@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student Application - Sheikh Tais Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #5C4033;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .application-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: #5C4033;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FFC107;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5C4033;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            background: #fafbfc;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #FFC107;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .profile-upload {
+            text-align: center;
+            padding: 30px;
+            border: 3px dashed #FFC107;
+            border-radius: 15px;
+            background: #fffbf0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .profile-upload:hover {
+            background: #fff8e1;
+            border-color: #5C4033;
+        }
+
+        .profile-upload.dragover {
+            background: #fff3c4;
+            border-color: #5C4033;
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: #FFC107;
+            margin-bottom: 15px;
+        }
+
+        .upload-text {
+            color: #5C4033;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .upload-subtext {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .image-preview {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .preview-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #FFC107;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .remove-image {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .remove-image:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-input {
+            width: 18px;
+            height: 18px;
+            accent-color: #FFC107;
+        }
+
+        .submit-section {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #5C4033 0%, #8B6F47 100%);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(92, 64, 51, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(92, 64, 51, 0.4);
+        }
+
+        .submit-btn:active:not(:disabled) {
+            transform: translateY(-1px);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #5C4033;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #5C4033;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e1e8ed;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FFC107, #5C4033);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #28a745;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .application-form {
+                padding: 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 5px;
+            color: #FFC107;
+            cursor: help;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #5C4033;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+
+        <div class="header">
+            <h1><i class="fas fa-user-tie"></i> Students Application</h1>
+            <p>Join tais and be a student to learn with us.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <i class="fas fa-check-circle"></i> Your application has been submitted successfully! We will review your application and contact you your email  within 5-7 days .
+        </div>
+
+        <form class="application-form" 
+              id="applicationForm" 
+              enctype="multipart/form-data"
+              action="https://submit-form.com/lBICObf9a" 
+              method="POST"
+              >
+            
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Personal Information
+                </h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">
+                            Full Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" required>
+                        <div class="error-message" id="fullNameError">Please enter your full name</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">
+                            Email Address <span class="required">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">
+                            Phone Number <span class="required">*</span>
+                        </label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                        <div class="error-message" id="phoneError">Please enter your phone number</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="dateOfBirth">
+                            Date of Birth <span class="required">*</span>
+                        </label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                        <div class="error-message" id="dateOfBirthError">Please enter your date of birth</div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="address">
+                            Complete Address <span class="required">*</span>
+                        </label>
+                        <textarea id="address" name="address" class="form-textarea" rows="3" required placeholder="Enter your complete address including city, state, and postal code"></textarea>
+                        <div class="error-message" id="addressError">Please enter your complete address</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-camera"></i>
+                    Profile Picture
+                </h2>
+                <div class="form-group">
+                    <div class="profile-upload" id="profileUpload">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="upload-text">Click to upload or drag and drop</div>
+                        <div class="upload-subtext">PNG, JPG or JPEG (Max 5MB)</div>
+                        <input type="file" id="profileImage" name="profileImage" class="file-input" accept="image/*">
+                    </div>
+                    <div class="image-preview" id="imagePreview" style="display: none;">
+                        <img id="previewImg" class="preview-image" src="/placeholder.svg" alt="Profile Preview">
+                        <br>
+                        <button type="button" class="remove-image" id="removeImage">
+                            <i class="fas fa-trash"></i> Remove Image
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user-graduate"></i>
+                    Student Information
+                </h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="favoriteSubject">
+                            Favorite Subject <span class="required">*</span>
+                            <span class="tooltip">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltiptext">Tell us the subject you enjoy learning the most</span>
+                            </span>
+                        </label>
+                        <select id="favoriteSubject" name="favoriteSubject" class="form-select" required>
+                            <option value="">Select Subject</option>
+                            <option value="math">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                            <option value="social-studies">Social Studies</option>
+                            <option value="arts">Arts</option>
+                            <option value="sports">Sports</option>
+                            <option value="ict">ICT / Computing</option>
+                            <option value="music">Music</option>
+                            <option value="literature">Literature</option>
+                            <option value="foreign-language">Foreign Language</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="favoriteSubjectError">Please select your favorite subject</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="previousSchool">
+                            Previous School <span class="required">*</span>
+                        </label>
+                        <input type="text" id="previousSchool" name="previousSchool" class="form-input" placeholder="Enter your previous school's name" required>
+                        <div class="error-message" id="previousSchoolError">Please enter your previous school</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="location">
+                            Location of Previous School <span class="required">*</span>
+                        </label>
+                        <input type="text" id="location" name="location" class="form-input" placeholder="City / Town / Area" required>
+                        <div class="error-message" id="locationError">Please enter the location</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="hobbies">
+                            Hobbies & Interests <span class="required">*</span>
+                        </label>
+                        <textarea id="hobbies" name="hobbies" class="form-textarea" rows="3" required placeholder="Tell us what you love doing (sports, reading, gaming, music...)"></textarea>
+                        <div class="error-message" id="hobbiesError">Please share your hobbies</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="goals">
+                            Your Goals & Dreams
+                        </label>
+                        <textarea id="goals" name="goals" class="form-textarea" rows="3" placeholder="What do you hope to achieve at this school?"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="futureCareer">
+                            What Would You Like to Become in the Future? <span class="required">*</span>
+                        </label>
+                        <select id="futureCareer" name="futureCareer" class="form-select" required>
+                            <option value="">Select Career</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="nurse">Nurse</option>
+                            <option value="engineer">Engineer</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="lawyer">Lawyer</option>
+                            <option value="pilot">Pilot</option>
+                            <option value="scientist">Scientist</option>
+                            <option value="astronaut">Astronaut</option>
+                            <option value="programmer">Programmer / Software Developer</option>
+                            <option value="cybersecurity">Cybersecurity Expert</option>
+                            <option value="ai-engineer">AI / Machine Learning Engineer</option>
+                            <option value="web-designer">Web Designer</option>
+                            <option value="graphic-designer">Graphic Designer</option>
+                            <option value="game-developer">Game Developer</option>
+                            <option value="architect">Architect</option>
+                            <option value="mechanic">Mechanic</option>
+                            <option value="electrician">Electrician</option>
+                            <option value="artist">Artist</option>
+                            <option value="musician">Musician</option>
+                            <option value="athlete">Professional Athlete</option>
+                            <option value="chef">Chef</option>
+                            <option value="business-owner">Business Owner / Entrepreneur</option>
+                            <option value="police">Police Officer</option>
+                            <option value="soldier">Soldier</option>
+                            <option value="firefighter">Firefighter</option>
+                            <option value="journalist">Journalist</option>
+                            <option value="actor">Actor / Actress</option>
+                            <option value="politician">Politician</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="futureCareerError">Please select your dream career</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="focusSubjects">
+                            Which Subjects Should We Focus More On For You?
+                        </label>
+                        <select id="focusSubjects" name="focusSubjects" class="form-select" multiple>
+                            <option value="math">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                            <option value="social-studies">Social Studies</option>
+                            <option value="computer">Computing / ICT</option>
+                            <option value="arts">Arts</option>
+                            <option value="reading">Reading & Writing</option>
+                            <option value="critical-thinking">Critical Thinking</option>
+                            <option value="sports">Physical Education</option>
+                            <option value="public-speaking">Public Speaking</option>
+                        </select>
+                        <small class="help-text">Hold Ctrl (or Cmd on Mac) to select multiple subjects</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-lightbulb"></i>
+                    About You & Your Goals
+                </h2>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label class="form-label" for="motivation">
+                            Why Do You Want to Attend Sheikh tais Academy <span class="required">*</span>
+                        </label>
+                        <textarea id="motivation" name="motivation" class="form-textarea" rows="4" required placeholder="Tell us what excites you about joining Oshek Thais Academy. What inspires you to study here and what do you hope to achieve?"></textarea>
+                        <div class="error-message" id="motivationError">Please share your motivation</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="activities">
+                            What Activities or Clubs Would You Like to Join? 
+                        </label>
+                        <textarea id="activities" name="activities" class="form-textarea" rows="3" placeholder="Tell us about sports, arts, science clubs, or other activities you’d love to participate in"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="learningGoals">
+                            Which Skills or Subjects Do You Most Want to Improve? 
+                        </label>
+                        <textarea id="learningGoals" name="learningGoals" class="form-textarea" rows="3" placeholder="For example: I want to get better at Mathematics, improve my coding skills, or learn more about science experiments"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="startDate">
+                            Expected attendance date <span class="required">*</span>
+                        </label>
+                        <input type="date" id="startDate" name="startDate" class="form-input" required>
+                        <div class="error-message" id="startDateError">Please select your expected start date</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="form-label" for="supporters">
+                            Who Encourages You in Your Learning? 
+                        </label>
+                        <textarea id="supporters" name="supporters" class="form-textarea" rows="3" placeholder="Share about teachers, family, or friends who inspire and support you in your studies"></textarea>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" class="checkbox-input" required>
+                    <label for="terms" class="form-label">
+                        confirm that all information provided is correct<span class="required">*</span>
+                    </label>
+                </div>
+                <div class="error-message" id="termsError">Please accept the terms and conditions</div>
+            </div>
+
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Application
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Form validation and progress tracking (Your original code)
+        const form = document.getElementById('applicationForm');
+        const progressFill = document.getElementById('progressFill');
+        const successMessage = document.getElementById('successMessage');
+        
+        // Profile image upload functionality (Your original code)
+        const profileUpload = document.getElementById('profileUpload');
+        const profileImage = document.getElementById('profileImage');
+        const imagePreview = document.getElementById('imagePreview');
+        const previewImg = document.getElementById('previewImg');
+        const removeImage = document.getElementById('removeImage');
+
+        // Progress tracking (Your original code)
+        function updateProgress() {
+            const requiredFields = form.querySelectorAll('[required]');
+            let filledFields = 0;
+            
+            requiredFields.forEach(field => {
+                if (field.type === 'checkbox') {
+                    if (field.checked) filledFields++;
+                } else if (field.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
+            
+            const progress = (filledFields / requiredFields.length) * 100;
+            progressFill.style.width = progress + '%';
+        }
+
+        // Image upload handling (Your original code)
+        profileUpload.addEventListener('click', () => {
+            profileImage.click();
+        });
+
+        profileUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            profileUpload.classList.add('dragover');
+        });
+
+        profileUpload.addEventListener('dragleave', () => {
+            profileUpload.classList.remove('dragover');
+        });
+
+        profileUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            profileUpload.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleImageUpload(files[0]);
+            }
+        });
+
+        profileImage.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleImageUpload(e.target.files[0]);
+            }
+        });
+
+        function handleImageUpload(file) {
+            if (file.size > 5 * 1024 * 1024) {
+                alert('File size must be less than 5MB');
+                return;
+            }
+
+            if (!file.type.startsWith('image/')) {
+                alert('Please select a valid image file');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                previewImg.src = e.target.result;
+                imagePreview.style.display = 'block';
+                profileUpload.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        removeImage.addEventListener('click', () => {
+            profileImage.value = '';
+            imagePreview.style.display = 'none';
+            profileUpload.style.display = 'block';
+        });
+
+        // Form validation (Your original code)
+        function validateField(field) {
+            const errorElement = document.getElementById(field.id + 'Error');
+            let isValid = true;
+
+            if (field.hasAttribute('required')) {
+                if (field.type === 'checkbox') {
+                    isValid = field.checked;
+                } else if (field.type === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    isValid = field.value.trim() !== '' && emailRegex.test(field.value);
+                } else {
+                    isValid = field.value.trim() !== '';
+                }
+            }
+
+            if (errorElement) {
+                errorElement.style.display = isValid ? 'none' : 'block';
+            }
+
+            field.style.borderColor = isValid ? '#e1e8ed' : '#e74c3c';
+            return isValid;
+        }
+
+        // Add event listeners for real-time validation and progress (Your original code)
+        const formFields = form.querySelectorAll('input, select, textarea');
+        formFields.forEach(field => {
+            field.addEventListener('input', () => {
+                validateField(field);
+                updateProgress();
+            });
+            field.addEventListener('change', () => {
+                validateField(field);
+                updateProgress();
+            });
+        });
+
+        // Initialize progress (Your original code)
+        updateProgress();
+
+        // =========================================================================================
+        // === STEP 2: THIS SUBMISSION CODE IS MODIFIED TO WORK WITH FORMSPREE =====================
+        // =========================================================================================
+        // This new code replaces your old simulation. It sends all form data, including the image,
+        // to the URL you provided in the <form> tag's 'action' attribute.
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop the form from submitting the old way
+
+            let isFormValid = true;
+            formFields.forEach(field => {
+                if (!validateField(field)) {
+                    isFormValid = false;
+                }
+            });
+
+            if (!isFormValid) {
+                alert('Please fill in all required fields correctly.');
+                return;
+            }
+            
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.innerHTML;
+            const formData = new FormData(form);
+
+            // Change button to show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            submitBtn.disabled = true;
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Success! Show your success message and hide the form
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    // Handle errors from the server
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert('Oops! There was a problem submitting your form.');
+                        }
+                        // Restore the button on error
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    });
+                }
+            }).catch(error => {
+                // Handle network errors
+                console.error('Error:', error);
+                alert('A network error occurred. Please check your connection and try again.');
+                // Restore the button on error
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Schedule & Timetables - Sheikh Tais Academy</title>
+    <meta name="description" content="Weekly class timetables for all grades at Sheikh Tais Academy with customizable schedule management.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .page-header h1 {
+            color: #5C4033;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .controls-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #5C4033;
+            background: white;
+            color: #5C4033;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #5C4033;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .add-class-btn {
+            background: #FFC107;
+            color: #5C4033;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .add-class-btn:hover {
+            background: #e0a800;
+            transform: translateY(-2px);
+        }
+
+        .timetables-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .timetable-container {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .timetable-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .class-header {
+            background: linear-gradient(135deg, #5C4033 0%, #8B6F47 100%);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .class-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .class-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .timetable-scroll {
+            overflow-x: auto;
+            padding: 0;
+        }
+
+        .timetable-table {
+            width: 100%;
+            min-width: 800px;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .timetable-table th {
+            background: #f8f9fa;
+            color: #5C4033;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+            border-bottom: 2px solid #5C4033;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .timetable-table td {
+            padding: 12px 8px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        .timetable-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .subject-cell {
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 2px;
+            padding: 8px !important;
+            transition: all 0.3s ease;
+        }
+
+        .subject-cell:hover {
+            background: #e9ecef;
+            transform: scale(1.02);
+        }
+
+        .subject-name {
+            font-weight: 600;
+            color: #5C4033;
+            margin-bottom: 4px;
+        }
+
+        .subject-teacher {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 2px;
+        }
+
+        .subject-room {
+            font-size: 0.75rem;
+            color: #999;
+            background: #FFC107;
+            padding: 2px 6px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .table-controls {
+            padding: 20px 25px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .add-remove-btns {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .table-control-btn {
+            padding: 8px 15px;
+            border: 1px solid #5C4033;
+            background: white;
+            color: #5C4033;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .table-control-btn:hover {
+            background: #5C4033;
+            color: white;
+        }
+
+        .table-control-btn.danger {
+            border-color: #dc3545;
+            color: #dc3545;
+        }
+
+        .table-control-btn.danger:hover {
+            background: #dc3545;
+            color: white;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            padding: 15px 0;
+        }
+
+        .breadcrumb a {
+            color: #5C4033;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #666;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .filter-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                justify-content: center;
+            }
+
+            .class-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .table-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .add-remove-btns {
+                justify-content: center;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <span>/</span>
+            <a href="documentation.html">Documentation</a>
+            <span>/</span>
+            <span>Exam Schedule & Timetables</span>
+        </nav>
+
+        <div class="page-header">
+            <h1><i class="fas fa-calendar-alt"></i> Exam Schedule & Timetables</h1>
+            <p>Comprehensive timetable management system for all classes. View, edit, and customize schedules for each grade level.</p>
+        </div>
+
+        
+        <div class="timetables-grid" id="timetablesContainer">
+            
+            <!-- Class 1 Timetable -->
+            <div class="timetable-container fade-in" data-class="1" data-level="primary">
+                <div class="class-header">
+                    <h3 class="class-title">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        Class 1
+                    </h3>
+                </div>
+                <div class="timetable-scroll">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>8:00 - 8:45</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Mr Dalton</div>
+                                    <div class="subject-room">Room 4</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr U-M-C</div>
+                                    <div class="subject-room">Room 4</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Statiatics and probability</div>
+                                    <div class="subject-teacher">Ms. Fatima</div>
+                                    <div class="subject-room">Lab 1</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Urdu</div>
+                                    <div class="subject-teacher">Mr. Hassan</div>
+                                    <div class="subject-room">Room 103</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Islamic Studies</div>
+                                    <div class="subject-teacher">Qari Usman</div>
+                                    <div class="subject-room">Room 104</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-controls">
+                    <div class="add-remove-btns">
+                        <button class="table-control-btn" onclick="addPeriod(1)">
+                            <i class="fas fa-plus"></i> Add Period
+                        </button>
+                        <button class="table-control-btn" onclick="addDay(1)">
+                            <i class="fas fa-calendar-plus"></i> Add Day
+                        </button>
+                        <button class="table-control-btn danger" onclick="removePeriod(1)">
+                            <i class="fas fa-minus"></i> Remove Period
+                        </button>
+                    </div>
+                    <div>
+                        <span style="color: #666; font-size: 0.9rem;">
+                            <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to view all days
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar structure for Classes 2-12 -->
+            <div class="timetable-container fade-in" data-class="12" data-level="high">
+                    <div class="class-header">
+                        <h3 class="class-title">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            Class 12 - Future Leaders
+                        </h3>
+                        <div class="class-actions">
+                            <button class="action-btn" onclick="editTimetable(12)">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-btn" onclick="printTimetable(12)">
+                                <i class="fas fa-print"></i>
+                            </button>
+                            <button class="action-btn" onclick="deleteTimetable(12)">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="timetable-scroll">
+                        <table class="timetable-table">
+                            <tbody>
+                            <tr>
+                                <td><strong>8:00 - 8:45</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Mr Dalton</div>
+                                    <div class="subject-room">Room 4</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr U-M-C</div>
+                                    <div class="subject-room">Room 4</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Statiatics and probability</div>
+                                    <div class="subject-teacher">Ms. Fatima</div>
+                                    <div class="subject-room">Lab 1</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Urdu</div>
+                                    <div class="subject-teacher">Mr. Hassan</div>
+                                    <div class="subject-room">Room 103</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Islamic Studies</div>
+                                    <div class="subject-teacher">Qari Usman</div>
+                                    <div class="subject-room">Room 104</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                            <tbody>
+                                <tr>
+                                    <td><strong>8:00 - 8:45</strong></td>
+                                    <td class="subject-cell">
+                                        <div class="subject-name">Advanced Math</div>
+                                        <div class="subject-teacher">Dr. Rahman</div>
+                                        <div class="subject-room">Room 301</div>
+                                    </td>
+                                    <td class="subject-cell">
+                                        <div class="subject-name">Physics</div>
+                                        <div class="subject-teacher">Prof. Khan</div>
+                                        <div class="subject-room">Physics Lab</div>
+                                    </td>
+                                    <td class="subject-cell">
+                                        <div class="subject-name">Chemistry</div>
+                                        <div class="subject-teacher">Dr. Malik</div>
+                                        <div class="subject-room">Chem Lab</div>
+                                    </td>
+                                    <td class="subject-cell">
+                                        <div class="subject-name">Biology</div>
+                                        <div class="subject-teacher">Ms. Sana</div>
+                                        <div class="subject-room">Bio Lab</div>
+                                    </td>
+                                    <td class="subject-cell">
+                                        <div class="subject-name">English Lit</div>
+                                        <div class="subject-teacher">Mr. Tariq</div>
+                                        <div class="subject-room">Room 301</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-controls">
+                        <div class="add-remove-btns">
+                            <button class="table-control-btn" onclick="addPeriod(12)">
+                                <i class="fas fa-plus"></i> Add Period
+                            </button>
+                            <button class="table-control-btn" onclick="addDay(12)">
+                                <i class="fas fa-calendar-plus"></i> Add Day
+                            </button>
+                            <button class="table-control-btn danger" onclick="removePeriod(12)">
+                                <i class="fas fa-minus"></i> Remove Period
+                            </button>
+                        </div>
+                        <div>
+                            <span style="color: #666; font-size: 0.9rem;">
+                                <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to view all days
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="timetable-container fade-in" data-class="1" data-level="primary">
+                <div class="class-header">
+                    <h3 class="class-title">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        Class 1 - Primary Level
+                    </h3>
+                    <div class="class-actions">
+                        <button class="action-btn" onclick="editTimetable(1)" title="Edit Timetable">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn" onclick="printTimetable(1)" title="Print Timetable">
+                            <i class="fas fa-print"></i>
+                        </button>
+                        <button class="action-btn" onclick="deleteTimetable(1)" title="Delete Timetable">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="timetable-scroll">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>8:00 - 8:45</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Science</div>
+                                    <div class="subject-teacher">Ms. Fatima</div>
+                                    <div class="subject-room">Lab 1</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Urdu</div>
+                                    <div class="subject-teacher">Mr. Hassan</div>
+                                    <div class="subject-room">Room 103</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Islamic Studies</div>
+                                    <div class="subject-teacher">Qari Usman</div>
+                                    <div class="subject-room">Room 104</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <!-- Additional periods can be added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-controls">
+                    <div class="add-remove-btns">
+                        <button class="table-control-btn" onclick="addPeriod(1)">
+                            <i class="fas fa-plus"></i> Add Period
+                        </button>
+                        <button class="table-control-btn" onclick="addDay(1)">
+                            <i class="fas fa-calendar-plus"></i> Add Day
+                        </button>
+                        <button class="table-control-btn danger" onclick="removePeriod(1)">
+                            <i class="fas fa-minus"></i> Remove Period
+                        </button>
+                    </div>
+                    <div>
+                        <span style="color: #666; font-size: 0.9rem;">
+                            <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to view all days
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timetable-container fade-in" data-class="1" data-level="primary">
+                <div class="class-header">
+                    <h3 class="class-title">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        Class 1 - Primary Level
+                    </h3>
+                    <div class="class-actions">
+                        <button class="action-btn" onclick="editTimetable(1)" title="Edit Timetable">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn" onclick="printTimetable(1)" title="Print Timetable">
+                            <i class="fas fa-print"></i>
+                        </button>
+                        <button class="action-btn" onclick="deleteTimetable(1)" title="Delete Timetable">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="timetable-scroll">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>8:00 - 8:45</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Science</div>
+                                    <div class="subject-teacher">Ms. Fatima</div>
+                                    <div class="subject-room">Lab 1</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Urdu</div>
+                                    <div class="subject-teacher">Mr. Hassan</div>
+                                    <div class="subject-room">Room 103</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Islamic Studies</div>
+                                    <div class="subject-teacher">Qari Usman</div>
+                                    <div class="subject-room">Room 104</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <!-- Additional periods can be added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-controls">
+                    <div class="add-remove-btns">
+                        <button class="table-control-btn" onclick="addPeriod(1)">
+                            <i class="fas fa-plus"></i> Add Period
+                        </button>
+                        <button class="table-control-btn" onclick="addDay(1)">
+                            <i class="fas fa-calendar-plus"></i> Add Day
+                        </button>
+                        <button class="table-control-btn danger" onclick="removePeriod(1)">
+                            <i class="fas fa-minus"></i> Remove Period
+                        </button>
+                    </div>
+                    <div>
+                        <span style="color: #666; font-size: 0.9rem;">
+                            <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to view all days
+                        </span>
+                    </div>
+                </div>
+            </div> 
+            
+              <div class="timetable-container fade-in" data-class="1" data-level="primary">
+                <div class="class-header">
+                    <h3 class="class-title">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        Class 1 - Primary Level
+                    </h3>
+                    <div class="class-actions">
+                        <button class="action-btn" onclick="editTimetable(1)" title="Edit Timetable">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn" onclick="printTimetable(1)" title="Print Timetable">
+                            <i class="fas fa-print"></i>
+                        </button>
+                        <button class="action-btn" onclick="deleteTimetable(1)" title="Delete Timetable">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="timetable-scroll">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>8:00 - 8:45</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Science</div>
+                                    <div class="subject-teacher">Ms. Fatima</div>
+                                    <div class="subject-room">Lab 1</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Urdu</div>
+                                    <div class="subject-teacher">Mr. Hassan</div>
+                                    <div class="subject-room">Room 103</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Islamic Studies</div>
+                                    <div class="subject-teacher">Qari Usman</div>
+                                    <div class="subject-room">Room 104</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <!-- Additional periods can be added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-controls">
+                    <div class="add-remove-btns">
+                        <button class="table-control-btn" onclick="addPeriod(1)">
+                            <i class="fas fa-plus"></i> Add Period
+                        </button>
+                        <button class="table-control-btn" onclick="addDay(1)">
+                            <i class="fas fa-calendar-plus"></i> Add Day
+                        </button>
+                        <button class="table-control-btn danger" onclick="removePeriod(1)">
+                            <i class="fas fa-minus"></i> Remove Period
+                        </button>
+                    </div>
+                    <div>
+                        <span style="color: #666; font-size: 0.9rem;">
+                            <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to view all days
+                        </span>
+                    </div>
+                </div>
+            </div> 
+            
+               <div class="timetable-container fade-in" data-class="1" data-level="primary">
+                <div class="class-header">
+                    <h3 class="class-title">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        Class 1 - Primary Level
+                    </h3>
+                    <div class="class-actions">
+                        <button class="action-btn" onclick="editTimetable(1)" title="Edit Timetable">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn" onclick="printTimetable(1)" title="Print Timetable">
+                            <i class="fas fa-print"></i>
+                        </button>
+                        <button class="action-btn" onclick="deleteTimetable(1)" title="Delete Timetable">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="timetable-scroll">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>8:00 - 8:45</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Science</div>
+                                    <div class="subject-teacher">Ms. Fatima</div>
+                                    <div class="subject-room">Lab 1</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Urdu</div>
+                                    <div class="subject-teacher">Mr. Hassan</div>
+                                    <div class="subject-room">Room 103</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Islamic Studies</div>
+                                    <div class="subject-teacher">Qari Usman</div>
+                                    <div class="subject-room">Room 104</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>8:45 - 9:30</strong></td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">English</div>
+                                    <div class="subject-teacher">Mr. Ahmed</div>
+                                    <div class="subject-room">Room 102</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Mathematics</div>
+                                    <div class="subject-teacher">Ms. Sarah</div>
+                                    <div class="subject-room">Room 101</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Art</div>
+                                    <div class="subject-teacher">Ms. Aisha</div>
+                                    <div class="subject-room">Art Room</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Physical Education</div>
+                                    <div class="subject-teacher">Mr. Ali</div>
+                                    <div class="subject-room">Playground</div>
+                                </td>
+                                <td class="subject-cell">
+                                    <div class="subject-name">Computer</div>
+                                    <div class="subject-teacher">Mr. Tariq</div>
+                                    <div class="subject-room">Computer Lab</div>
+                                </td>
+                            </tr>
+                            <!-- Additional periods can be added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-controls">
+                    <div class="add-remove-btns">
+                        <button class="table-control-btn" onclick="addPeriod(1)">
+                            <i class="fas fa-plus"></i> Add Period
+                        </button>
+                        <button class="table-control-btn" onclick="addDay(1)">
+                            <i class="fas fa-calendar-plus"></i> Add Day
+                        </button>
+                        <button class="table-control-btn danger" onclick="removePeriod(1)">
+                            <i class="fas fa-minus"></i> Remove Period
+                        </button>
+                    </div>
+                    <div>
+                        <span style="color: #666; font-size: 0.9rem;">
+                            <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to view all days
+                        </span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

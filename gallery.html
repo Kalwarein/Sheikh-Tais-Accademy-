@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Sheikh Tais Academy</title>
+    <meta name="description" content="Explore the vibrant life at Sheikh Tais Academy through our photo gallery.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/gallery.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Sheikh Tais Academy</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="features.html" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documentation.html" class="nav-link">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link active">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="download.html" class="nav-link">Download</a>
+                    </li>
+                </ul>
+            
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Sheikh Tais Academy</span>
+            </div>
+            <button class="sidebar-close" id="sidebar-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="sidebar-link">Home</a></li>
+            <li><a href="about.html" class="sidebar-link">About</a></li>
+            <li><a href="features.html" class="sidebar-link">Features</a></li>
+            <li><a href="news.html" class="sidebar-link">News</a></li>
+            <li><a href="documentation.html" class="sidebar-link">Documentation</a></li>
+            <li><a href="gallery.html" class="sidebar-link active">Gallery</a></li>
+            <li><a href="download.html" class="sidebar-link">Download</a></li>
+            <li><a href="developer.html" class="sidebar-link">Developer</a></li>
+            <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">School Gallery</h1>
+                <p class="page-subtitle">Take a glimpse into life at Sheikh Tais Academy through our photo collection</p>
+            </div>
+        </section>
+
+        <!-- Gallery Content -->
+        <section class="gallery-detailed section">
+            <div class="container">
+                <!-- Gallery Categories -->
+                <div class="gallery-categories">
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-filter="all">All Photos</button>
+                        <button class="filter-btn" data-filter="campus">Campus</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="academics">Academics</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="activities">Activities</button>
+                    </div>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid masonry">
+                    <!-- Campus Photos -->
+                    <div class="gallery-item" data-category="campus">
+                        <img src="/gallery/1757237855233.jpg" alt="Some staffs and the principal" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>staffs + Principal</h4>
+                                <p>Some staffs and the principal"</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="campus">
+                        <img src="/gallery/1757237971100.jpg" alt="School library" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Priamy kids in field trip costumes</h4>
+                                <p>Some primary students going on a field trip</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="academics">
+                        <img src="/gallery/1757238077897.jpg" alt="Science laboratory" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Science Students</h4>
+                                <p>one of the Modern science classroms  </p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="sports">
+                        <img src="/gallery/1757238090495.jpg" alt="School playground" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>The hall</h4>
+                                <p>Gatheting at the School Hall built by the adminstration</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events">
+                        <img src="/gallery/1757238086130.jpg" alt="Annual function" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Developer and mastermind</h4>
+                                <p>He is the Developer behind the tais App,website and all functions And also a fullstack Developer</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="academics">
+                        <img src="./img//1757194623183.jpg" alt="Computer lab" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>A group photo</h4>
+                                <p>A group photo with a visitor at Sheikh Tais Academy</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="campus">
+                        <img src="/gallery/1757238030799.jpg" alt="School auditorium" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Auditorium</h4>
+                                <p>Modern auditorium for events and assemblies</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="activities">
+                        <img src="/gallery/1757238057875.jpg" alt="Art class" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Art & Craft</h4>
+                                <p>Students engaged in creative activities</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events">
+                        <img src="/gallery/1757238071707.jpg" alt="Science exhibition" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Science Exhibition</h4>
+                                <p>Students showcasing science projects</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="sports">
+                        <img src="/gallery/1757249528531.jpg" alt="Sports day" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Saturday Classed</h4>
+                                <p>Studens learning arts class</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="academics">
+                        <img src="/gallery/1757237992279.jpg" alt="Classroom" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Classroom</h4>
+                                <p>Interactive learning environment</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="activities">
+                        <img src="/gallery/1757249417133.jpg" alt="Music class" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>science Room</h4>
+                                <p>Students learning Science and physics</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="campus">
+                        <img src="/gallery/1757249402962.jpg" alt="School garden" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Science Student SSS</h4>
+                                <p>Science Students At The congress Lab </p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events">
+                        <img src="/gallery/1757249387509.jpg" alt="Cultural program" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Cultural Program</h4>
+                                <p>Students at Morning Assembly</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="academics">
+                        <img src="/gallery/1757249513996.jpg" alt="Mathematics class" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>arts Class</h4>
+                                <p>Interactive arts learning session</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="campus">
+                        <img src="/gallery/1757249656078.jpg" alt="Drama club" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Jss Campus</h4>
+                                <p>School builing for JSS and sss before</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Sheikh Tais Academy</span>
+                    </div>
+                    <p class="footer-description">
+                        Motto: Seek Kmowledge from Birth yo death
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Education Street, City, Country</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@shaikhtaisacademy.edu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sheikh Tais Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="/placeholder.svg" alt="">
+            <div class="lightbox-info">
+                <h4 id="lightbox-title">Image Title</h4>
+                <p id="lightbox-description">Image description</p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="/assets/gallery.js"></script>
+</body>
+</html>
