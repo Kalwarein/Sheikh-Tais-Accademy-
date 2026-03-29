@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Sheikh Tais Academy</title>
-    <meta name="description" content="Explore the vibrant life at Sheikh Tais Academy through our photo gallery.">
+    <title>Gallery - Henmat International School</title>
+    <meta name="description" content="Explore the vibrant life at Henmat International School through our photo gallery.">
+    <meta name="theme-color" content="#1e3a8a">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/gallery.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header / Navbar -->
     <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
+                <a href="index.html" class="nav-logo">
                     <i class="fas fa-graduation-cap"></i>
-                    <span>Sheikh Tais Academy</span>
-                </div>
+                    <span>Henmat International School</span>
+                </a>
                 
                 <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item">
@@ -33,22 +34,27 @@
                         <a href="about.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="features.html" class="nav-link">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="news.html" class="nav-link">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="documentation.html" class="nav-link">Documentation</a>
+                        <a href="features.html" class="nav-link">Academics</a>
                     </li>
                     <li class="nav-item">
                         <a href="gallery.html" class="nav-link active">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a href="download.html" class="nav-link">Download</a>
+                        <a href="news.html" class="nav-link">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link nav-cta">Apply Now</a>
                     </li>
                 </ul>
-            
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
@@ -58,7 +64,7 @@
         <div class="sidebar-header">
             <div class="sidebar-logo">
                 <i class="fas fa-graduation-cap"></i>
-                <span>Sheikh Tais Academy</span>
+                <span>Henmat International</span>
             </div>
             <button class="sidebar-close" id="sidebar-close">
                 <i class="fas fa-times"></i>
@@ -67,13 +73,13 @@
         <ul class="sidebar-menu">
             <li><a href="index.html" class="sidebar-link">Home</a></li>
             <li><a href="about.html" class="sidebar-link">About</a></li>
-            <li><a href="features.html" class="sidebar-link">Features</a></li>
-            <li><a href="news.html" class="sidebar-link">News</a></li>
-            <li><a href="documentation.html" class="sidebar-link">Documentation</a></li>
+            <li><a href="features.html" class="sidebar-link">Academics</a></li>
             <li><a href="gallery.html" class="sidebar-link active">Gallery</a></li>
-            <li><a href="download.html" class="sidebar-link">Download</a></li>
-            <li><a href="developer.html" class="sidebar-link">Developer</a></li>
+            <li><a href="news.html" class="sidebar-link">News</a></li>
+            <li><a href="documentation.html" class="sidebar-link">Resources</a></li>
+            <li><a href="download.html" class="sidebar-link">Download App</a></li>
             <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+            <li><a href="application.html" class="sidebar-link">Apply Now</a></li>
         </ul>
     </div>
 
@@ -83,7 +89,7 @@
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title">School Gallery</h1>
-                <p class="page-subtitle">Take a glimpse into life at Sheikh Tais Academy through our photo collection</p>
+                <p class="page-subtitle">Take a glimpse into life at Henmat International School through our photo collection</p>
             </div>
         </section>
 
@@ -103,14 +109,14 @@
                 </div>
 
                 <!-- Gallery Grid -->
-                <div class="gallery-grid masonry">
+                <div class="gallery-grid">
                     <!-- Campus Photos -->
                     <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757237855233.jpg" alt="Some staffs and the principal" />
+                        <img src="/gallery/1757237855233.jpg" alt="School staff and principal">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>staffs + Principal</h4>
-                                <p>Some staffs and the principal"</p>
+                                <h4>Staff & Principal</h4>
+                                <p>Some staff members with the principal</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -121,11 +127,11 @@
                     </div>
                     
                     <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757237971100.jpg" alt="School library" />
+                        <img src="/gallery/1757237971100.jpg" alt="Students on field trip">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Priamy kids in field trip costumes</h4>
-                                <p>Some primary students going on a field trip</p>
+                                <h4>Field Trip Day</h4>
+                                <p>Primary students going on a field trip</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -136,26 +142,11 @@
                     </div>
                     
                     <div class="gallery-item" data-category="academics">
-                        <img src="/gallery/1757238077897.jpg" alt="Science laboratory" />
+                        <img src="/gallery/1757238077897.jpg" alt="Science laboratory">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h4>Science Students</h4>
-                                <p>one of the Modern science classroms  </p>
-                            </div>
-                            <div class="gallery-actions">
-                                <button class="gallery-btn" onclick="openLightbox(this)">
-                                    <i class="fas fa-search-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="sports">
-                        <img src="/gallery/1757238090495.jpg" alt="School playground" />
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>The hall</h4>
-                                <p>Gatheting at the School Hall built by the adminstration</p>
+                                <p>Modern science classroom in action</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -166,11 +157,26 @@
                     </div>
                     
                     <div class="gallery-item" data-category="events">
-                        <img src="/gallery/1757238086130.jpg" alt="Annual function" />
+                        <img src="/gallery/1757238090495.jpg" alt="School hall">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Developer and mastermind</h4>
-                                <p>He is the Developer behind the tais App,website and all functions And also a fullstack Developer</p>
+                                <h4>School Hall</h4>
+                                <p>Gathering at the school assembly hall</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events">
+                        <img src="/gallery/1757238086130.jpg" alt="School event">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>School Event</h4>
+                                <p>Special celebration at our campus</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -181,11 +187,11 @@
                     </div>
                     
                     <div class="gallery-item" data-category="academics">
-                        <img src="./img//1757194623183.jpg" alt="Computer lab" />
+                        <img src="./img/1757194623183.jpg" alt="Group photo with visitor">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>A group photo</h4>
-                                <p>A group photo with a visitor at Sheikh Tais Academy</p>
+                                <h4>Group Photo</h4>
+                                <p>A group photo with a visitor at school</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -196,7 +202,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757238030799.jpg" alt="School auditorium" />
+                        <img src="/gallery/1757238030799.jpg" alt="School auditorium">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h4>Auditorium</h4>
@@ -211,7 +217,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="activities">
-                        <img src="/gallery/1757238057875.jpg" alt="Art class" />
+                        <img src="/gallery/1757238057875.jpg" alt="Art class">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h4>Art & Craft</h4>
@@ -226,7 +232,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="events">
-                        <img src="/gallery/1757238071707.jpg" alt="Science exhibition" />
+                        <img src="/gallery/1757238071707.jpg" alt="Science exhibition">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h4>Science Exhibition</h4>
@@ -240,12 +246,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="sports">
-                        <img src="/gallery/1757249528531.jpg" alt="Sports day" />
+                    <div class="gallery-item" data-category="activities">
+                        <img src="/gallery/1757249528531.jpg" alt="Saturday classes">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Saturday Classed</h4>
-                                <p>Studens learning arts class</p>
+                                <h4>Saturday Classes</h4>
+                                <p>Students learning arts on Saturday</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -256,7 +262,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="academics">
-                        <img src="/gallery/1757237992279.jpg" alt="Classroom" />
+                        <img src="/gallery/1757237992279.jpg" alt="Classroom">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h4>Classroom</h4>
@@ -270,42 +276,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="activities">
-                        <img src="/gallery/1757249417133.jpg" alt="Music class" />
+                    <div class="gallery-item" data-category="academics">
+                        <img src="/gallery/1757249417133.jpg" alt="Science room">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>science Room</h4>
-                                <p>Students learning Science and physics</p>
-                            </div>
-                            <div class="gallery-actions">
-                                <button class="gallery-btn" onclick="openLightbox(this)">
-                                    <i class="fas fa-search-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757249402962.jpg" alt="School garden" />
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Science Student SSS</h4>
-                                <p>Science Students At The congress Lab </p>
-                            </div>
-                            <div class="gallery-actions">
-                                <button class="gallery-btn" onclick="openLightbox(this)">
-                                    <i class="fas fa-search-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="events">
-                        <img src="/gallery/1757249387509.jpg" alt="Cultural program" />
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Cultural Program</h4>
-                                <p>Students at Morning Assembly</p>
+                                <h4>Science Room</h4>
+                                <p>Students learning Science and Physics</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -316,10 +292,40 @@
                     </div>
                     
                     <div class="gallery-item" data-category="academics">
-                        <img src="/gallery/1757249513996.jpg" alt="Mathematics class" />
+                        <img src="/gallery/1757249402962.jpg" alt="Science students">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>arts Class</h4>
+                                <h4>Science Students SSS</h4>
+                                <p>Science students at the congress lab</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="events">
+                        <img src="/gallery/1757249387509.jpg" alt="Morning assembly">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Morning Assembly</h4>
+                                <p>Students at morning assembly</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="activities">
+                        <img src="/gallery/1757249513996.jpg" alt="Arts class">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Arts Class</h4>
                                 <p>Interactive arts learning session</p>
                             </div>
                             <div class="gallery-actions">
@@ -331,11 +337,11 @@
                     </div>
                     
                     <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757249656078.jpg" alt="Drama club" />
+                        <img src="/gallery/1757249656078.jpg" alt="JSS Campus">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Jss Campus</h4>
-                                <p>School builing for JSS and sss before</p>
+                                <h4>JSS Campus</h4>
+                                <p>School building for JSS students</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -356,22 +362,22 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>Sheikh Tais Academy</span>
+                        <span>Henmat International School</span>
                     </div>
                     <p class="footer-description">
-                        Motto: Seek Kmowledge from Birth yo death
+                        Excellence in Education - Nurturing young minds and building future leaders.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -381,8 +387,9 @@
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="features.html">Features</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Academics</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="news.html">News</a></li>
                     </ul>
                 </div>
@@ -391,9 +398,9 @@
                     <h3 class="footer-title">Resources</h3>
                     <ul class="footer-links">
                         <li><a href="documentation.html">Documentation</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="download.html">Download App</a></li>
+                        <li><a href="application.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -402,43 +409,27 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Education Street, City, Country</span>
+                            <span>Shell, Woodlowy Park, Freetown, Sierra Leone</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
+                            <span>+232 99 051737</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>info@shaikhtaisacademy.edu</span>
+                            <span>info@henmatschool.edu</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Sheikh Tais Academy. All rights reserved.</p>
+                <p>&copy; 2025 Henmat International School. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <span class="lightbox-close">&times;</span>
-            <img id="lightbox-img" src="/placeholder.svg" alt="">
-            <div class="lightbox-info">
-                <h4 id="lightbox-title">Image Title</h4>
-                <p id="lightbox-description">Image description</p>
-            </div>
-            <div class="lightbox-nav">
-                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </div>
-
     <!-- Custom JavaScript -->
-    <script src="/assets/gallery.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>

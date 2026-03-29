@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News & Updates - Sheikh Tais Academy</title>
-    <meta name="description" content="Stay updated with the latest news and announcements from Sheikh Tais Academy.">
+    <title>News & Updates - Henmat International School</title>
+    <meta name="description" content="Stay updated with the latest news and announcements from Henmat International School.">
+    <meta name="theme-color" content="#1e3a8a">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,10 +21,10 @@
     <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
+                <a href="index.html" class="nav-logo">
                     <i class="fas fa-graduation-cap"></i>
-                    <span>Sheikh Tais Academy</span>
-                </div>
+                    <span>Henmat International School</span>
+                </a>
                 
                 <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item">
@@ -33,19 +34,19 @@
                         <a href="about.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="features.html" class="nav-link">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="news.html" class="nav-link active">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="documentation.html" class="nav-link">Documentation</a>
+                        <a href="features.html" class="nav-link">Academics</a>
                     </li>
                     <li class="nav-item">
                         <a href="gallery.html" class="nav-link">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a href="download.html" class="nav-link">Download</a>
+                        <a href="news.html" class="nav-link active">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link nav-cta">Apply Now</a>
                     </li>
                 </ul>
                 
@@ -63,7 +64,7 @@
         <div class="sidebar-header">
             <div class="sidebar-logo">
                 <i class="fas fa-graduation-cap"></i>
-                <span>Sheikh Tais Academy</span>
+                <span>Henmat International</span>
             </div>
             <button class="sidebar-close" id="sidebar-close">
                 <i class="fas fa-times"></i>
@@ -72,12 +73,13 @@
         <ul class="sidebar-menu">
             <li><a href="index.html" class="sidebar-link">Home</a></li>
             <li><a href="about.html" class="sidebar-link">About</a></li>
-            <li><a href="features.html" class="sidebar-link">Features</a></li>
-            <li><a href="news.html" class="sidebar-link active">News</a></li>
-            <li><a href="documentation.html" class="sidebar-link">Documentation</a></li>
+            <li><a href="features.html" class="sidebar-link">Academics</a></li>
             <li><a href="gallery.html" class="sidebar-link">Gallery</a></li>
-            <li><a href="download.html" class="sidebar-link">Download</a></li>
-            <li><a href="developer.html" class="sidebar-link">Developer</a></li>
+            <li><a href="news.html" class="sidebar-link active">News</a></li>
+            <li><a href="documentation.html" class="sidebar-link">Resources</a></li>
+            <li><a href="download.html" class="sidebar-link">Download App</a></li>
+            <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+            <li><a href="application.html" class="sidebar-link">Apply Now</a></li>
         </ul>
     </div>
 
@@ -87,44 +89,93 @@
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title">Latest News & Updates</h1>
-                <p class="page-subtitle">Stay updated with the latest happenings at Sheikh Tais Academy</p>
+                <p class="page-subtitle">Stay updated with the latest happenings at Henmat International School</p>
             </div>
         </section>
 
         <!-- News Content -->
         <section class="news-detailed section">
             <div class="container">
-                <!-- Recent News -->
+                <!-- Featured News -->
                 <div class="recent-news">
                     <h2 class="section-title">Recent Updates</h2>
                     <div class="news-grid">
                         <article class="featured-article">
-                        <div class="featured-image">
-                            <img src="./img/fire-breaking-news.jpg" alt="Fire incident at Sheikh Tais Academy" />
-                        </div>
-                        <div class="featured-content">
-                            <div class="article-meta">
-                                <span class="article-date"><i class="fas fa-calendar"></i> May 15, 2025</span>
-                                <span class="article-category">Breaking News</span>
+                            <div class="featured-image">
+                                <img src="./img/fire-breaking-news.jpg" alt="Fire incident at Henmat International School">
                             </div>
-                            <h3 class="article-title">Fire Incident at Sheikh Tais Academy</h3>
-                            <p class="article-excerpt">
-                                A devastating fire broke out near Sheikh Tais Academy earlier today, sending shockwaves through the school community and beyond. The academy's main hall was destroyed in the incident.
-                            </p>
-                            <a href="news-info-fire.html" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-date">
-                            <span class="month">Nov</span>
-                            <span class="day">28</span>
-                        </div>
-                        <div class="news-content">
-                            <h3 class="news-title">New Computer Lab Opening</h3>
-                            <p class="news-excerpt">We're excited to announce the opening of our state-of-the-art computer lab with the latest technology for our students.</p>
-                            <a href="#" class="news-link">Read More</a>
-                        </div>
-                    </article>
+                            <div class="featured-content">
+                                <div class="article-meta">
+                                    <span class="article-date"><i class="fas fa-calendar"></i> May 15, 2025</span>
+                                    <span class="article-category">Breaking News</span>
+                                </div>
+                                <h3 class="article-title">Fire Incident Near School Premises</h3>
+                                <p class="article-excerpt">
+                                    A fire broke out near the school premises earlier today. Thanks to our quick-response safety protocols and the fire service, the situation was contained. All students and staff are safe.
+                                </p>
+                                <a href="news-info-fire.html" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <div class="news-date">
+                                <span class="month">Dec</span>
+                                <span class="day">15</span>
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-title">Annual Sports Day 2025</h3>
+                                <p class="news-excerpt">Join us for our annual sports day celebration featuring various competitions, games, and activities for all students.</p>
+                                <a href="#" class="news-link">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <div class="news-date">
+                                <span class="month">Dec</span>
+                                <span class="day">10</span>
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-title">New Mobile App Update</h3>
+                                <p class="news-excerpt">We have released a major update to our mobile app with new features and improved performance for better user experience.</p>
+                                <a href="#" class="news-link">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <div class="news-date">
+                                <span class="month">Nov</span>
+                                <span class="day">28</span>
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-title">Science Exhibition Winners</h3>
+                                <p class="news-excerpt">Congratulations to all winners of our annual science exhibition. See the innovative projects that impressed our judges.</p>
+                                <a href="#" class="news-link">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <div class="news-date">
+                                <span class="month">Nov</span>
+                                <span class="day">20</span>
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-title">New Computer Lab Opening</h3>
+                                <p class="news-excerpt">We are excited to announce the opening of our state-of-the-art computer lab with the latest technology for our students.</p>
+                                <a href="#" class="news-link">Read More</a>
+                            </div>
+                        </article>
+                        
+                        <article class="news-card">
+                            <div class="news-date">
+                                <span class="month">Nov</span>
+                                <span class="day">15</span>
+                            </div>
+                            <div class="news-content">
+                                <h3 class="news-title">Parent-Teacher Meeting</h3>
+                                <p class="news-excerpt">Upcoming parent-teacher meeting scheduled for next week. Please check the school calendar for details.</p>
+                                <a href="#" class="news-link">Read More</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -138,22 +189,22 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>Sheikh Tais Academy</span>
+                        <span>Henmat International School</span>
                     </div>
                     <p class="footer-description">
-                        Motto: Seek Kmowledge from Birth yo death
+                        Excellence in Education - Nurturing young minds and building future leaders.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -163,8 +214,9 @@
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="features.html">Features</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Academics</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="news.html">News</a></li>
                     </ul>
                 </div>
@@ -173,9 +225,9 @@
                     <h3 class="footer-title">Resources</h3>
                     <ul class="footer-links">
                         <li><a href="documentation.html">Documentation</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="download.html">Download App</a></li>
+                        <li><a href="application.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -188,23 +240,23 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+232 (0) 123-4567</span>
+                            <span>+232 99 051737</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>info@shaikhtaisacademy.edu</span>
+                            <span>info@henmatschool.edu</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Sheikh Tais Academy. All rights reserved.</p>
+                <p>&copy; 2025 Henmat International School. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>
