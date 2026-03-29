@@ -262,6 +262,49 @@
             .class-tabs {
                 justify-content: center;
             }
+            
+            .timetable-container {
+                border-radius: 12px;
+            }
+            
+            .timetable-header {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+            
+            .timetable-title {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .class-tabs {
+                padding: 0.375rem;
+            }
+            
+            .class-tab {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.8125rem;
+            }
+            
+            .exam-date-card {
+                padding: 1rem;
+            }
+            
+            .exam-date-badge {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .exam-date-badge .day {
+                font-size: 1.25rem;
+            }
+            
+            .exam-date-badge .month {
+                font-size: 0.625rem;
+            }
         }
     </style>
 </head>

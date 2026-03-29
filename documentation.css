@@ -3,6 +3,12 @@
    Professional Document-Style UI
    ===================================================== */
 
+/* ===== GLOBAL OVERFLOW FIX ===== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* ===== DOCUMENTATION CSS VARIABLES ===== */
 :root {
   /* Document Colors */
@@ -47,6 +53,8 @@
   padding-top: 80px;
   min-height: 100vh;
   background: var(--doc-off-white);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* ===== DOCUMENTATION HERO HEADER ===== */
@@ -62,8 +70,8 @@
   content: "";
   position: absolute;
   top: -50%;
-  right: -20%;
-  width: 60%;
+  right: 0;
+  width: 50%;
   height: 200%;
   background: radial-gradient(circle, rgba(96, 165, 250, 0.15) 0%, transparent 70%);
   pointer-events: none;
@@ -179,6 +187,8 @@
   max-width: var(--doc-max-width);
   margin: 0 auto;
   padding: 3rem 2rem;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* ===== DOCUMENTATION LAYOUT WITH SIDEBAR ===== */
@@ -187,6 +197,8 @@
   grid-template-columns: var(--doc-sidebar-width) 1fr;
   gap: 3rem;
   align-items: start;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ===== DOCUMENTATION SIDEBAR / TABLE OF CONTENTS ===== */
@@ -263,6 +275,9 @@
   padding: 2.5rem;
   box-shadow: var(--doc-shadow);
   border: 1px solid var(--doc-border);
+  overflow-x: hidden;
+  max-width: 100%;
+  min-width: 0;
 }
 
 /* ===== DOCUMENTATION SECTIONS ===== */
@@ -1431,12 +1446,14 @@
 @media (max-width: 1024px) {
   .doc-layout {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .doc-sidebar {
     position: relative;
     top: 0;
     order: -1;
+    display: none;
   }
   
   .doc-toc {
@@ -1446,23 +1463,40 @@
   .doc-nav {
     display: block;
   }
+  
+  .doc-container {
+    padding: 2rem 1rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .doc-hero {
+    overflow: hidden;
+  }
+  
+  .doc-hero-content {
+    padding: 0 1rem;
+  }
+  
   .doc-hero-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   
   .doc-hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.9375rem;
   }
   
   .doc-container {
-    padding: 2rem 1.25rem;
+    padding: 1.5rem 1rem;
   }
   
   .doc-main-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+  
+  .doc-breadcrumb .container {
+    padding: 0 1rem;
   }
   
   .doc-section-title {
@@ -1511,24 +1545,56 @@
 
 @media (max-width: 480px) {
   .doc-hero {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
+  }
+  
+  .doc-hero-content {
+    padding: 0 0.75rem;
   }
   
   .doc-hero-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+  
+  .doc-container {
+    padding: 1rem 0.75rem;
+  }
+  
+  .doc-main-content {
+    padding: 1rem;
+    border-radius: 10px;
   }
   
   .doc-info-box {
     flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .doc-section-title {
+    font-size: 1.125rem;
+    flex-wrap: wrap;
   }
   
   .doc-table-container {
     font-size: 0.8125rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 8px;
   }
   
   .doc-table th,
   .doc-table td {
-    padding: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  .doc-breadcrumb .container {
+    padding: 0 0.75rem;
+  }
+  
+  .breadcrumb-nav {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
   }
 }
 
