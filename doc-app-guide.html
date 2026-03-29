@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Use the App - Sheikh Tais Academy</title>
-    <meta name="description" content="Complete guide on navigating and using all features of the Sheikh Tais Academy mobile application.">
+    <title>Mobile App User Guide - Henmat International School</title>
+    <meta name="description" content="Complete guide on how to download, install, and use the Henmat International School mobile application for students and parents.">
+    <meta name="theme-color" content="#1e3a8a">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="documentation.css">
 </head>
 <body>
     <!-- Header / Navbar -->
     <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
+                <a href="index.html" class="nav-logo">
                     <i class="fas fa-graduation-cap"></i>
-                    <span>Sheikh Tais Academy</span>
-                </div>
+                    <span>Henmat International School</span>
+                </a>
                 
                 <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item">
@@ -33,19 +35,19 @@
                         <a href="about.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="features.html" class="nav-link">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="news.html" class="nav-link">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="documentation.html" class="nav-link">Documentation</a>
+                        <a href="features.html" class="nav-link">Academics</a>
                     </li>
                     <li class="nav-item">
                         <a href="gallery.html" class="nav-link">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a href="download.html" class="nav-link">Download</a>
+                        <a href="news.html" class="nav-link">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="application.html" class="nav-link nav-cta">Apply Now</a>
                     </li>
                 </ul>
                 
@@ -63,7 +65,7 @@
         <div class="sidebar-header">
             <div class="sidebar-logo">
                 <i class="fas fa-graduation-cap"></i>
-                <span>Sheikh Tais Academy</span>
+                <span>Henmat International</span>
             </div>
             <button class="sidebar-close" id="sidebar-close">
                 <i class="fas fa-times"></i>
@@ -72,102 +74,492 @@
         <ul class="sidebar-menu">
             <li><a href="index.html" class="sidebar-link">Home</a></li>
             <li><a href="about.html" class="sidebar-link">About</a></li>
-            <li><a href="features.html" class="sidebar-link">Features</a></li>
-            <li><a href="news.html" class="sidebar-link">News</a></li>
-            <li><a href="documentation.html" class="sidebar-link">Documentation</a></li>
+            <li><a href="features.html" class="sidebar-link">Academics</a></li>
             <li><a href="gallery.html" class="sidebar-link">Gallery</a></li>
-            <li><a href="download.html" class="sidebar-link">Download</a></li>
-            <li><a href="developer.html" class="sidebar-link">Developer</a></li>
+            <li><a href="news.html" class="sidebar-link">News</a></li>
+            <li><a href="documentation.html" class="sidebar-link">Resources</a></li>
+            <li><a href="download.html" class="sidebar-link">Download App</a></li>
             <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+            <li><a href="application.html" class="sidebar-link">Apply Now</a></li>
         </ul>
     </div>
 
     <!-- Main Content -->
-       <section id="features" class="features section">
+    <main class="doc-page-main">
+        <!-- Breadcrumb -->
+        <div class="doc-breadcrumb">
             <div class="container">
-                <h2 class="section-title">Getting Started</h2>
-                <p class="section-subtitle">How to use the Sheikh Tais Academy</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <h1>1</h1>
-                        </div>
-                        <h3 class="feature-title">Download the App</h3>
-                        <p class="feature-description">Download the Sheikh Tais Academy app from our official website or through the provided APK file.</p>
-                        <hr>
-                        <p><strong>Make sure to download from official sources only</strong></p>
+                <nav class="breadcrumb-nav">
+                    <a href="index.html" class="breadcrumb-link">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <i class="fas fa-chevron-right breadcrumb-separator"></i>
+                    <a href="documentation.html" class="breadcrumb-link">Documentation</a>
+                    <i class="fas fa-chevron-right breadcrumb-separator"></i>
+                    <span class="breadcrumb-current">Mobile App User Guide</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Hero Header -->
+        <section class="doc-hero">
+            <div class="doc-hero-content">
+                <span class="doc-hero-badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    User Guide
+                </span>
+                <h1 class="doc-hero-title">Mobile App User Guide</h1>
+                <p class="doc-hero-subtitle">
+                    Complete guide on how to download, install, and navigate all features of the Henmat International School mobile application for students and parents.
+                </p>
+                <div class="doc-hero-meta">
+                    <span class="doc-hero-meta-item">
+                        <i class="fab fa-android"></i>
+                        Android App
+                    </span>
+                    <span class="doc-hero-meta-item">
+                        <i class="fas fa-clock"></i>
+                        10 min read
+                    </span>
+                    <span class="doc-hero-meta-item">
+                        <i class="fas fa-sync-alt"></i>
+                        Updated: March 2025
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Document Content -->
+        <section class="doc-container">
+            <div class="doc-layout">
+                <!-- Table of Contents Sidebar -->
+                <aside class="doc-sidebar">
+                    <div class="doc-toc">
+                        <h3 class="toc-title">
+                            <i class="fas fa-list"></i>
+                            Table of Contents
+                        </h3>
+                        <nav class="toc-nav">
+                            <a href="#getting-started" class="toc-link active">
+                                <i class="fas fa-rocket"></i>
+                                Getting Started
+                            </a>
+                            <a href="#installation" class="toc-link">
+                                <i class="fas fa-download"></i>
+                                Installation
+                            </a>
+                            <a href="#account-setup" class="toc-link">
+                                <i class="fas fa-user-plus"></i>
+                                Account Setup
+                            </a>
+                            <a href="#app-features" class="toc-link">
+                                <i class="fas fa-th-large"></i>
+                                App Features
+                            </a>
+                            <a href="#parent-portal" class="toc-link">
+                                <i class="fas fa-users"></i>
+                                Parent Portal
+                            </a>
+                            <a href="#troubleshooting" class="toc-link">
+                                <i class="fas fa-tools"></i>
+                                Troubleshooting
+                            </a>
+                        </nav>
                     </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <h1>2</h1>
+                </aside>
+
+                <!-- Main Document Content -->
+                <div class="doc-main-content">
+                    <!-- Introduction -->
+                    <div class="doc-info-box doc-info-box-info">
+                        <div class="doc-info-box-icon">
+                            <i class="fas fa-info-circle"></i>
                         </div>
-                        <h3 class="feature-title">Install & Launch</h3>
-                        <p class="feature-description">Install the app on your Android device and launch it. Make sure you have enabled installation from unknown sources if needed</p>
-                        <hr>
-                        <p><strong>Enable "Unknown Sources" in your device settings if prompted</strong></p>
+                        <div class="doc-info-box-content">
+                            <h4>About the App</h4>
+                            <p>The Henmat International School mobile app is designed to keep students and parents connected with the school. Access grades, timetables, announcements, and more from your Android device.</p>
+                        </div>
                     </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <h1>3</h1>
+
+                    <!-- Getting Started -->
+                    <section id="getting-started" class="doc-section">
+                        <h2 class="doc-section-title">
+                            <i class="fas fa-rocket"></i>
+                            Getting Started
+                        </h2>
+                        <p class="doc-section-description">
+                            Follow these simple steps to get started with the Henmat International School mobile application. The app is available for Android devices and can be downloaded from our official website.
+                        </p>
+
+                        <div class="doc-steps-grid">
+                            <div class="doc-step-card">
+                                <div class="doc-step-number">1</div>
+                                <h4 class="doc-step-title">Download the App</h4>
+                                <p class="doc-step-description">Download the Henmat International School app from our official downloads page.</p>
+                                <p class="doc-step-note">Only download from official sources</p>
+                            </div>
+                            
+                            <div class="doc-step-card">
+                                <div class="doc-step-number">2</div>
+                                <h4 class="doc-step-title">Install & Launch</h4>
+                                <p class="doc-step-description">Install the APK file on your Android device and launch the application.</p>
+                                <p class="doc-step-note">Enable "Unknown Sources" if prompted</p>
+                            </div>
+                            
+                            <div class="doc-step-card">
+                                <div class="doc-step-number">3</div>
+                                <h4 class="doc-step-title">Create Account</h4>
+                                <p class="doc-step-description">Sign up using your email, password, and name. Select your account type (Student, Staff, or Parent).</p>
+                                <p class="doc-step-note">Fill all required fields</p>
+                            </div>
+                            
+                            <div class="doc-step-card">
+                                <div class="doc-step-number">4</div>
+                                <h4 class="doc-step-title">Verify & Sign In</h4>
+                                <p class="doc-step-description">Click the verification link sent to your email, then return to the app and sign in.</p>
+                                <p class="doc-step-note">Check spam folder if needed</p>
+                            </div>
                         </div>
-                        <h3 class="feature-title">Create Account</h3>
-                        <p class="feature-description">Signup Using your email and a password including your name + Account type it includes student,staff,parent choose select your Account type fill all fields and signup.</p>
+
+                        <div class="doc-highlight-box">
+                            <h4>System Requirements</h4>
+                            <p>The app requires Android 6.0 (Marshmallow) or higher, 50MB of free storage space, and an active internet connection for full functionality.</p>
+                        </div>
+                    </section>
+
+                    <hr class="doc-divider">
+
+                    <!-- Installation -->
+                    <section id="installation" class="doc-section">
+                        <h2 class="doc-section-title">
+                            <i class="fas fa-download"></i>
+                            Installation Guide
+                        </h2>
+                        <p class="doc-section-description">
+                            Detailed instructions for downloading and installing the Henmat International School mobile application on your Android device.
+                        </p>
+
+                        <h3 class="doc-subsection-title">
+                            <i class="fas fa-cloud-download-alt"></i>
+                            Downloading the App
+                        </h3>
+                        <ol class="doc-numbered-list">
+                            <li>Visit the official Henmat International School website</li>
+                            <li>Navigate to the Downloads page</li>
+                            <li>Click the "Download APK" button</li>
+                            <li>Wait for the download to complete</li>
+                        </ol>
+
+                        <h3 class="doc-subsection-title">
+                            <i class="fas fa-cog"></i>
+                            Enabling Installation from Unknown Sources
+                        </h3>
+                        <div class="doc-info-box doc-info-box-warning">
+                            <div class="doc-info-box-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="doc-info-box-content">
+                                <h4>Important Security Note</h4>
+                                <p>Before installing, you may need to enable installation from unknown sources. This is safe when downloading from our official website only.</p>
+                            </div>
+                        </div>
+
+                        <ol class="doc-numbered-list">
+                            <li>Go to Settings on your Android device</li>
+                            <li>Tap on Security or Privacy settings</li>
+                            <li>Find "Install from Unknown Sources" or "Install Unknown Apps"</li>
+                            <li>Enable permission for your browser or file manager</li>
+                            <li>Locate the downloaded APK file and tap to install</li>
+                            <li>Follow the on-screen installation prompts</li>
+                        </ol>
+                    </section>
+
+                    <hr class="doc-divider">
+
+                    <!-- Account Setup -->
+                    <section id="account-setup" class="doc-section">
+                        <h2 class="doc-section-title">
+                            <i class="fas fa-user-plus"></i>
+                            Account Setup
+                        </h2>
+                        <p class="doc-section-description">
+                            Learn how to create and verify your account to access all features of the mobile application.
+                        </p>
+
+                        <h3 class="doc-subsection-title">
+                            <i class="fas fa-user-circle"></i>
+                            Creating Your Account
+                        </h3>
+                        <ul class="doc-list">
+                            <li><i class="fas fa-check"></i> Open the app and tap "Create Account" or "Sign Up"</li>
+                            <li><i class="fas fa-check"></i> Enter your full name as registered with the school</li>
+                            <li><i class="fas fa-check"></i> Provide a valid email address (preferably the one registered with school)</li>
+                            <li><i class="fas fa-check"></i> Create a strong password (minimum 8 characters)</li>
+                            <li><i class="fas fa-check"></i> Select your account type: Student, Parent, or Staff</li>
+                            <li><i class="fas fa-check"></i> Tap "Create Account" to submit your registration</li>
+                        </ul>
+
+                        <h3 class="doc-subsection-title">
+                            <i class="fas fa-envelope-open-text"></i>
+                            Email Verification
+                        </h3>
+                        <div class="doc-info-box doc-info-box-success">
+                            <div class="doc-info-box-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="doc-info-box-content">
+                                <h4>Verification Steps</h4>
+                                <ul>
+                                    <li>Check your email inbox for the verification message</li>
+                                    <li>Click the verification link in the email</li>
+                                    <li>Return to the app and sign in with your credentials</li>
+                                    <li>You&apos;re now ready to use all app features</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="doc-divider">
+
+                    <!-- App Features -->
+                    <section id="app-features" class="doc-section">
+                        <h2 class="doc-section-title">
+                            <i class="fas fa-th-large"></i>
+                            App Features
+                        </h2>
+                        <p class="doc-section-description">
+                            Explore the comprehensive features available in the Henmat International School mobile application.
+                        </p>
+
+                        <div class="doc-card-grid">
+                            <div class="doc-card">
+                                <div class="doc-card-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h3 class="doc-card-title">Dashboard</h3>
+                                <p class="doc-card-description">
+                                    Overview of your academic information, upcoming events, and quick access to all features.
+                                </p>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-card-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h3 class="doc-card-title">Timetable</h3>
+                                <p class="doc-card-description">
+                                    View your daily and weekly class schedule with subject details and room locations.
+                                </p>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-card-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="doc-card-title">Grades & Results</h3>
+                                <p class="doc-card-description">
+                                    Check your examination results, assignment grades, and overall academic performance.
+                                </p>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-card-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <h3 class="doc-card-title">Announcements</h3>
+                                <p class="doc-card-description">
+                                    Stay updated with important school news, events, and administrative notices.
+                                </p>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-card-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <h3 class="doc-card-title">Attendance</h3>
+                                <p class="doc-card-description">
+                                    Track your attendance records and view attendance statistics over time.
+                                </p>
+                            </div>
+
+                            <div class="doc-card">
+                                <div class="doc-card-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h3 class="doc-card-title">Documents</h3>
+                                <p class="doc-card-description">
+                                    Access important school documents, forms, and downloadable resources.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="doc-divider">
+
+                    <!-- Parent Portal -->
+                    <section id="parent-portal" class="doc-section">
+                        <h2 class="doc-section-title">
+                            <i class="fas fa-users"></i>
+                            Parent Portal
+                        </h2>
+                        <p class="doc-section-description">
+                            Parents have access to a dedicated portal for monitoring their child&apos;s academic progress and school activities.
+                        </p>
+
+                        <h3 class="doc-subsection-title">
+                            <i class="fas fa-key"></i>
+                            Parent Account Access
+                        </h3>
+                        <p class="doc-paragraph">
+                            Parents receive separate login credentials during the admission process. These credentials provide access to comprehensive information about their child&apos;s education.
+                        </p>
+
+                        <div class="doc-policy-grid">
+                            <div class="doc-policy-card">
+                                <div class="doc-policy-header">
+                                    <div class="doc-policy-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <h4 class="doc-policy-title">What Parents Can View</h4>
+                                </div>
+                                <ul class="doc-policy-list">
+                                    <li><i class="fas fa-circle"></i> Academic grades and report cards</li>
+                                    <li><i class="fas fa-circle"></i> Attendance records and history</li>
+                                    <li><i class="fas fa-circle"></i> Class timetable and schedule</li>
+                                    <li><i class="fas fa-circle"></i> School announcements and notices</li>
+                                    <li><i class="fas fa-circle"></i> Fee payment status and history</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="doc-policy-card">
+                                <div class="doc-policy-header">
+                                    <div class="doc-policy-icon">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </div>
+                                    <h4 class="doc-policy-title">Communication Features</h4>
+                                </div>
+                                <ul class="doc-policy-list">
+                                    <li><i class="fas fa-circle"></i> Direct messaging with teachers</li>
+                                    <li><i class="fas fa-circle"></i> Notification alerts for important updates</li>
+                                    <li><i class="fas fa-circle"></i> Absence reporting functionality</li>
+                                    <li><i class="fas fa-circle"></i> Event registration and RSVPs</li>
+                                    <li><i class="fas fa-circle"></i> Parent-teacher meeting scheduling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="doc-divider">
+
+                    <!-- Troubleshooting -->
+                    <section id="troubleshooting" class="doc-section">
+                        <h2 class="doc-section-title">
+                            <i class="fas fa-tools"></i>
+                            Troubleshooting
+                        </h2>
+                        <p class="doc-section-description">
+                            Solutions to common issues you may encounter while using the mobile application.
+                        </p>
+
+                        <div class="doc-faq-list">
+                            <div class="doc-faq-item">
+                                <div class="doc-faq-question" onclick="toggleFaq(this)">
+                                    <h4>App will not load or crashes frequently</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="doc-faq-answer">
+                                    <p>Try clearing the app cache in your device settings, restart your device, or reinstall the app. Ensure you have sufficient storage space (at least 100MB free) and a stable internet connection. If the problem persists, contact technical support.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="doc-faq-item">
+                                <div class="doc-faq-question" onclick="toggleFaq(this)">
+                                    <h4>Cannot log in with my credentials</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="doc-faq-answer">
+                                    <p>Double-check your email address and password for typos. Ensure Caps Lock is not enabled. If you have forgotten your password, use the "Forgot Password" option to reset it. If issues continue, contact the school office for credential verification.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="doc-faq-item">
+                                <div class="doc-faq-question" onclick="toggleFaq(this)">
+                                    <h4>Notifications are not working</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="doc-faq-answer">
+                                    <p>Check your device&apos;s notification settings and ensure the app has permission to send notifications. Also verify your notification preferences within the app settings. Make sure battery optimisation is not blocking app notifications.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="doc-faq-item">
+                                <div class="doc-faq-question" onclick="toggleFaq(this)">
+                                    <h4>App installation fails</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="doc-faq-answer">
+                                    <p>Ensure you have enabled "Install from Unknown Sources" for your browser or file manager. Check that you have sufficient storage space. Delete the APK file and re-download it from our official website. Restart your device and try again.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="doc-faq-item">
+                                <div class="doc-faq-question" onclick="toggleFaq(this)">
+                                    <h4>Data not syncing or showing old information</h4>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="doc-faq-answer">
+                                    <p>Pull down on the screen to manually refresh data. Check your internet connection is stable. Log out and log back in to force a full data sync. If the issue persists, clear the app cache and restart.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="doc-info-box doc-info-box-info">
+                            <div class="doc-info-box-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="doc-info-box-content">
+                                <h4>Still Need Help?</h4>
+                                <p>If you cannot resolve your issue using the troubleshooting guide above, please contact the school office or send an email to support@henmatschool.edu for technical assistance.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Download CTA -->
+                    <div class="doc-cta-section">
+                        <div class="doc-cta-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="doc-cta-title">Ready to Download?</h3>
+                        <p class="doc-cta-description">
+                            Get the Henmat International School app now and stay connected with your child&apos;s education.
+                        </p>
+                        <a href="download.html" class="doc-cta-button">
+                            <i class="fab fa-android"></i>
+                            Download App
+                        </a>
                     </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                          <h1>4</h1>
+
+                    <!-- Devlink Credit -->
+                    <div class="devlink-credit">
+                        <div class="devlink-content">
+                            <div class="devlink-logo">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="devlink-text">
+                                <h4>Website developed by Devlink</h4>
+                                <p>Professional website and app development solutions</p>
+                            </div>
                         </div>
-                        <h3 class="feature-title">Verify Profile</h3>
-                        <p class="feature-description">Complete your profile verification by clicking the button sent to your email to access all features. and now signin with the credentials you used to create your Account <hr><strong> note: once you clicked the button in the email sent to you exit the email app and return to the tais app and signin</strong></p>
+                        <a href="devlink.html" class="devlink-link">
+                            Learn More <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="troubleshooting" class="doc-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-tools"></i>
-                                Troubleshooting
-                            </h2>
-                            
-                            <h3 class="subsection-title">Common Issues</h3>
-                            <div class="faq-container">
-                                <div class="faq-item">
-                                    <div class="faq-question">
-                                        <h4>App won't load or crashes frequently</h4>
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                    <div class="faq-answer">
-                                        <p>Try clearing the app cache, restarting your device, or reinstalling the app. Ensure you have sufficient storage space and a stable internet connection.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="faq-item">
-                                    <div class="faq-question">
-                                        <h4>Can't log in with my credentials</h4>
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                    <div class="faq-answer">
-                                        <p>Double-check your student ID and password. If you've forgotten your password, use the "Forgot Password" option or contact the school office for assistance.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="faq-item">
-                                    <div class="faq-question">
-                                        <h4>Notifications not working</h4>
-                                        <i class="fas fa-chevron-down"></i>
-                                    </div>
-                                    <div class="faq-answer">
-                                        <p>Check your device's notification settings and ensure the app has permission to send notifications. Also verify your notification preferences within the app settings.</p>
-                                    </div>
-                                </div>
-                            </div>
+    </main>
 
-                            
-                        </section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -175,22 +567,22 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>Sheikh Tais Academy</span>
+                        <span>Henmat International School</span>
                     </div>
                     <p class="footer-description">
-                        Motto: Seek Knowledge From Birth To Death
+                        Excellence in Education - Nurturing young minds and building future leaders.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -200,8 +592,9 @@
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="features.html">Features</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Academics</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="news.html">News</a></li>
                     </ul>
                 </div>
@@ -210,9 +603,9 @@
                     <h3 class="footer-title">Resources</h3>
                     <ul class="footer-links">
                         <li><a href="documentation.html">Documentation</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="download.html">Download App</a></li>
+                        <li><a href="application.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -221,27 +614,81 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Education Street, City, Country</span>
+                            <span>Shell, Woodlowy Park, Freetown, Sierra Leone</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
+                            <span>+232 99 051737</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>info@shaikhtaisacademy.edu</span>
+                            <span>info@henmatschool.edu</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Sheikh Tais Academy. All rights reserved.</p>
+                <p>&copy; 2025 Henmat International School. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="Script.js"></script>
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.doc-faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Table of Contents Active State
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('.doc-section');
+
+        function setActiveLink() {
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+
+        // Smooth scroll for TOC links
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
