@@ -1672,6 +1672,23 @@ hr {
   font-size: 0.875rem;
 }
 
+.devlink-credit {
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.devlink-credit a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.devlink-credit a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 /* ===== PAGE LAYOUTS ===== */
 .page-main {
   padding-top: 80px;
