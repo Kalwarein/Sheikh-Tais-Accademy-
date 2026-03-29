@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/Index.html" },
+    { "source": "/index.html", "destination": "/Index.html" },
+    { "source": "/about.html", "destination": "/About.html" },
+    { "source": "/apply", "destination": "/application/apply.html" },
+    { "source": "/apply.html", "destination": "/application/apply.html" }
+  ],
+  "headers": [
+    {
+      "source": "**/*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
+}

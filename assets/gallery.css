@@ -41,18 +41,21 @@ body {
   overflow-x: hidden;
 }
 
-/* CSS Variables */
+/* CSS Variables - Henmat International School */
 :root {
-  --primary-color: #5c4033;
-  --accent-color: #ffc107;
-  --text-dark: #333;
-  --text-light: #666;
+  --primary-color: #1e3a8a;
+  --bright-blue: #2563eb;
+  --light-blue: #60a5fa;
+  --accent-color: #93c5fd;
+  --text-dark: #0f172a;
+  --text-light: #475569;
   --white: #ffffff;
-  --light-bg: #f8f9fa;
-  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --light-bg: #f8fafc;
+  --border-color: #e2e8f0;
+  --shadow: 0 10px 25px rgba(0,0,0,0.05);
+  --shadow-hover: 0 15px 35px rgba(0,0,0,0.1);
   --transition: all 0.3s ease;
-  --border-radius: 8px;
+  --border-radius: 12px;
 }
 
 /* Utility Classes */
@@ -158,7 +161,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--primary-color), #4a2c20);
+  background: linear-gradient(135deg, var(--primary-color), var(--bright-blue));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -545,7 +548,7 @@ body {
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--primary-color), #4a2c20);
+  background: linear-gradient(135deg, var(--primary-color), var(--bright-blue));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -555,7 +558,7 @@ body {
 }
 
 .feature-card:hover .feature-icon {
-  background: linear-gradient(135deg, var(--accent-color), #e6ac00);
+  background: linear-gradient(135deg, var(--bright-blue), var(--light-blue));
 }
 
 .feature-icon i {
@@ -737,7 +740,8 @@ body {
 }
 
 .btn-secondary:hover {
-  background: #e6ac00;
+  background: var(--bright-blue);
+  color: var(--white);
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
 }
@@ -778,7 +782,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(92, 64, 51, 0.8);
+  background: rgba(30, 58, 138, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -797,7 +801,7 @@ body {
 
 /* Download Section */
 .download {
-  background: linear-gradient(135deg, var(--primary-color), #4a2c20);
+  background: linear-gradient(135deg, var(--primary-color), var(--bright-blue));
   color: var(--white);
 }
 
@@ -1151,7 +1155,7 @@ body {
 }
 
 .page-header {
-  background: linear-gradient(135deg, var(--primary-color), #4a2c20);
+  background: linear-gradient(135deg, var(--primary-color), var(--bright-blue));
   color: var(--white);
   padding: 4rem 0;
   text-align: center;

@@ -1,0 +1,21 @@
+{
+  "name": "sheikh-tais-academy",
+  "version": "1.0.0",
+  "description": "Sheikh Tais Academy - Official school website",
+  "scripts": {
+    "dev": "serve -l 3000",
+    "start": "serve -l 3000",
+    "build": "echo 'No build required for static HTML site'"
+  },
+  "keywords": [
+    "education",
+    "school",
+    "academy",
+    "sierra-leone"
+  ],
+  "author": "Momoh Mustapha Sandi",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
