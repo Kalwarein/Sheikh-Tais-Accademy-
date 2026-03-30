@@ -987,4 +987,80 @@ window.addEventListener('resize', () => {
 })
 
 // Initialize all enhancements
-console.log('Sheikh Tais Academy enhanced animations loaded successfully!')
+console.log('OrangeTel website loaded successfully!')
+
+// Initialize sidebar dropdown functionality
+function initSidebarDropdowns() {
+  const dropdownToggles = document.querySelectorAll('.sidebar-dropdown-toggle')
+  
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault()
+      const parent = this.parentElement
+      
+      // Close other dropdowns
+      document.querySelectorAll('.sidebar-dropdown').forEach(dropdown => {
+        if (dropdown !== parent) {
+          dropdown.classList.remove('active')
+        }
+      })
+      
+      // Toggle current dropdown
+      parent.classList.toggle('active')
+    })
+  })
+}
+
+// Initialize modal functionality
+function initModals() {
+  const modalTriggers = document.querySelectorAll('[data-modal]')
+  const modalCloseButtons = document.querySelectorAll('.modal-close')
+  const modalOverlays = document.querySelectorAll('.modal-overlay')
+  
+  modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault()
+      const modalId = this.getAttribute('data-modal')
+      const modal = document.getElementById(modalId)
+      if (modal) {
+        modal.classList.add('active')
+        document.body.style.overflow = 'hidden'
+      }
+    })
+  })
+  
+  modalCloseButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const modal = this.closest('.modal-overlay')
+      if (modal) {
+        modal.classList.remove('active')
+        document.body.style.overflow = ''
+      }
+    })
+  })
+  
+  modalOverlays.forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('active')
+        document.body.style.overflow = ''
+      }
+    })
+  })
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+        modal.classList.remove('active')
+        document.body.style.overflow = ''
+      })
+    }
+  })
+}
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+  initSidebarDropdowns()
+  initModals()
+})

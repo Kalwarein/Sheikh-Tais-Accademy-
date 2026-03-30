@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - OrangeTel</title>
+    <meta name="description" content="Get help with OrangeTel services. Browse FAQs, contact support, and find answers to common questions.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-signal"></i>
+                    <span>OrangeTel</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
+                    <li class="nav-item"><a href="support.html" class="nav-link active">Support</a></li>
+                    <li class="nav-item"><a href="about-company.html" class="nav-link">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-signal"></i>
+                <span>OrangeTel</span>
+            </div>
+            <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="sidebar-link">Home</a></li>
+            <li><a href="products.html" class="sidebar-link">Products</a></li>
+            <li><a href="promotions.html" class="sidebar-link">Promotions</a></li>
+            <li><a href="support.html" class="sidebar-link active">Support</a></li>
+            <li><a href="about-company.html" class="sidebar-link">About</a></li>
+            <li><a href="app.html" class="sidebar-link">Get App</a></li>
+            <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main class="page-main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Help Center</h1>
+                <p class="page-subtitle">How can we help you today?</p>
+            </div>
+        </section>
+
+        <!-- Quick Help Links -->
+        <section class="quick-links-section">
+            <div class="container">
+                <div class="quick-links-grid">
+                    <a href="#faq" class="quick-link-card">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQs</span>
+                    </a>
+                    <a href="contact.html" class="quick-link-card">
+                        <i class="fas fa-headset"></i>
+                        <span>Contact Support</span>
+                    </a>
+                    <a href="sim-registration.html" class="quick-link-card">
+                        <i class="fas fa-sim-card"></i>
+                        <span>SIM Registration</span>
+                    </a>
+                    <a href="app.html" class="quick-link-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Download App</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Self-Service Options -->
+        <section class="section" style="background: var(--white);">
+            <div class="container">
+                <h2 class="section-title">Self-Service Options</h2>
+                <p class="section-subtitle">Quick actions you can do yourself</p>
+                
+                <div class="documentation-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fas fa-wallet"></i></div>
+                        <h3 class="doc-title">Check Balance</h3>
+                        <p class="doc-description">Dial <strong>*100#</strong> to check your current airtime and data balance instantly.</p>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fas fa-wifi"></i></div>
+                        <h3 class="doc-title">Buy Data</h3>
+                        <p class="doc-description">Dial <strong>*123#</strong> to access our data menu and purchase bundles.</p>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fas fa-credit-card"></i></div>
+                        <h3 class="doc-title">Recharge</h3>
+                        <p class="doc-description">Dial <strong>*101*PIN#</strong> to recharge using a scratch card voucher.</p>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <h3 class="doc-title">Transfer Airtime</h3>
+                        <p class="doc-description">Dial <strong>*102*NUMBER*AMOUNT#</strong> to share airtime with friends.</p>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fas fa-sim-card"></i></div>
+                        <h3 class="doc-title">Check SIM Info</h3>
+                        <p class="doc-description">Dial <strong>*111#</strong> to see your number and account information.</p>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fas fa-undo"></i></div>
+                        <h3 class="doc-title">PUK Recovery</h3>
+                        <p class="doc-description">Visit any OrangeTel store with your ID to recover your PUK code.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faq" class="section" style="background: var(--light-bg);">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions</p>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I check my data balance?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can check your data balance by dialing *100# or through the OrangeTel app. The app shows detailed usage breakdowns including remaining data, calls, and SMS.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I buy a data bundle?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Dial *123# and follow the menu prompts to select your preferred bundle. You can also buy data through the OrangeTel app, which offers app-exclusive deals and instant activation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What should I do if I forgot my PUK code?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Visit any OrangeTel store with a valid photo ID that matches the registered SIM owner. Our staff will verify your identity and provide your PUK code. You can also call customer service at *123#.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I register my SIM card?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>New SIM cards must be registered within 30 days of purchase. Visit our <a href="sim-registration.html">SIM Registration page</a> or visit any OrangeTel store with your national ID and a passport photo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I transfer data to another OrangeTel user?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! You can share data with other OrangeTel users through the app or by dialing *103*NUMBER*MB#. A small transfer fee may apply. Both users must be on OrangeTel network.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I activate international roaming?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Dial *126# to access roaming options or enable roaming through the app settings. We recommend purchasing a roaming package before traveling. Standard pay-as-you-go rates apply if no package is activated.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What are the customer service hours?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our phone support is available 24/7 by dialing *123# or calling our hotline. Store hours vary by location - use our store locator to find hours for your nearest store.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How do I stop unwanted promotional messages?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Dial *130# and select the option to manage your marketing preferences. You can also opt out through the OrangeTel app under Settings > Privacy > Marketing Communications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Options -->
+        <section class="section" style="background: var(--white);">
+            <div class="container">
+                <h2 class="section-title">Still Need Help?</h2>
+                <p class="section-subtitle">Our support team is ready to assist</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-phone"></i></div>
+                        <h3 class="feature-title">Call Us</h3>
+                        <p class="feature-description">Dial *123# from your OrangeTel number or call +1 (555) 123-4567 from any phone. Available 24/7.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-envelope"></i></div>
+                        <h3 class="feature-title">Email Support</h3>
+                        <p class="feature-description">Send us an email at support@orangetel.com. We respond within 24 hours.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-store"></i></div>
+                        <h3 class="feature-title">Visit a Store</h3>
+                        <p class="feature-description">Find your nearest OrangeTel store for in-person assistance and SIM services.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                        <h3 class="feature-title">Live Chat</h3>
+                        <p class="feature-description">Chat with us through the OrangeTel app for instant support. Available 8AM - 10PM.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="contact.html" class="cta-button">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo"><i class="fas fa-signal"></i><span>OrangeTel</span></div>
+                    <p class="footer-description">Connecting you to what matters most.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>*123#</span></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span>support@orangetel.com</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 OrangeTel Communications.</p></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
