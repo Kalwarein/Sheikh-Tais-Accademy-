@@ -1,4 +1,4 @@
-// Enhanced Sheikh Tais Academy JavaScript with Comprehensive Animations
+// Qcell Sierra Leone - Premium Telecom Website JavaScript
 
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -987,7 +987,7 @@ window.addEventListener('resize', () => {
 })
 
 // Initialize all enhancements
-console.log('OrangeTel website loaded successfully!')
+console.log('Qcell Sierra Leone website loaded successfully!')
 
 // Initialize sidebar dropdown functionality
 function initSidebarDropdowns() {
