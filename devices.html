@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devices & Routers - Qcell Sierra Leone</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="Index.html" class="nav-logo"><i class="fas fa-mobile-alt"></i> Qcell</a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
+          <li class="nav-item has-dropdown"><a href="#" class="nav-link">Personal <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="products.html"><i class="fas fa-database"></i>Data Plans</a></li>
+              <li><a href="products.html"><i class="fas fa-phone"></i>Call Plans</a></li>
+              <li><a href="products.html"><i class="fas fa-envelope"></i>SMS Bundles</a></li>
+              <li><a href="products.html"><i class="fas fa-globe"></i>Roaming</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="devices.html"><i class="fas fa-sim-card"></i>SIM Cards</a></li>
+              <li><a href="devices.html"><i class="fas fa-mobile"></i>Devices</a></li>
+              <li><a href="broadband.html"><i class="fas fa-wifi"></i>Broadband</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
+          <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+        </ul>
+        <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="sidebar-backdrop"></div>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo"><i class="fas fa-mobile-alt"></i> Qcell</div>
+      <button class="sidebar-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="Index.html" class="sidebar-link"><i class="fas fa-home"></i> Home</a></li>
+      <li class="sidebar-dropdown">
+        <div class="sidebar-dropdown-toggle"><span><i class="fas fa-box"></i> Products</span><i class="fas fa-chevron-down dropdown-arrow"></i></div>
+        <ul class="sidebar-dropdown-menu">
+          <li><a href="devices.html">Devices</a></li>
+          <li><a href="broadband.html">Broadband</a></li>
+        </ul>
+      </li>
+      <li><a href="promotions.html" class="sidebar-link"><i class="fas fa-gift"></i> Promotions</a></li>
+      <li><a href="contact.html" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="page-header" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 120px 0 60px; margin-top: 80px;">
+    <div class="container">
+      <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Mobile Devices</h1>
+      <p style="font-size: 1.1rem; opacity: 0.9;">Latest 4G & 5G Routers and Mobile Devices</p>
+    </div>
+  </section>
+
+  <section class="devices-preview-section">
+    <div class="container">
+      <h2 class="section-title">4G Routers</h2>
+      <div class="devices-grid">
+        <div class="device-card" onclick="openModal('router4g1')">
+          <div class="device-badge">Popular</div>
+          <div class="device-image"><i class="fas fa-wifi"></i></div>
+          <div class="device-content">
+            <span class="device-category">4G Router</span>
+            <h3>Qcell 4G Pro Max</h3>
+            <p>Fast & Reliable Home Internet</p>
+            <div class="device-specs">
+              <span><i class="fas fa-bolt"></i> 150Mbps</span>
+              <span><i class="fas fa-users"></i> 32 Devices</span>
+            </div>
+            <div class="device-price">Le 250,000</div>
+            <button class="device-btn">View Details</button>
+          </div>
+        </div>
+
+        <div class="device-card" onclick="openModal('router4g2')">
+          <div class="device-badge new">New</div>
+          <div class="device-image"><i class="fas fa-wifi"></i></div>
+          <div class="device-content">
+            <span class="device-category">4G Router</span>
+            <h3>Qcell 4G Speed</h3>
+            <p>Budget-Friendly Internet Solution</p>
+            <div class="device-specs">
+              <span><i class="fas fa-bolt"></i> 100Mbps</span>
+              <span><i class="fas fa-users"></i> 16 Devices</span>
+            </div>
+            <div class="device-price">Le 180,000</div>
+            <button class="device-btn">View Details</button>
+          </div>
+        </div>
+
+        <div class="device-card" onclick="openModal('router4g3')">
+          <div class="device-image"><i class="fas fa-wifi"></i></div>
+          <div class="device-content">
+            <span class="device-category">4G Router</span>
+            <h3>Qcell 4G Essential</h3>
+            <p>Basic Home Internet Connection</p>
+            <div class="device-specs">
+              <span><i class="fas fa-bolt"></i> 50Mbps</span>
+              <span><i class="fas fa-users"></i> 8 Devices</span>
+            </div>
+            <div class="device-price">Le 120,000</div>
+            <button class="device-btn">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="devices-preview-section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title">5G Routers</h2>
+      <div class="devices-grid">
+        <div class="device-card" onclick="openModal('router5g1')">
+          <div class="device-badge hot">Hot</div>
+          <div class="device-image"><i class="fas fa-broadcast-tower"></i></div>
+          <div class="device-content">
+            <span class="device-category">5G Router</span>
+            <h3>Qcell 5G Ultra</h3>
+            <p>Next-Gen Ultra-Fast Internet</p>
+            <div class="device-specs">
+              <span><i class="fas fa-bolt"></i> 1Gbps</span>
+              <span><i class="fas fa-users"></i> 64 Devices</span>
+            </div>
+            <div class="device-price">Le 450,000</div>
+            <button class="device-btn">View Details</button>
+          </div>
+        </div>
+
+        <div class="device-card" onclick="openModal('router5g2')">
+          <div class="device-image"><i class="fas fa-broadcast-tower"></i></div>
+          <div class="device-content">
+            <span class="device-category">5G Router</span>
+            <h3>Qcell 5G Pro</h3>
+            <p>High-Speed 5G Connectivity</p>
+            <div class="device-specs">
+              <span><i class="fas fa-bolt"></i> 600Mbps</span>
+              <span><i class="fas fa-users"></i> 48 Devices</span>
+            </div>
+            <div class="device-price">Le 350,000</div>
+            <button class="device-btn">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="devices-preview-section">
+    <div class="container">
+      <h2 class="section-title">MiFi Devices</h2>
+      <div class="devices-grid">
+        <div class="device-card" onclick="openModal('mifi1')">
+          <div class="device-image"><i class="fas fa-mobile-alt"></i></div>
+          <div class="device-content">
+            <span class="device-category">MiFi Device</span>
+            <h3>Qcell MiFi Pro</h3>
+            <p>Portable 4G WiFi Hotspot</p>
+            <div class="device-specs">
+              <span><i class="fas fa-bolt"></i> 150Mbps</span>
+              <span><i class="fas fa-battery-three-quarters"></i> 12hrs</span>
+            </div>
+            <div class="device-price">Le 95,000</div>
+            <button class="device-btn">View Details</button>
+          </div>
+        </div>
+
+        <div class="device-card" onclick="openModal('mifi2')">
+          <div class="device-badge new">New</div>
+          <div class="device-image"><i class="fas fa-mobile-alt"></i></div>
+          <div class="device-content">
+            <span class="device-category">MiFi Device</span>
+            <h3>Qcell MiFi Lite</h3>
+            <p>Compact Portable Hotspot</p>
+            <div class="device-specs">
+              <span><i class="fas fa-bolt"></i> 100Mbps</span>
+              <span><i class="fas fa-battery-half"></i> 8hrs</span>
+            </div>
+            <div class="device-price">Le 65,000</div>
+            <button class="device-btn">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="deviceModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <div class="modal-body">
+        <div class="modal-icon"><i class="fas fa-wifi"></i></div>
+        <h2 id="modalTitle">Device Name</h2>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <div class="modal-price" id="modalPrice">Le 0</div>
+        <p id="modalDescription" style="color: var(--text-light); margin-bottom: 1.5rem;"></p>
+        <button class="modal-btn" onclick="closeModal()">Order Now</button>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background: var(--text-dark); color: var(--white); padding: 4rem 0 1rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        <div><h3 style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 1.3rem;"><i class="fas fa-mobile-alt" style="margin-right: 0.75rem; color: var(--primary-color);"></i>Qcell</h3></div>
+        <div><h4 style="margin-bottom: 1rem;">Quick Links</h4><ul style="list-style: none;"><li style="margin-bottom: 0.5rem;"><a href="Index.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">Home</a></li></ul></div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; text-align: center;"><p style="opacity: 0.7;">&copy; 2024 Qcell. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="Script.js"></script>
+  <script>
+    function openModal(deviceId) {
+      const devices = {
+        router4g1: {title: 'Qcell 4G Pro Max', price: 'Le 250,000', specs: {speed: '150Mbps', devices: '32', battery: 'AC Powered', coverage: 'Indoor'}},
+        router4g2: {title: 'Qcell 4G Speed', price: 'Le 180,000', specs: {speed: '100Mbps', devices: '16', battery: 'AC Powered', coverage: 'Indoor'}},
+        router5g1: {title: 'Qcell 5G Ultra', price: 'Le 450,000', specs: {speed: '1Gbps', devices: '64', battery: 'AC Powered', coverage: 'Wide Area'}},
+        mifi1: {title: 'Qcell MiFi Pro', price: 'Le 95,000', specs: {speed: '150Mbps', devices: '10', battery: '12 Hours', coverage: 'Portable'}}
+      };
+      const device = devices[deviceId] || {};
+      document.getElementById('modalTitle').textContent = device.title;
+      document.getElementById('modalPrice').textContent = device.price;
+      document.getElementById('modalSpecs').innerHTML = Object.entries(device.specs || {}).map(([k,v]) => `<div class="spec-item"><span class="spec-label">${k}</span><span class="spec-value">${v}</span></div>`).join('');
+      document.getElementById('deviceModal').classList.add('active');
+    }
+    function closeModal() {
+      document.getElementById('deviceModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

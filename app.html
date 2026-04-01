@@ -1,280 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download App - OrangeTel</title>
-    <meta name="description" content="Download the OrangeTel app to manage your account, buy data, check balance, and access exclusive offers.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qcell Mobile App - Manage Your Account</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <i class="fas fa-signal"></i>
-                    <span>OrangeTel</span>
-                </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-                    <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
-                    <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
-                    <li class="nav-item"><a href="about-company.html" class="nav-link">About</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-logo">
-                <i class="fas fa-signal"></i>
-                <span>OrangeTel</span>
-            </div>
-            <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="index.html" class="sidebar-link">Home</a></li>
-            <li><a href="products.html" class="sidebar-link">Products</a></li>
-            <li><a href="promotions.html" class="sidebar-link">Promotions</a></li>
-            <li><a href="support.html" class="sidebar-link">Support</a></li>
-            <li><a href="about-company.html" class="sidebar-link">About</a></li>
-            <li><a href="app.html" class="sidebar-link active">Get App</a></li>
-            <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="Index.html" class="nav-logo"><i class="fas fa-mobile-alt"></i> Qcell</a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="app.html" class="nav-link">App</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
         </ul>
+        <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="sidebar-backdrop"></div>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo"><i class="fas fa-mobile-alt"></i> Qcell</div>
+      <button class="sidebar-close"><i class="fas fa-times"></i></button>
     </div>
+    <ul class="sidebar-menu">
+      <li><a href="Index.html" class="sidebar-link"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="app.html" class="sidebar-link highlight"><i class="fas fa-mobile-alt"></i> App</a></li>
+      <li><a href="contact.html" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </div>
 
-    <main class="page-main">
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-title">OrangeTel App</h1>
-                <p class="page-subtitle">Your mobile account at your fingertips</p>
-            </div>
-        </section>
+  <section class="page-header" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 120px 0 60px; margin-top: 80px;">
+    <div class="container">
+      <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Qcell Mobile App</h1>
+      <p style="font-size: 1.1rem; opacity: 0.9;">Your account in your pocket</p>
+    </div>
+  </section>
 
-        <!-- App Download Section -->
-        <section class="app-section">
-            <div class="container">
-                <div class="app-content">
-                    <div class="app-text">
-                        <h2>Download the OrangeTel App</h2>
-                        <p>Manage your account anytime, anywhere. Buy data bundles, check your balance, pay bills, transfer airtime, and access exclusive app-only deals.</p>
-                        <ul class="app-features-list">
-                            <li><i class="fas fa-check"></i> Buy data and airtime instantly</li>
-                            <li><i class="fas fa-check"></i> Check balance and usage history</li>
-                            <li><i class="fas fa-check"></i> Transfer airtime to friends</li>
-                            <li><i class="fas fa-check"></i> Pay bills and subscribe to bundles</li>
-                            <li><i class="fas fa-check"></i> Access exclusive app-only offers</li>
-                            <li><i class="fas fa-check"></i> 24/7 live chat support</li>
-                        </ul>
-                        <div class="app-buttons">
-                            <a href="downloads/app-release.apk" class="app-btn" download>
-                                <i class="fab fa-android"></i>
-                                <div class="app-btn-text">
-                                    <small>Download APK</small>
-                                    <span>Android</span>
-                                </div>
-                            </a>
-                            <a href="#" class="app-btn" style="opacity: 0.6; cursor: not-allowed;">
-                                <i class="fab fa-apple"></i>
-                                <div class="app-btn-text">
-                                    <small>Coming Soon</small>
-                                    <span>App Store</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="app-image">
-                        <img src="/img/file_000000007f1461f8827b752d8c94b5a9.png" alt="OrangeTel Mobile App" />
-                    </div>
-                </div>
+  <section class="app-promo-section">
+    <div class="container app-promo-content">
+      <div class="app-promo-text">
+        <h2>Download the Qcell App</h2>
+        <p>Manage your account anytime, anywhere. Buy data bundles, check your balance, pay bills, transfer airtime, and access exclusive app-only deals.</p>
+        <ul class="app-features-list">
+          <li><i class="fas fa-check"></i> Buy data and airtime instantly</li>
+          <li><i class="fas fa-check"></i> Check balance and usage</li>
+          <li><i class="fas fa-check"></i> Transfer airtime to friends</li>
+          <li><i class="fas fa-check"></i> Pay bills securely</li>
+          <li><i class="fas fa-check"></i> Exclusive app-only offers</li>
+          <li><i class="fas fa-check"></i> 24/7 live chat support</li>
+        </ul>
+        <div class="app-buttons">
+          <a href="#" class="app-btn">
+            <i class="fab fa-android"></i>
+            <div class="app-btn-text">
+              <small>Download for</small>
+              <span>Android</span>
             </div>
-        </section>
-
-        <!-- App Features -->
-        <section class="section" style="background: var(--white);">
-            <div class="container">
-                <h2 class="section-title">App Features</h2>
-                <p class="section-subtitle">Everything you need in one app</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-wifi"></i></div>
-                        <h3 class="feature-title">Buy Data</h3>
-                        <p class="feature-description">Browse all data plans and purchase with one tap. Get instant activation.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-wallet"></i></div>
-                        <h3 class="feature-title">Check Balance</h3>
-                        <p class="feature-description">View your airtime, data, SMS, and call balances in real-time.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
-                        <h3 class="feature-title">Transfer Airtime</h3>
-                        <p class="feature-description">Send airtime to friends and family instantly from the app.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="feature-title">Usage History</h3>
-                        <p class="feature-description">Track your data, call, and SMS usage with detailed analytics.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-gift"></i></div>
-                        <h3 class="feature-title">Exclusive Offers</h3>
-                        <p class="feature-description">Access special deals and promotions only available in the app.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-comments"></i></div>
-                        <h3 class="feature-title">Live Chat</h3>
-                        <p class="feature-description">Get instant support through our in-app chat feature.</p>
-                    </div>
-                </div>
+          </a>
+          <a href="#" class="app-btn outline">
+            <i class="fab fa-apple"></i>
+            <div class="app-btn-text">
+              <small>Coming Soon</small>
+              <span>iOS</span>
             </div>
-        </section>
-
-        <!-- App Screenshots -->
-        <section class="section" style="background: var(--light-bg);">
-            <div class="container">
-                <h2 class="section-title">App Screenshots</h2>
-                <p class="section-subtitle">See what the app looks like</p>
-                
-                <div class="screenshots-grid">
-                    <div class="screenshot-item">
-                        <img src="/img/Screenshot_20250906-215925~2.png" alt="App Home Screen" />
-                        <h4>Home Screen</h4>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="/img/Screenshot_20250906-215945~2.png" alt="Data Plans" />
-                        <h4>Data Plans</h4>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="/img/Screenshot_20250906-215950~2.png" alt="Account Balance" />
-                        <h4>Account</h4>
-                    </div>
-                    <div class="screenshot-item">
-                        <img src="/img/Screenshot_20250906-215953~2.png" alt="Promotions" />
-                        <h4>Promotions</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Installation Guide -->
-        <section class="installation-guide">
-            <div class="container">
-                <h2 class="section-title">Installation Guide</h2>
-                <p class="section-subtitle">How to install the OrangeTel app</p>
-                
-                <div class="guide-steps">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Download</h3>
-                            <p>Click the download button above to get the APK file on your Android device.</p>
-                        </div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Enable Installation</h3>
-                            <p>Go to Settings > Security > Enable "Install from Unknown Sources".</p>
-                        </div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Install</h3>
-                            <p>Open the downloaded APK file and tap "Install" to complete setup.</p>
-                        </div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3>Register</h3>
-                            <p>Open the app and sign in with your OrangeTel number to get started.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- App Info -->
-        <section class="section" style="background: var(--white);">
-            <div class="container">
-                <h2 class="section-title">App Information</h2>
-                
-                <div class="requirements-grid">
-                    <div class="requirement-card">
-                        <i class="fab fa-android"></i>
-                        <h4>Android Requirements</h4>
-                        <ul>
-                            <li>Android 6.0 or higher</li>
-                            <li>50MB free storage</li>
-                            <li>Internet connection</li>
-                        </ul>
-                    </div>
-                    <div class="requirement-card">
-                        <i class="fas fa-info-circle"></i>
-                        <h4>App Details</h4>
-                        <ul>
-                            <li>Version: 2.5.1</li>
-                            <li>Size: 25MB</li>
-                            <li>Last Updated: March 2025</li>
-                        </ul>
-                    </div>
-                    <div class="requirement-card">
-                        <i class="fas fa-star"></i>
-                        <h4>Rating</h4>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>4.5/5</span>
-                        </div>
-                        <p style="margin-top: 1rem; color: var(--text-light);">Based on 50,000+ reviews</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo"><i class="fas fa-signal"></i><span>OrangeTel</span></div>
-                    <p class="footer-description">Connecting you to what matters most.</p>
-                </div>
-                <div class="footer-section">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 class="footer-title">Contact</h3>
-                    <div class="contact-info">
-                        <div class="contact-item"><i class="fas fa-phone"></i><span>*123#</span></div>
-                        <div class="contact-item"><i class="fas fa-envelope"></i><span>support@orangetel.com</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom"><p>&copy; 2025 OrangeTel Communications.</p></div>
+          </a>
         </div>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+      <div class="app-promo-image">
+        <div style="width: 100%; height: 400px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+          <i class="fas fa-mobile-alt" style="font-size: 5rem; color: rgba(255, 255, 255, 0.3);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <h2 class="section-title">App Features</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div style="text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 15px;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <i class="fas fa-wifi" style="font-size: 1.75rem; color: var(--white);"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Buy Data</h3>
+          <p style="color: var(--text-light);">Browse all data plans and purchase with one tap.</p>
+        </div>
+        <div style="text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 15px;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <i class="fas fa-wallet" style="font-size: 1.75rem; color: var(--white);"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Check Balance</h3>
+          <p style="color: var(--text-light);">View your airtime and data balances in real-time.</p>
+        </div>
+        <div style="text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 15px;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <i class="fas fa-exchange-alt" style="font-size: 1.75rem; color: var(--white);"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Transfer Airtime</h3>
+          <p style="color: var(--text-light);">Send airtime to friends instantly.</p>
+        </div>
+        <div style="text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 15px;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <i class="fas fa-gift" style="font-size: 1.75rem; color: var(--white);"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Exclusive Offers</h3>
+          <p style="color: var(--text-light);">Access special deals only in the app.</p>
+        </div>
+        <div style="text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 15px;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <i class="fas fa-chart-line" style="font-size: 1.75rem; color: var(--white);"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Usage Analytics</h3>
+          <p style="color: var(--text-light);">Track your data and call usage.</p>
+        </div>
+        <div style="text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 15px;">
+          <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+            <i class="fas fa-comments" style="font-size: 1.75rem; color: var(--white);"></i>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem;">Live Chat</h3>
+          <p style="color: var(--text-light);">Get instant support 24/7.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title">Installation Guide</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
+          <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">1</div>
+          <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.75rem;">Download</h3>
+          <p style="color: var(--text-light);">Tap the download button to get the APK file on your Android device.</p>
+        </div>
+        <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
+          <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">2</div>
+          <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.75rem;">Enable Installation</h3>
+          <p style="color: var(--text-light);">Go to Settings > Security > Enable "Install from Unknown Sources".</p>
+        </div>
+        <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
+          <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">3</div>
+          <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.75rem;">Install</h3>
+          <p style="color: var(--text-light);">Open the downloaded APK file and tap "Install" to complete.</p>
+        </div>
+        <div style="background: var(--white); padding: 2rem; border-radius: 15px; box-shadow: var(--shadow);">
+          <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">4</div>
+          <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.75rem;">Login</h3>
+          <p style="color: var(--text-light);">Sign in with your Qcell number to get started.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--white); text-align: center;">
+    <div class="container">
+      <h2 class="section-title">App Requirements</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div>
+          <i class="fab fa-android" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; display: block;"></i>
+          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Android</h3>
+          <p style="color: var(--text-light); line-height: 1.7;">Android 6.0 or higher<br>50MB free storage<br>Version 3.0.1</p>
+        </div>
+        <div>
+          <i class="fas fa-info-circle" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; display: block;"></i>
+          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">App Info</h3>
+          <p style="color: var(--text-light); line-height: 1.7;">Size: 30MB<br>Last Updated: 2024<br>Free Download</p>
+        </div>
+        <div>
+          <i class="fas fa-star" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; display: block;"></i>
+          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Rating</h3>
+          <p style="color: var(--text-light); line-height: 1.7;">4.7/5 Stars<br>100,000+ Reviews<br>Highly Rated</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: var(--text-dark); color: var(--white); padding: 4rem 0 1rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        <div><h3 style="display: flex; align-items: center; margin-bottom: 1rem; font-size: 1.3rem;"><i class="fas fa-mobile-alt" style="margin-right: 0.75rem; color: var(--primary-color);"></i>Qcell</h3></div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; text-align: center;"><p style="opacity: 0.7;">&copy; 2024 Qcell. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="Script.js"></script>
 </body>
 </html>

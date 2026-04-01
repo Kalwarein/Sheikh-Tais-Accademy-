@@ -5229,6 +5229,391 @@ body {
   }
 }
 
+/* FAQ & Support Styles */
+.faq-section {
+  padding: 4rem 0;
+  background: var(--light-bg);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-accordion {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.faq-item.active {
+  box-shadow: var(--shadow-hover);
+}
+
+.faq-header {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.faq-item:hover .faq-header {
+  background: var(--light-bg);
+}
+
+.faq-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.faq-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-bg);
+  border-radius: 50%;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-content {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Support Channels */
+.support-channels-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.channel-card {
+  background: var(--light-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.channel-card:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-10px);
+}
+
+.channel-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.channel-icon i {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.channel-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.channel-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.channel-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.channel-btn:hover {
+  background: var(--text-dark);
+}
+
+.channel-btn.secondary {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.channel-btn.secondary:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Service Centers */
+.service-centers-section {
+  padding: 4rem 0;
+  background: var(--light-bg);
+}
+
+.service-centers-map {
+  height: 400px;
+  background: linear-gradient(135deg, var(--white), var(--light-bg));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow);
+}
+
+.service-centers-map i {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.service-centers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.center-card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.center-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.center-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.center-info {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.center-info i {
+  color: var(--primary-color);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.center-hours {
+  background: var(--light-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Contact Form */
+.contact-form-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.contact-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.form-submit:hover {
+  background: var(--text-dark);
+  transform: scale(1.02);
+}
+
+/* Help Center Section */
+.help-center-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.help-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.help-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.help-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.75rem;
+}
+
+.help-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.help-card p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.help-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid var(--white);
+  transition: var(--transition);
+}
+
+.help-link:hover {
+  opacity: 0.8;
+}
+
+/* Responsive support */
+@media (max-width: 768px) {
+  .faq-header {
+    padding: 1rem;
+  }
+  
+  .faq-title {
+    font-size: 1rem;
+  }
+  
+  .service-centers-map {
+    height: 250px;
+  }
+  
+  .center-info {
+    font-size: 0.85rem;
+  }
+}
+
 /* ====================================
    QCELL ENHANCED TELECOM STYLES
    ==================================== */
