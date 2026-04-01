@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#1e40af">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -387,16 +387,63 @@
             </div>
         </section>
 
+        <!-- Why Choose Us Section -->
+        <section id="why-choose-us" class="section" style="background: var(--light-bg);">
+            <div class="container">
+                <h2 class="section-title">Why Choose Elevation Lodge</h2>
+                <p class="section-subtitle">Discover what makes us the preferred choice for discerning travelers</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3 class="feature-title">Prime Location</h3>
+                        <p class="feature-description">Nestled at 8,500 feet elevation with panoramic views of pristine mountain peaks and valleys.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="feature-title">Award-Winning Service</h3>
+                        <p class="feature-description">Recognized by TripAdvisor and Forbes for exceptional hospitality and guest satisfaction.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="feature-title">Eco-Friendly</h3>
+                        <p class="feature-description">Committed to sustainability with solar power, local sourcing, and conservation programs.</p>
+                    </div>
+                </div>
+                
+                <div class="news-cta" style="margin-top: 3rem;">
+                    <a href="About.html" class="btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
-        <section class="section" style="padding: 0;">
+        <section class="section" style="padding: 60px 0;">
             <div class="container">
                 <div class="call-to-action">
                     <h3>Ready to Experience Elevation Lodge?</h3>
-                    <p>Book your stay today and discover the perfect mountain retreat</p>
-                    <a href="book.html" class="cta-button">
-                        <i class="fas fa-calendar-alt"></i>
-                        Reserve Your Room
-                    </a>
+                    <p>Book your stay today and discover the perfect mountain retreat. Best rates guaranteed when you book direct.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                        <a href="book.html" class="cta-button">
+                            <i class="fas fa-calendar-alt"></i>
+                            Reserve Your Room
+                        </a>
+                        <a href="rooms.html" class="btn-secondary" style="background: rgba(255,255,255,0.1); border-color: white; color: white;">
+                            <i class="fas fa-bed"></i>
+                            View All Rooms
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -448,6 +495,59 @@
 
                 <div class="news-cta" style="margin-top: 2rem;">
                     <a href="gallery.html" class="btn-secondary">View Full Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers Section -->
+        <section id="special-offers" class="section" style="background: var(--white);">
+            <div class="container">
+                <h2 class="section-title">Special Offers</h2>
+                <p class="section-subtitle">Take advantage of our exclusive packages and seasonal deals</p>
+                
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-card" style="text-align: left; padding: 2rem;">
+                        <span style="display: inline-block; background: var(--accent-gold); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;">SAVE 15%</span>
+                        <h3 class="feature-title" style="text-align: left;">Early Bird Special</h3>
+                        <p class="feature-description" style="text-align: left;">Book 30+ days in advance and enjoy 15% off your entire stay. Plus, complimentary airport transfer.</p>
+                        <a href="book.html" class="btn-secondary" style="margin-top: 1.5rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">Book Now</a>
+                    </div>
+                    
+                    <div class="feature-card" style="text-align: left; padding: 2rem; border: 2px solid var(--primary-color);">
+                        <span style="display: inline-block; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;">BEST VALUE</span>
+                        <h3 class="feature-title" style="text-align: left;">Extended Stay Package</h3>
+                        <p class="feature-description" style="text-align: left;">Stay 7+ nights and get 20% off plus complimentary spa treatment and gourmet dinner for two.</p>
+                        <a href="book.html" class="cta-button" style="margin-top: 1.5rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">Book Now</a>
+                    </div>
+                    
+                    <div class="feature-card" style="text-align: left; padding: 2rem;">
+                        <span style="display: inline-block; background: #e91e63; color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;">ROMANTIC</span>
+                        <h3 class="feature-title" style="text-align: left;">Honeymoon Retreat</h3>
+                        <p class="feature-description" style="text-align: left;">Celebrate love with champagne on arrival, couples spa, candlelit dinner, and mountain suite upgrade.</p>
+                        <a href="book.html" class="btn-secondary" style="margin-top: 1.5rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section" style="padding: 80px 0; background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-size: 2.5rem; color: white; margin-bottom: 1rem;">Start Your Mountain Adventure Today</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">Join thousands of happy guests who have experienced the magic of Elevation Lodge. Your perfect getaway awaits.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="book.html" class="cta-button" style="background: white; color: var(--primary-color);">
+                        <i class="fas fa-calendar-check"></i>
+                        Book Your Stay
+                    </a>
+                    <a href="contact.html" class="btn-secondary" style="border-color: white; color: white;">
+                        <i class="fas fa-phone"></i>
+                        Contact Us
+                    </a>
+                    <a href="https://wa.me/15551234567" target="_blank" class="cta-button" style="background: #25d366;">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
                 </div>
             </div>
         </section>

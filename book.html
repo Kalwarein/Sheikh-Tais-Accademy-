@@ -4,51 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Stay - Elevation Lodge</title>
+    <meta name="description" content="Book your luxury mountain retreat at Elevation Lodge. Easy booking via WhatsApp with best price guarantee.">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/mountain.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="Index.html">🏔️ Elevation Lodge</a>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="Index.html" class="nav-logo">
+                    <i class="fas fa-mountain"></i>
+                    <span>Elevation Lodge</span>
+                </a>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="book.html" class="cta-button active" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">Book Now</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="book.html" class="nav-link active">Book</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Booking Section -->
+    <!-- Mobile Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-mountain"></i>
+                <span>Elevation Lodge</span>
+            </div>
+            <button class="sidebar-close" id="sidebar-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="Index.html" class="sidebar-link">Home</a></li>
+            <li><a href="About.html" class="sidebar-link">About</a></li>
+            <li><a href="rooms.html" class="sidebar-link">Rooms</a></li>
+            <li><a href="pricing.html" class="sidebar-link">Pricing</a></li>
+            <li><a href="gallery.html" class="sidebar-link">Gallery</a></li>
+            <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+            <li><a href="book.html" class="sidebar-link active">Book Now</a></li>
+        </ul>
+    </div>
+
+    <!-- Booking Hero -->
     <section class="booking-hero">
         <h1>Reserve Your Perfect Stay</h1>
-        <p>Experience luxury at Elevation Lodge</p>
+        <p>Experience luxury at Elevation Lodge - Book now via WhatsApp</p>
     </section>
 
+    <!-- Main Booking Content -->
     <main class="booking-container">
         <div class="booking-wrapper">
+            <!-- Booking Form -->
             <div class="booking-form-section">
-                <h2>Quick Booking</h2>
+                <h2><i class="fas fa-calendar-check" style="margin-right: 0.75rem; color: var(--primary-color);"></i>Quick Booking</h2>
                 <form id="quickBookingForm" class="booking-form">
                     <div class="form-group">
                         <label for="roomType">Select Room Type *</label>
                         <select id="roomType" required>
                             <option value="">-- Choose a Room --</option>
-                            <option value="Forest View Deluxe">Forest View Deluxe ($120/night)</option>
-                            <option value="Mountain Suite">Mountain Suite ($220/night)</option>
-                            <option value="Cozy Standard">Cozy Standard ($80/night)</option>
-                            <option value="Executive Room">Executive Room ($150/night)</option>
+                            <option value="Forest View Deluxe">Forest View Deluxe - $120/night</option>
+                            <option value="Mountain Suite">Mountain Suite - $220/night</option>
+                            <option value="Cozy Standard">Cozy Standard - $80/night</option>
+                            <option value="Executive Room">Executive Room - $150/night</option>
                         </select>
                     </div>
 
@@ -66,54 +107,72 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="guests">Number of Guests *</label>
-                            <input type="number" id="guests" min="1" max="6" value="1" required>
+                            <select id="guests" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="rooms">Number of Rooms *</label>
-                            <input type="number" id="rooms" min="1" max="10" value="1" required>
+                            <select id="rooms" required>
+                                <option value="1" selected>1 Room</option>
+                                <option value="2">2 Rooms</option>
+                                <option value="3">3 Rooms</option>
+                                <option value="4">4 Rooms</option>
+                                <option value="5">5 Rooms</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="name">Full Name *</label>
-                        <input type="text" id="name" placeholder="John Doe" required>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 123-4567" required>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" placeholder="john@example.com" required>
+                        <label for="specialRequests">Special Requests (Optional)</label>
+                        <textarea id="specialRequests" placeholder="Any special arrangements, dietary requirements, or requests..."></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" placeholder="+1 (555) 123-4567" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="specialRequests">Special Requests</label>
-                        <textarea id="specialRequests" placeholder="Any special arrangements or requests..." rows="4"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Book via WhatsApp</button>
-                    <p class="form-note">We'll send your booking details via WhatsApp for confirmation.</p>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        Book via WhatsApp
+                    </button>
+                    <p class="form-note">Your booking details will be sent via WhatsApp for instant confirmation.</p>
                 </form>
             </div>
 
+            <!-- Sidebar Info -->
             <div class="booking-info-section">
                 <div class="booking-card">
-                    <h3>Why Book with Us?</h3>
+                    <h3><i class="fas fa-shield-alt" style="margin-right: 0.5rem; color: var(--primary-color);"></i>Why Book With Us?</h3>
                     <ul class="benefits-list">
-                        <li>✓ Best Price Guarantee</li>
-                        <li>✓ Free Cancellation</li>
-                        <li>✓ 24/7 Customer Support</li>
-                        <li>✓ Luxury Amenities Included</li>
-                        <li>✓ Scenic Mountain Views</li>
-                        <li>✓ World-Class Service</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Best Price Guarantee</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Free Cancellation (48h)</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 24/7 Customer Support</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Luxury Amenities Included</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Scenic Mountain Views</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Complimentary Breakfast</li>
                     </ul>
                 </div>
 
                 <div class="booking-card">
-                    <h3>Special Offers</h3>
+                    <h3><i class="fas fa-tags" style="margin-right: 0.5rem; color: var(--primary-color);"></i>Special Offers</h3>
                     <div class="offer">
                         <h4>Early Bird Discount</h4>
                         <p>Book 30+ days in advance and save 15%</p>
@@ -123,17 +182,17 @@
                         <p>Stay 7+ nights and get 20% off</p>
                     </div>
                     <div class="offer">
-                        <h4>Group Booking</h4>
-                        <p>Contact us for group rates</p>
+                        <h4>Honeymoon Package</h4>
+                        <p>Special romantic getaway deals available</p>
                     </div>
                 </div>
 
                 <div class="booking-card contact-card">
-                    <h3>Need Help?</h3>
-                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/923001234567" target="_blank">+92 300 1234567</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:bookings@elevationlodge.com">bookings@elevationlodge.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+923001234567">+92 300 1234567</a></p>
-                    <p><strong>Hours:</strong> 24/7 Support Available</p>
+                    <h3><i class="fas fa-headset" style="margin-right: 0.5rem; color: var(--primary-color);"></i>Need Assistance?</h3>
+                    <p><i class="fab fa-whatsapp" style="color: #25d366; margin-right: 0.5rem;"></i><strong>WhatsApp:</strong> <a href="https://wa.me/15551234567" target="_blank">+1 (555) 123-4567</a></p>
+                    <p><i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 0.5rem;"></i><strong>Email:</strong> <a href="mailto:bookings@elevationlodge.com">bookings@elevationlodge.com</a></p>
+                    <p><i class="fas fa-phone" style="color: var(--primary-color); margin-right: 0.5rem;"></i><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    <p><i class="fas fa-clock" style="color: var(--primary-color); margin-right: 0.5rem;"></i><strong>Hours:</strong> 24/7 Support Available</p>
                 </div>
             </div>
         </div>
@@ -141,37 +200,66 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Elevation Lodge</h4>
-                <p>Experience luxury mountain hospitality at its finest.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="rooms.html">Rooms</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>📍 Mountain Valley Road, Highland Region</p>
-                <p>📞 +92 300 1234567</p>
-                <p>✉️ info@elevationlodge.com</p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-mountain"></i>
+                        <span>Elevation Lodge</span>
+                    </div>
+                    <p class="footer-description">
+                        Your premier mountain retreat offering luxury accommodations, world-class amenities, and unforgettable experiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Guest Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="book.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Mountain Peak Road<br>Alpine Valley, CO 80401</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@elevationlodge.com</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Elevation Lodge. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elevation Lodge. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
