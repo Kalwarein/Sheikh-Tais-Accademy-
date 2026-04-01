@@ -3,6 +3,7 @@
 // ============================================
 
 document.addEventListener("DOMContentLoaded", () => {
+  initSplashScreen()
   initNavigation()
   initRoomsFunctionality()
   initGalleryLightbox()
@@ -14,25 +15,88 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // ============================================
+// SPLASH SCREEN
+// ============================================
+
+function initSplashScreen() {
+  const splashScreen = document.getElementById('splash-screen')
+  
+  if (!splashScreen) return
+
+  // Create backdrop for sidebar if it doesn't exist
+  if (!document.getElementById('sidebar-backdrop')) {
+    const backdrop = document.createElement('div')
+    backdrop.className = 'sidebar-backdrop'
+    backdrop.id = 'sidebar-backdrop'
+    document.body.appendChild(backdrop)
+  }
+
+  // Hide splash screen after 2.5 seconds
+  setTimeout(() => {
+    splashScreen.classList.add('fade-out')
+    setTimeout(() => {
+      splashScreen.style.display = 'none'
+    }, 500)
+  }, 2500)
+}
+
+// ============================================
 // NAVIGATION & MENU
 // ============================================
 
 function initNavigation() {
-  const hamburger = document.querySelector('.hamburger')
-  const navMenu = document.querySelector('.nav-menu')
-  
-  if (!hamburger || !navMenu) return
+  const hamburger = document.getElementById('hamburger')
+  const sidebar = document.getElementById('sidebar')
+  const sidebarClose = document.getElementById('sidebar-close')
+  const sidebarLinks = document.querySelectorAll('.sidebar-link')
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active')
-    hamburger.classList.toggle('active')
+  // Create backdrop if it doesn't exist
+  let backdrop = document.getElementById('sidebar-backdrop')
+  if (!backdrop) {
+    backdrop = document.createElement('div')
+    backdrop.className = 'sidebar-backdrop'
+    backdrop.id = 'sidebar-backdrop'
+    document.body.appendChild(backdrop)
+  }
+
+  if (!hamburger || !sidebar) return
+
+  // Open sidebar
+  hamburger.addEventListener('click', (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    sidebar.classList.add('active')
+    backdrop.classList.add('active')
+    hamburger.classList.add('active')
+    document.body.style.overflow = 'hidden'
   })
 
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active')
-      hamburger.classList.remove('active')
-    })
+  // Close sidebar function
+  function closeSidebar() {
+    sidebar.classList.remove('active')
+    backdrop.classList.remove('active')
+    hamburger.classList.remove('active')
+    document.body.style.overflow = ''
+  }
+
+  // Close button
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', closeSidebar)
+  }
+
+  // Backdrop click
+  backdrop.addEventListener('click', closeSidebar)
+
+  // Close on link click
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', closeSidebar)
+  })
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+      closeSidebar()
+    }
   })
 }
 
