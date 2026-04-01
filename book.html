@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Elevation Lodge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="Index.html">🏔️ Elevation Lodge</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="book.html" class="nav-link active">Book</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-hero">
+        <h1>Reserve Your Perfect Stay</h1>
+        <p>Experience luxury at Elevation Lodge</p>
+    </section>
+
+    <main class="booking-container">
+        <div class="booking-wrapper">
+            <div class="booking-form-section">
+                <h2>Quick Booking</h2>
+                <form id="quickBookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="roomType">Select Room Type *</label>
+                        <select id="roomType" required>
+                            <option value="">-- Choose a Room --</option>
+                            <option value="Forest View Deluxe">Forest View Deluxe ($120/night)</option>
+                            <option value="Mountain Suite">Mountain Suite ($220/night)</option>
+                            <option value="Cozy Standard">Cozy Standard ($80/night)</option>
+                            <option value="Executive Room">Executive Room ($150/night)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkIn">Check-in Date *</label>
+                            <input type="date" id="checkIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkOut">Check-out Date *</label>
+                            <input type="date" id="checkOut" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <input type="number" id="guests" min="1" max="6" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rooms">Number of Rooms *</label>
+                            <input type="number" id="rooms" min="1" max="10" value="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="+1 (555) 123-4567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests</label>
+                        <textarea id="specialRequests" placeholder="Any special arrangements or requests..." rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Book via WhatsApp</button>
+                    <p class="form-note">We'll send your booking details via WhatsApp for confirmation.</p>
+                </form>
+            </div>
+
+            <div class="booking-info-section">
+                <div class="booking-card">
+                    <h3>Why Book with Us?</h3>
+                    <ul class="benefits-list">
+                        <li>✓ Best Price Guarantee</li>
+                        <li>✓ Free Cancellation</li>
+                        <li>✓ 24/7 Customer Support</li>
+                        <li>✓ Luxury Amenities Included</li>
+                        <li>✓ Scenic Mountain Views</li>
+                        <li>✓ World-Class Service</li>
+                    </ul>
+                </div>
+
+                <div class="booking-card">
+                    <h3>Special Offers</h3>
+                    <div class="offer">
+                        <h4>Early Bird Discount</h4>
+                        <p>Book 30+ days in advance and save 15%</p>
+                    </div>
+                    <div class="offer">
+                        <h4>Extended Stay</h4>
+                        <p>Stay 7+ nights and get 20% off</p>
+                    </div>
+                    <div class="offer">
+                        <h4>Group Booking</h4>
+                        <p>Contact us for group rates</p>
+                    </div>
+                </div>
+
+                <div class="booking-card contact-card">
+                    <h3>Need Help?</h3>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/923001234567" target="_blank">+92 300 1234567</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:bookings@elevationlodge.com">bookings@elevationlodge.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+923001234567">+92 300 1234567</a></p>
+                    <p><strong>Hours:</strong> 24/7 Support Available</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Elevation Lodge</h4>
+                <p>Experience luxury mountain hospitality at its finest.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📍 Mountain Valley Road, Highland Region</p>
+                <p>📞 +92 300 1234567</p>
+                <p>✉️ info@elevationlodge.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elevation Lodge. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
