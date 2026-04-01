@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites - Elevation Lodge</title>
+    <meta name="description" content="Explore our luxurious rooms and suites at Elevation Lodge. From cozy standard rooms to expansive mountain suites with breathtaking views.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <i class="fas fa-mountain"></i>
+                    <span>Elevation Lodge</span>
+                </a>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rooms.html" class="nav-link active">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pricing.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="book.html" class="cta-button" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">Book Now</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-mountain"></i>
+                <span>Elevation Lodge</span>
+            </div>
+            <button class="sidebar-close" id="sidebar-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="sidebar-link">Home</a></li>
+            <li><a href="about.html" class="sidebar-link">About</a></li>
+            <li><a href="rooms.html" class="sidebar-link active">Rooms</a></li>
+            <li><a href="pricing.html" class="sidebar-link">Pricing</a></li>
+            <li><a href="gallery.html" class="sidebar-link">Gallery</a></li>
+            <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+            <li><a href="book.html" class="sidebar-link">Book Now</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Rooms & Suites</h1>
+                <p class="page-subtitle">Discover our collection of elegantly appointed accommodations designed for comfort and relaxation</p>
+            </div>
+        </section>
+
+        <!-- Rooms Content -->
+        <section class="section">
+            <div class="container">
+                <div class="rooms-grid">
+                    <!-- Forest View Deluxe -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Forest View Deluxe Room" />
+                            <span class="room-badge">Popular</span>
+                            <span class="room-price">$120/night</span>
+                        </div>
+                        <div class="room-content">
+                            <span class="room-type">Deluxe Room</span>
+                            <h3 class="room-name">Forest View Deluxe</h3>
+                            <p class="room-description">Wake up to serene forest views in this spacious 350 sq ft room featuring premium bedding and modern amenities.</p>
+                            <div class="room-amenities">
+                                <span class="room-amenity"><i class="fas fa-bed"></i> King Bed</span>
+                                <span class="room-amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+                                <span class="room-amenity"><i class="fas fa-tv"></i> Smart TV</span>
+                                <span class="room-amenity"><i class="fas fa-snowflake"></i> A/C</span>
+                            </div>
+                            <div class="room-buttons">
+                                <button class="btn-secondary" onclick="openRoomModal('forest-deluxe')">View Details</button>
+                                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Forest%20View%20Deluxe%20room.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mountain Suite -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Mountain Suite" />
+                            <span class="room-badge">Best Value</span>
+                            <span class="room-price">$220/night</span>
+                        </div>
+                        <div class="room-content">
+                            <span class="room-type">Suite</span>
+                            <h3 class="room-name">Mountain Suite</h3>
+                            <p class="room-description">Indulge in luxury with panoramic mountain views, a private balcony, jacuzzi, and a spacious 550 sq ft living area.</p>
+                            <div class="room-amenities">
+                                <span class="room-amenity"><i class="fas fa-bed"></i> King Bed</span>
+                                <span class="room-amenity"><i class="fas fa-bath"></i> Jacuzzi</span>
+                                <span class="room-amenity"><i class="fas fa-fire"></i> Fireplace</span>
+                                <span class="room-amenity"><i class="fas fa-door-open"></i> Balcony</span>
+                            </div>
+                            <div class="room-buttons">
+                                <button class="btn-secondary" onclick="openRoomModal('mountain-suite')">View Details</button>
+                                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Mountain%20Suite.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cozy Standard -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Cozy Standard Room" />
+                            <span class="room-price">$80/night</span>
+                        </div>
+                        <div class="room-content">
+                            <span class="room-type">Standard Room</span>
+                            <h3 class="room-name">Cozy Standard</h3>
+                            <p class="room-description">Perfect for budget-conscious travelers seeking comfort in a 280 sq ft room without compromising on quality.</p>
+                            <div class="room-amenities">
+                                <span class="room-amenity"><i class="fas fa-bed"></i> Queen Bed</span>
+                                <span class="room-amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+                                <span class="room-amenity"><i class="fas fa-coffee"></i> Coffee Maker</span>
+                                <span class="room-amenity"><i class="fas fa-tv"></i> TV</span>
+                            </div>
+                            <div class="room-buttons">
+                                <button class="btn-secondary" onclick="openRoomModal('cozy-standard')">View Details</button>
+                                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Cozy%20Standard%20room.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Executive Room -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80" alt="Executive Room" />
+                            <span class="room-badge">Business</span>
+                            <span class="room-price">$150/night</span>
+                        </div>
+                        <div class="room-content">
+                            <span class="room-type">Executive Room</span>
+                            <h3 class="room-name">Executive Room</h3>
+                            <p class="room-description">Designed for the business traveler, this 400 sq ft room features a dedicated work area and premium amenities.</p>
+                            <div class="room-amenities">
+                                <span class="room-amenity"><i class="fas fa-bed"></i> King Bed</span>
+                                <span class="room-amenity"><i class="fas fa-desktop"></i> Work Desk</span>
+                                <span class="room-amenity"><i class="fas fa-wifi"></i> High-Speed WiFi</span>
+                                <span class="room-amenity"><i class="fas fa-coffee"></i> Nespresso</span>
+                            </div>
+                            <div class="room-buttons">
+                                <button class="btn-secondary" onclick="openRoomModal('executive')">View Details</button>
+                                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Executive%20Room.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Family Suite -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&q=80" alt="Family Suite" />
+                            <span class="room-badge">Family</span>
+                            <span class="room-price">$280/night</span>
+                        </div>
+                        <div class="room-content">
+                            <span class="room-type">Family Suite</span>
+                            <h3 class="room-name">Family Suite</h3>
+                            <p class="room-description">Spacious 700 sq ft suite perfect for families, featuring two bedrooms, a living area, and kid-friendly amenities.</p>
+                            <div class="room-amenities">
+                                <span class="room-amenity"><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                                <span class="room-amenity"><i class="fas fa-couch"></i> Living Area</span>
+                                <span class="room-amenity"><i class="fas fa-gamepad"></i> Game Console</span>
+                                <span class="room-amenity"><i class="fas fa-utensils"></i> Kitchenette</span>
+                            </div>
+                            <div class="room-buttons">
+                                <button class="btn-secondary" onclick="openRoomModal('family-suite')">View Details</button>
+                                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Family%20Suite.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Presidential Suite -->
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80" alt="Presidential Suite" />
+                            <span class="room-badge" style="background: var(--accent-gold);">Premium</span>
+                            <span class="room-price">$450/night</span>
+                        </div>
+                        <div class="room-content">
+                            <span class="room-type">Presidential Suite</span>
+                            <h3 class="room-name">Presidential Suite</h3>
+                            <p class="room-description">Ultimate luxury in 1000 sq ft with panoramic views, private terrace, butler service, and exclusive amenities.</p>
+                            <div class="room-amenities">
+                                <span class="room-amenity"><i class="fas fa-bed"></i> King Bed</span>
+                                <span class="room-amenity"><i class="fas fa-hot-tub"></i> Private Hot Tub</span>
+                                <span class="room-amenity"><i class="fas fa-concierge-bell"></i> Butler</span>
+                                <span class="room-amenity"><i class="fas fa-glass-cheers"></i> Mini Bar</span>
+                            </div>
+                            <div class="room-buttons">
+                                <button class="btn-secondary" onclick="openRoomModal('presidential')">View Details</button>
+                                <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Presidential%20Suite.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section" style="padding: 0; margin-bottom: 4rem;">
+            <div class="container">
+                <div class="call-to-action">
+                    <h3>Need Help Choosing?</h3>
+                    <p>Our concierge team is available 24/7 to help you find the perfect room</p>
+                    <a href="contact.html" class="cta-button">
+                        <i class="fas fa-phone"></i>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Room Modals -->
+    <!-- Forest View Deluxe Modal -->
+    <div class="modal" id="modal-forest-deluxe">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRoomModal('forest-deluxe')">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Forest View Deluxe Room" class="modal-image">
+            <div class="modal-body">
+                <span class="modal-subtitle">Deluxe Room</span>
+                <h2 class="modal-title">Forest View Deluxe</h2>
+                <p class="modal-price">$120 <span>/ night</span></p>
+                <p class="modal-description">
+                    Immerse yourself in nature with our Forest View Deluxe room. This spacious 350 sq ft retreat features floor-to-ceiling windows overlooking the pristine forest canopy. The room includes a plush king-size bed with premium linens, a marble bathroom with rain shower, and a cozy sitting area perfect for morning coffee while watching wildlife.
+                </p>
+                <h4 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Room Amenities</h4>
+                <div class="modal-amenities">
+                    <span class="modal-amenity"><i class="fas fa-bed"></i> King Size Bed</span>
+                    <span class="modal-amenity"><i class="fas fa-wifi"></i> Free High-Speed WiFi</span>
+                    <span class="modal-amenity"><i class="fas fa-tv"></i> 55" Smart TV</span>
+                    <span class="modal-amenity"><i class="fas fa-snowflake"></i> Climate Control</span>
+                    <span class="modal-amenity"><i class="fas fa-shower"></i> Rain Shower</span>
+                    <span class="modal-amenity"><i class="fas fa-safe"></i> In-Room Safe</span>
+                    <span class="modal-amenity"><i class="fas fa-phone"></i> Direct Phone</span>
+                    <span class="modal-amenity"><i class="fas fa-tshirt"></i> Bathrobes & Slippers</span>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" onclick="closeRoomModal('forest-deluxe')">Close</button>
+                    <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Forest%20View%20Deluxe%20room.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mountain Suite Modal -->
+    <div class="modal" id="modal-mountain-suite">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRoomModal('mountain-suite')">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80" alt="Mountain Suite" class="modal-image">
+            <div class="modal-body">
+                <span class="modal-subtitle">Suite</span>
+                <h2 class="modal-title">Mountain Suite</h2>
+                <p class="modal-price">$220 <span>/ night</span></p>
+                <p class="modal-description">
+                    Experience the ultimate mountain retreat in our signature Mountain Suite. This 550 sq ft sanctuary features breathtaking panoramic mountain views from your private balcony. Indulge in the jacuzzi tub while gazing at the peaks, warm up by the gas fireplace, or relax in the separate living area. The perfect choice for romantic getaways.
+                </p>
+                <h4 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Room Amenities</h4>
+                <div class="modal-amenities">
+                    <span class="modal-amenity"><i class="fas fa-bed"></i> King Size Bed</span>
+                    <span class="modal-amenity"><i class="fas fa-bath"></i> Jacuzzi Tub</span>
+                    <span class="modal-amenity"><i class="fas fa-fire"></i> Gas Fireplace</span>
+                    <span class="modal-amenity"><i class="fas fa-door-open"></i> Private Balcony</span>
+                    <span class="modal-amenity"><i class="fas fa-couch"></i> Living Area</span>
+                    <span class="modal-amenity"><i class="fas fa-glass-cheers"></i> Mini Bar</span>
+                    <span class="modal-amenity"><i class="fas fa-coffee"></i> Nespresso Machine</span>
+                    <span class="modal-amenity"><i class="fas fa-concierge-bell"></i> Room Service</span>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" onclick="closeRoomModal('mountain-suite')">Close</button>
+                    <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Mountain%20Suite.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cozy Standard Modal -->
+    <div class="modal" id="modal-cozy-standard">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRoomModal('cozy-standard')">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Cozy Standard Room" class="modal-image">
+            <div class="modal-body">
+                <span class="modal-subtitle">Standard Room</span>
+                <h2 class="modal-title">Cozy Standard</h2>
+                <p class="modal-price">$80 <span>/ night</span></p>
+                <p class="modal-description">
+                    Our Cozy Standard room proves that comfort doesn't require a large footprint. This thoughtfully designed 280 sq ft space offers everything you need for a restful stay. Featuring a comfortable queen bed, modern bathroom, and all essential amenities, it's the perfect base for exploring the mountains without breaking the bank.
+                </p>
+                <h4 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Room Amenities</h4>
+                <div class="modal-amenities">
+                    <span class="modal-amenity"><i class="fas fa-bed"></i> Queen Size Bed</span>
+                    <span class="modal-amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+                    <span class="modal-amenity"><i class="fas fa-tv"></i> 42" TV</span>
+                    <span class="modal-amenity"><i class="fas fa-coffee"></i> Coffee Maker</span>
+                    <span class="modal-amenity"><i class="fas fa-snowflake"></i> Climate Control</span>
+                    <span class="modal-amenity"><i class="fas fa-shower"></i> Walk-in Shower</span>
+                    <span class="modal-amenity"><i class="fas fa-parking"></i> Free Parking</span>
+                    <span class="modal-amenity"><i class="fas fa-utensils"></i> Breakfast Included</span>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" onclick="closeRoomModal('cozy-standard')">Close</button>
+                    <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Cozy%20Standard%20room.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Executive Room Modal -->
+    <div class="modal" id="modal-executive">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRoomModal('executive')">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80" alt="Executive Room" class="modal-image">
+            <div class="modal-body">
+                <span class="modal-subtitle">Executive Room</span>
+                <h2 class="modal-title">Executive Room</h2>
+                <p class="modal-price">$150 <span>/ night</span></p>
+                <p class="modal-description">
+                    Designed with the discerning business traveler in mind, our 400 sq ft Executive Room seamlessly blends work and relaxation. The ergonomic workspace features high-speed WiFi and ample outlets, while the king bed ensures restful sleep. Complimentary access to our business center and meeting rooms included.
+                </p>
+                <h4 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Room Amenities</h4>
+                <div class="modal-amenities">
+                    <span class="modal-amenity"><i class="fas fa-bed"></i> King Size Bed</span>
+                    <span class="modal-amenity"><i class="fas fa-desktop"></i> Ergonomic Desk</span>
+                    <span class="modal-amenity"><i class="fas fa-wifi"></i> High-Speed WiFi</span>
+                    <span class="modal-amenity"><i class="fas fa-coffee"></i> Nespresso Machine</span>
+                    <span class="modal-amenity"><i class="fas fa-print"></i> Printer Access</span>
+                    <span class="modal-amenity"><i class="fas fa-tshirt"></i> Express Laundry</span>
+                    <span class="modal-amenity"><i class="fas fa-dumbbell"></i> Gym Access</span>
+                    <span class="modal-amenity"><i class="fas fa-shuttle-van"></i> Airport Shuttle</span>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" onclick="closeRoomModal('executive')">Close</button>
+                    <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Executive%20Room.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Family Suite Modal -->
+    <div class="modal" id="modal-family-suite">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRoomModal('family-suite')">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80" alt="Family Suite" class="modal-image">
+            <div class="modal-body">
+                <span class="modal-subtitle">Family Suite</span>
+                <h2 class="modal-title">Family Suite</h2>
+                <p class="modal-price">$280 <span>/ night</span></p>
+                <p class="modal-description">
+                    Create lasting family memories in our spacious 700 sq ft Family Suite. Two separate bedrooms ensure privacy for parents while kids enjoy their own space. The central living area is perfect for family movie nights, and the kitchenette makes snack time easy. Complimentary kids' activities program included!
+                </p>
+                <h4 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Room Amenities</h4>
+                <div class="modal-amenities">
+                    <span class="modal-amenity"><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                    <span class="modal-amenity"><i class="fas fa-couch"></i> Living Area</span>
+                    <span class="modal-amenity"><i class="fas fa-utensils"></i> Kitchenette</span>
+                    <span class="modal-amenity"><i class="fas fa-gamepad"></i> Game Console</span>
+                    <span class="modal-amenity"><i class="fas fa-baby"></i> Cribs Available</span>
+                    <span class="modal-amenity"><i class="fas fa-child"></i> Kids Activities</span>
+                    <span class="modal-amenity"><i class="fas fa-swimmer"></i> Pool Access</span>
+                    <span class="modal-amenity"><i class="fas fa-parking"></i> Family Parking</span>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" onclick="closeRoomModal('family-suite')">Close</button>
+                    <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Family%20Suite.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Presidential Suite Modal -->
+    <div class="modal" id="modal-presidential">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeRoomModal('presidential')">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Presidential Suite" class="modal-image">
+            <div class="modal-body">
+                <span class="modal-subtitle">Presidential Suite</span>
+                <h2 class="modal-title">Presidential Suite</h2>
+                <p class="modal-price">$450 <span>/ night</span></p>
+                <p class="modal-description">
+                    The pinnacle of luxury at Elevation Lodge. This magnificent 1000 sq ft suite offers unparalleled views from its wraparound terrace. Features include a private hot tub, dedicated butler service, gourmet minibar, and exclusive access to our VIP lounge. Perfect for special celebrations or those who demand the very best.
+                </p>
+                <h4 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Room Amenities</h4>
+                <div class="modal-amenities">
+                    <span class="modal-amenity"><i class="fas fa-bed"></i> California King Bed</span>
+                    <span class="modal-amenity"><i class="fas fa-hot-tub"></i> Private Hot Tub</span>
+                    <span class="modal-amenity"><i class="fas fa-concierge-bell"></i> Butler Service</span>
+                    <span class="modal-amenity"><i class="fas fa-glass-cheers"></i> Premium Mini Bar</span>
+                    <span class="modal-amenity"><i class="fas fa-spa"></i> In-Room Spa</span>
+                    <span class="modal-amenity"><i class="fas fa-utensils"></i> Private Dining</span>
+                    <span class="modal-amenity"><i class="fas fa-car"></i> Luxury Transfer</span>
+                    <span class="modal-amenity"><i class="fas fa-crown"></i> VIP Lounge Access</span>
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-secondary" onclick="closeRoomModal('presidential')">Close</button>
+                    <a href="https://wa.me/1234567890?text=Hi,%20I'd%20like%20to%20book%20the%20Presidential%20Suite.%20Check-in:%20[DATE]%20Check-out:%20[DATE]" class="btn-primary btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-mountain"></i>
+                        <span>Elevation Lodge</span>
+                    </div>
+                    <p class="footer-description">
+                        Your premier mountain retreat offering luxury accommodations, world-class amenities, and unforgettable experiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Guest Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="book.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Mountain Peak Road<br>Alpine Valley, CO 80401</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@elevationlodge.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elevation Lodge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="Script.js"></script>
+    <script>
+        // Room Modal Functions
+        function openRoomModal(roomId) {
+            const modal = document.getElementById('modal-' + roomId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeRoomModal(roomId) {
+            const modal = document.getElementById('modal-' + roomId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

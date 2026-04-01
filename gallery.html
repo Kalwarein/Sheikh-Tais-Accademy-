@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Sheikh Tais Academy</title>
-    <meta name="description" content="Explore the vibrant life at Sheikh Tais Academy through our photo gallery.">
+    <title>Gallery - Elevation Lodge</title>
+    <meta name="description" content="Explore the beauty of Elevation Lodge through our photo gallery. Stunning views, luxurious rooms, and memorable experiences.">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/gallery.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header / Navbar -->
     <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Sheikh Tais Academy</span>
-                </div>
+                <a href="index.html" class="nav-logo">
+                    <i class="fas fa-mountain"></i>
+                    <span>Elevation Lodge</span>
+                </a>
                 
                 <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item">
@@ -33,22 +33,27 @@
                         <a href="about.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="features.html" class="nav-link">Features</a>
+                        <a href="rooms.html" class="nav-link">Rooms</a>
                     </li>
                     <li class="nav-item">
-                        <a href="news.html" class="nav-link">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="documentation.html" class="nav-link">Documentation</a>
+                        <a href="pricing.html" class="nav-link">Pricing</a>
                     </li>
                     <li class="nav-item">
                         <a href="gallery.html" class="nav-link active">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a href="download.html" class="nav-link">Download</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="book.html" class="cta-button" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">Book Now</a>
                     </li>
                 </ul>
-            
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
@@ -57,8 +62,8 @@
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Sheikh Tais Academy</span>
+                <i class="fas fa-mountain"></i>
+                <span>Elevation Lodge</span>
             </div>
             <button class="sidebar-close" id="sidebar-close">
                 <i class="fas fa-times"></i>
@@ -67,13 +72,11 @@
         <ul class="sidebar-menu">
             <li><a href="index.html" class="sidebar-link">Home</a></li>
             <li><a href="about.html" class="sidebar-link">About</a></li>
-            <li><a href="features.html" class="sidebar-link">Features</a></li>
-            <li><a href="news.html" class="sidebar-link">News</a></li>
-            <li><a href="documentation.html" class="sidebar-link">Documentation</a></li>
+            <li><a href="rooms.html" class="sidebar-link">Rooms</a></li>
+            <li><a href="pricing.html" class="sidebar-link">Pricing</a></li>
             <li><a href="gallery.html" class="sidebar-link active">Gallery</a></li>
-            <li><a href="download.html" class="sidebar-link">Download</a></li>
-            <li><a href="developer.html" class="sidebar-link">Developer</a></li>
             <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+            <li><a href="book.html" class="sidebar-link">Book Now</a></li>
         </ul>
     </div>
 
@@ -82,8 +85,8 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1 class="page-title">School Gallery</h1>
-                <p class="page-subtitle">Take a glimpse into life at Sheikh Tais Academy through our photo collection</p>
+                <h1 class="page-title">Photo Gallery</h1>
+                <p class="page-subtitle">Take a visual journey through Elevation Lodge and discover the beauty that awaits you</p>
             </div>
         </section>
 
@@ -94,23 +97,23 @@
                 <div class="gallery-categories">
                     <div class="category-filters">
                         <button class="filter-btn active" data-filter="all">All Photos</button>
-                        <button class="filter-btn" data-filter="campus">Campus</button>
-                        <button class="filter-btn" data-filter="events">Events</button>
-                        <button class="filter-btn" data-filter="academics">Academics</button>
-                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="rooms">Rooms</button>
+                        <button class="filter-btn" data-filter="amenities">Amenities</button>
+                        <button class="filter-btn" data-filter="dining">Dining</button>
+                        <button class="filter-btn" data-filter="views">Views</button>
                         <button class="filter-btn" data-filter="activities">Activities</button>
                     </div>
                 </div>
 
                 <!-- Gallery Grid -->
-                <div class="gallery-grid masonry">
-                    <!-- Campus Photos -->
-                    <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757237855233.jpg" alt="Some staffs and the principal" />
+                <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <!-- Rooms Photos -->
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Forest View Deluxe Room" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>staffs + Principal</h4>
-                                <p>Some staffs and the principal"</p>
+                                <h4>Forest View Deluxe</h4>
+                                <p>Spacious room with forest views</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -120,12 +123,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757237971100.jpg" alt="School library" />
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Mountain Suite" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Priamy kids in field trip costumes</h4>
-                                <p>Some primary students going on a field trip</p>
+                                <h4>Mountain Suite</h4>
+                                <p>Luxury suite with panoramic views</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -135,12 +138,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="academics">
-                        <img src="/gallery/1757238077897.jpg" alt="Science laboratory" />
+                    <div class="gallery-item" data-category="amenities">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80" alt="Pool Area" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Science Students</h4>
-                                <p>one of the Modern science classroms  </p>
+                                <h4>Pool Area</h4>
+                                <p>Heated infinity pool</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -150,12 +153,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="sports">
-                        <img src="/gallery/1757238090495.jpg" alt="School playground" />
+                    <div class="gallery-item" data-category="views">
+                        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600&q=80" alt="Mountain Views" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>The hall</h4>
-                                <p>Gatheting at the School Hall built by the adminstration</p>
+                                <h4>Mountain Views</h4>
+                                <p>Breathtaking sunrise panorama</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -165,12 +168,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="events">
-                        <img src="/gallery/1757238086130.jpg" alt="Annual function" />
+                    <div class="gallery-item" data-category="dining">
+                        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&q=80" alt="Restaurant" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Developer and mastermind</h4>
-                                <p>He is the Developer behind the tais App,website and all functions And also a fullstack Developer</p>
+                                <h4>Fine Dining</h4>
+                                <p>Award-winning restaurant</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -180,12 +183,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="academics">
-                        <img src="./img//1757194623183.jpg" alt="Computer lab" />
+                    <div class="gallery-item" data-category="amenities">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Spa" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>A group photo</h4>
-                                <p>A group photo with a visitor at Sheikh Tais Academy</p>
+                                <h4>Luxury Spa</h4>
+                                <p>Rejuvenating wellness center</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -195,72 +198,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757238030799.jpg" alt="School auditorium" />
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Standard Room" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Auditorium</h4>
-                                <p>Modern auditorium for events and assemblies</p>
-                            </div>
-                            <div class="gallery-actions">
-                                <button class="gallery-btn" onclick="openLightbox(this)">
-                                    <i class="fas fa-search-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="activities">
-                        <img src="/gallery/1757238057875.jpg" alt="Art class" />
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Art & Craft</h4>
-                                <p>Students engaged in creative activities</p>
-                            </div>
-                            <div class="gallery-actions">
-                                <button class="gallery-btn" onclick="openLightbox(this)">
-                                    <i class="fas fa-search-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="events">
-                        <img src="/gallery/1757238071707.jpg" alt="Science exhibition" />
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Science Exhibition</h4>
-                                <p>Students showcasing science projects</p>
-                            </div>
-                            <div class="gallery-actions">
-                                <button class="gallery-btn" onclick="openLightbox(this)">
-                                    <i class="fas fa-search-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="sports">
-                        <img src="/gallery/1757249528531.jpg" alt="Sports day" />
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Saturday Classed</h4>
-                                <p>Studens learning arts class</p>
-                            </div>
-                            <div class="gallery-actions">
-                                <button class="gallery-btn" onclick="openLightbox(this)">
-                                    <i class="fas fa-search-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-category="academics">
-                        <img src="/gallery/1757237992279.jpg" alt="Classroom" />
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>Classroom</h4>
-                                <p>Interactive learning environment</p>
+                                <h4>Cozy Standard</h4>
+                                <p>Comfortable and inviting</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -271,11 +214,11 @@
                     </div>
                     
                     <div class="gallery-item" data-category="activities">
-                        <img src="/gallery/1757249417133.jpg" alt="Music class" />
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Hiking" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>science Room</h4>
-                                <p>Students learning Science and physics</p>
+                                <h4>Hiking Trails</h4>
+                                <p>Explore mountain paths</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -285,12 +228,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757249402962.jpg" alt="School garden" />
+                    <div class="gallery-item" data-category="views">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Lodge Exterior" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Science Student SSS</h4>
-                                <p>Science Students At The congress Lab </p>
+                                <h4>Lodge Exterior</h4>
+                                <p>Welcome to Elevation Lodge</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -300,12 +243,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="events">
-                        <img src="/gallery/1757249387509.jpg" alt="Cultural program" />
+                    <div class="gallery-item" data-category="dining">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Gourmet Cuisine" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Cultural Program</h4>
-                                <p>Students at Morning Assembly</p>
+                                <h4>Gourmet Cuisine</h4>
+                                <p>Locally sourced ingredients</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -315,12 +258,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="academics">
-                        <img src="/gallery/1757249513996.jpg" alt="Mathematics class" />
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80" alt="Executive Room" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>arts Class</h4>
-                                <p>Interactive arts learning session</p>
+                                <h4>Executive Room</h4>
+                                <p>Work and relaxation combined</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -330,12 +273,12 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-category="campus">
-                        <img src="/gallery/1757249656078.jpg" alt="Drama club" />
+                    <div class="gallery-item" data-category="activities">
+                        <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&q=80" alt="Skiing" />
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>Jss Campus</h4>
-                                <p>School builing for JSS and sss before</p>
+                                <h4>Winter Sports</h4>
+                                <p>World-class skiing nearby</p>
                             </div>
                             <div class="gallery-actions">
                                 <button class="gallery-btn" onclick="openLightbox(this)">
@@ -344,6 +287,80 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="gallery-item" data-category="amenities">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Fitness Center" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Fitness Center</h4>
+                                <p>State-of-the-art equipment</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="views">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Sunset Views" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Sunset Views</h4>
+                                <p>Golden hour magic</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80" alt="Presidential Suite" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Presidential Suite</h4>
+                                <p>Ultimate luxury experience</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="dining">
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="Lobby Lounge" />
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Lobby Lounge</h4>
+                                <p>Relax with mountain views</p>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section" style="padding: 0; margin-bottom: 4rem;">
+            <div class="container">
+                <div class="call-to-action">
+                    <h3>Ready to Experience This?</h3>
+                    <p>Book your stay and create your own memories at Elevation Lodge</p>
+                    <a href="book.html" class="cta-button">
+                        <i class="fas fa-calendar-alt"></i>
+                        Book Your Stay
+                    </a>
                 </div>
             </div>
         </section>
@@ -355,24 +372,24 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Sheikh Tais Academy</span>
+                        <i class="fas fa-mountain"></i>
+                        <span>Elevation Lodge</span>
                     </div>
                     <p class="footer-description">
-                        Motto: Seek Kmowledge from Birth yo death
+                        Your premier mountain retreat offering luxury accommodations and unforgettable experiences.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-youtube"></i>
+                        <a href="#" class="social-link" aria-label="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
                         </a>
                     </div>
                 </div>
@@ -381,19 +398,19 @@
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Resources</h3>
+                    <h3 class="footer-title">Guest Services</h3>
                     <ul class="footer-links">
-                        <li><a href="documentation.html">Documentation</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="book.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
                 
@@ -402,7 +419,7 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Education Street, City, Country</span>
+                            <span>123 Mountain Peak Road<br>Alpine Valley, CO 80401</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
@@ -410,35 +427,19 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>info@shaikhtaisacademy.edu</span>
+                            <span>info@elevationlodge.com</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Sheikh Tais Academy. All rights reserved.</p>
+                <p>&copy; 2025 Elevation Lodge. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <span class="lightbox-close">&times;</span>
-            <img id="lightbox-img" src="/placeholder.svg" alt="">
-            <div class="lightbox-info">
-                <h4 id="lightbox-title">Image Title</h4>
-                <p id="lightbox-description">Image description</p>
-            </div>
-            <div class="lightbox-nav">
-                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </div>
-
     <!-- Custom JavaScript -->
-    <script src="/assets/gallery.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>
