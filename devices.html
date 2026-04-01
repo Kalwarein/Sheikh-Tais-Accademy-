@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <nav class="navbar">
       <div class="nav-container">
         <a href="Index.html" class="nav-logo"><i class="fas fa-mobile-alt"></i> Qcell</a>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
           <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
           <li class="nav-item has-dropdown"><a href="#" class="nav-link">Personal <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
@@ -34,16 +34,16 @@
           <li class="nav-item"><a href="support.html" class="nav-link">Support</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
         </ul>
-        <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <div class="hamburger" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
       </div>
     </nav>
   </header>
 
-  <div class="sidebar-backdrop"></div>
-  <div class="sidebar">
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="sidebar-logo"><i class="fas fa-mobile-alt"></i> Qcell</div>
-      <button class="sidebar-close"><i class="fas fa-times"></i></button>
+      <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
     </div>
     <ul class="sidebar-menu">
       <li><a href="Index.html" class="sidebar-link"><i class="fas fa-home"></i> Home</a></li>
@@ -72,7 +72,7 @@
       <div class="devices-grid">
         <div class="device-card" onclick="openModal('router4g1')">
           <div class="device-badge">Popular</div>
-          <div class="device-image"><i class="fas fa-wifi"></i></div>
+          <div class="device-image"><img src="/img/router-4g-pro.jpg" alt="Qcell 4G Pro Max Router" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="device-content">
             <span class="device-category">4G Router</span>
             <h3>Qcell 4G Pro Max</h3>
@@ -88,7 +88,7 @@
 
         <div class="device-card" onclick="openModal('router4g2')">
           <div class="device-badge new">New</div>
-          <div class="device-image"><i class="fas fa-wifi"></i></div>
+          <div class="device-image"><img src="/img/router-4g-pro.jpg" alt="Qcell 4G Speed Router" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="device-content">
             <span class="device-category">4G Router</span>
             <h3>Qcell 4G Speed</h3>
@@ -103,7 +103,7 @@
         </div>
 
         <div class="device-card" onclick="openModal('router4g3')">
-          <div class="device-image"><i class="fas fa-wifi"></i></div>
+          <div class="device-image"><img src="/img/router-4g-pro.jpg" alt="Qcell 4G Essential Router" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="device-content">
             <span class="device-category">4G Router</span>
             <h3>Qcell 4G Essential</h3>
@@ -126,7 +126,7 @@
       <div class="devices-grid">
         <div class="device-card" onclick="openModal('router5g1')">
           <div class="device-badge hot">Hot</div>
-          <div class="device-image"><i class="fas fa-broadcast-tower"></i></div>
+          <div class="device-image"><img src="/img/router-5g-ultra.jpg" alt="Qcell 5G Ultra Router" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="device-content">
             <span class="device-category">5G Router</span>
             <h3>Qcell 5G Ultra</h3>
@@ -141,7 +141,7 @@
         </div>
 
         <div class="device-card" onclick="openModal('router5g2')">
-          <div class="device-image"><i class="fas fa-broadcast-tower"></i></div>
+          <div class="device-image"><img src="/img/router-5g-ultra.jpg" alt="Qcell 5G Pro Router" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="device-content">
             <span class="device-category">5G Router</span>
             <h3>Qcell 5G Pro</h3>
@@ -163,7 +163,7 @@
       <h2 class="section-title">MiFi Devices</h2>
       <div class="devices-grid">
         <div class="device-card" onclick="openModal('mifi1')">
-          <div class="device-image"><i class="fas fa-mobile-alt"></i></div>
+          <div class="device-image"><img src="/img/mifi-portable.jpg" alt="Qcell MiFi Pro" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="device-content">
             <span class="device-category">MiFi Device</span>
             <h3>Qcell MiFi Pro</h3>
@@ -179,7 +179,7 @@
 
         <div class="device-card" onclick="openModal('mifi2')">
           <div class="device-badge new">New</div>
-          <div class="device-image"><i class="fas fa-mobile-alt"></i></div>
+          <div class="device-image"><img src="/img/mifi-portable.jpg" alt="Qcell MiFi Lite" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="device-content">
             <span class="device-category">MiFi Device</span>
             <h3>Qcell MiFi Lite</h3>

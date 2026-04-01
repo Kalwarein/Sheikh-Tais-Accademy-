@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <nav class="navbar">
       <div class="nav-container">
         <a href="Index.html" class="nav-logo"><i class="fas fa-mobile-alt"></i> Qcell</a>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
           <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
           <li class="nav-item has-dropdown"><a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
@@ -24,19 +24,21 @@
           <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
         </ul>
-        <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <div class="hamburger" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
       </div>
     </nav>
   </header>
 
-  <div class="sidebar-backdrop"></div>
-  <div class="sidebar">
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="sidebar-logo"><i class="fas fa-mobile-alt"></i> Qcell</div>
-      <button class="sidebar-close"><i class="fas fa-times"></i></button>
+      <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
     </div>
     <ul class="sidebar-menu">
       <li><a href="Index.html" class="sidebar-link"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="devices.html" class="sidebar-link"><i class="fas fa-router"></i> Devices</a></li>
+      <li><a href="broadband.html" class="sidebar-link"><i class="fas fa-wifi"></i> Broadband</a></li>
       <li><a href="promotions.html" class="sidebar-link"><i class="fas fa-gift"></i> Promotions</a></li>
       <li><a href="contact.html" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
@@ -55,7 +57,7 @@
       <div class="broadband-grid">
         <div class="broadband-card featured">
           <div class="broadband-badge">Popular</div>
-          <div class="broadband-icon"><i class="fas fa-home"></i></div>
+          <div class="broadband-icon" style="padding: 0; overflow: hidden; border-radius: 15px;"><img src="/img/broadband-home.jpg" alt="Home Broadband" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <h3>Home Starter</h3>
           <div class="broadband-speed">50 Mbps</div>
           <ul class="broadband-features">
@@ -71,7 +73,7 @@
 
         <div class="broadband-card featured">
           <div class="broadband-badge">Best Value</div>
-          <div class="broadband-icon"><i class="fas fa-home"></i></div>
+          <div class="broadband-icon" style="padding: 0; overflow: hidden; border-radius: 15px;"><img src="/img/broadband-home.jpg" alt="Home Broadband Pro" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <h3>Home Pro</h3>
           <div class="broadband-speed">100 Mbps</div>
           <ul class="broadband-features">
@@ -86,7 +88,7 @@
         </div>
 
         <div class="broadband-card">
-          <div class="broadband-icon"><i class="fas fa-home"></i></div>
+          <div class="broadband-icon" style="padding: 0; overflow: hidden; border-radius: 15px;"><img src="/img/broadband-home.jpg" alt="Home Broadband Ultra" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <h3>Home Ultra</h3>
           <div class="broadband-speed">300 Mbps</div>
           <ul class="broadband-features">
@@ -108,7 +110,7 @@
       <h2 class="section-title">Office & Business Plans</h2>
       <div class="broadband-grid">
         <div class="broadband-card">
-          <div class="broadband-icon" style="background: linear-gradient(135deg, #1f2937, #374151);"><i class="fas fa-briefcase"></i></div>
+          <div class="broadband-icon" style="padding: 0; overflow: hidden; border-radius: 15px;"><img src="/img/broadband-office.jpg" alt="Office Broadband" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <h3>Office Basic</h3>
           <div class="broadband-speed">100 Mbps</div>
           <ul class="broadband-features">
@@ -124,7 +126,7 @@
 
         <div class="broadband-card featured">
           <div class="broadband-badge">Popular</div>
-          <div class="broadband-icon" style="background: linear-gradient(135deg, #1f2937, #374151);"><i class="fas fa-briefcase"></i></div>
+          <div class="broadband-icon" style="padding: 0; overflow: hidden; border-radius: 15px;"><img src="/img/broadband-office.jpg" alt="Office Enterprise Broadband" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <h3>Office Enterprise</h3>
           <div class="broadband-speed">500 Mbps</div>
           <ul class="broadband-features">
@@ -139,7 +141,7 @@
         </div>
 
         <div class="broadband-card">
-          <div class="broadband-icon" style="background: linear-gradient(135deg, #1f2937, #374151);"><i class="fas fa-briefcase"></i></div>
+          <div class="broadband-icon" style="padding: 0; overflow: hidden; border-radius: 15px;"><img src="/img/broadband-office.jpg" alt="Office Unlimited Broadband" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <h3>Office Unlimited</h3>
           <div class="broadband-speed">1 Gbps</div>
           <ul class="broadband-features">
