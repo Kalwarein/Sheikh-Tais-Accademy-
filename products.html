@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products & Plans - OrangeTel</title>
-    <meta name="description" content="Browse OrangeTel's data plans, call plans, SMS bundles, and internet packages. Find the perfect plan for your needs.">
+    <title>Products & Plans - Qcell Sierra Leone</title>
+    <meta name="description" content="Browse Qcell's data plans, call plans, SMS bundles, and internet packages. Find the perfect plan for your needs in Sierra Leone.">
+    <link rel="icon" type="image/png" href="https://i.imghippo.com/files/IJi2095tg.jpg">
+    <meta name="theme-color" content="#ff7a00" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,10 +22,10 @@
     <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
+                <a href="index.html" class="nav-logo">
                     <i class="fas fa-signal"></i>
-                    <span>OrangeTel</span>
-                </div>
+                    <span>Qcell</span>
+                </a>
                 
                 <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item">
@@ -46,8 +48,13 @@
                             <li><a href="#bulk"><i class="fas fa-comments"></i> Bulk SMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="products.html" class="nav-link active">Products</a>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link active">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#sim"><i class="fas fa-sim-card"></i> SIM Cards</a></li>
+                            <li><a href="devices.html"><i class="fas fa-mobile-alt"></i> Devices</a></li>
+                            <li><a href="broadband.html"><i class="fas fa-broadcast-tower"></i> Broadband</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="promotions.html" class="nav-link">Promotions</a>
@@ -62,6 +69,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="about-company.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="app.html" class="nav-link nav-cta">Get App</a>
                     </li>
                 </ul>
                 
@@ -79,7 +89,7 @@
         <div class="sidebar-header">
             <div class="sidebar-logo">
                 <i class="fas fa-signal"></i>
-                <span>OrangeTel</span>
+                <span>Qcell</span>
             </div>
             <button class="sidebar-close" id="sidebar-close">
                 <i class="fas fa-times"></i>
@@ -114,7 +124,7 @@
             <li><a href="promotions.html" class="sidebar-link">Promotions</a></li>
             <li><a href="support.html" class="sidebar-link">Support</a></li>
             <li><a href="about-company.html" class="sidebar-link">About</a></li>
-            <li><a href="app.html" class="sidebar-link">Get App</a></li>
+            <li><a href="app.html" class="sidebar-link highlight">Get App</a></li>
             <li><a href="contact.html" class="sidebar-link">Contact</a></li>
         </ul>
     </div>
@@ -122,32 +132,70 @@
     <!-- Main Content -->
     <main class="page-main">
         <!-- Page Header -->
-        <section class="page-header">
+        <section class="page-header-enhanced">
             <div class="container">
-                <h1 class="page-title">Products & Plans</h1>
-                <p class="page-subtitle">Find the perfect data, voice, and SMS plans for your needs</p>
+                <div class="page-header-content">
+                    <h1>Products & Plans</h1>
+                    <p>Find the perfect data, voice, and SMS plans for your needs</p>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>/</span>
+                        <span>Products</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section class="quick-links-section">
+            <div class="container">
+                <div class="quick-links-grid">
+                    <a href="#data-plans" class="quick-link-card">
+                        <i class="fas fa-wifi"></i>
+                        <span>Data Plans</span>
+                    </a>
+                    <a href="#calls" class="quick-link-card">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Plans</span>
+                    </a>
+                    <a href="#sms" class="quick-link-card">
+                        <i class="fas fa-comment"></i>
+                        <span>SMS Bundles</span>
+                    </a>
+                    <a href="#roaming" class="quick-link-card">
+                        <i class="fas fa-globe"></i>
+                        <span>Roaming</span>
+                    </a>
+                    <a href="#enterprise" class="quick-link-card">
+                        <i class="fas fa-building"></i>
+                        <span>Business</span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Data Plans Section -->
         <section id="data-plans" class="pricing-section">
             <div class="container">
-                <h2 class="section-title">Data Plans</h2>
-                <p class="section-subtitle">High-speed internet for streaming, browsing, and more</p>
+                <div class="section-header">
+                    <h2 class="section-title">Data Plans</h2>
+                    <p class="section-subtitle">High-speed internet for streaming, browsing, and more</p>
+                </div>
                 
+                <!-- Daily Plans -->
+                <h3 class="plan-category-title"><i class="fas fa-bolt"></i> Daily Plans</h3>
                 <div class="pricing-grid">
-                    <!-- Daily Plans -->
                     <div class="pricing-card">
                         <div class="pricing-icon">
                             <i class="fas fa-bolt"></i>
                         </div>
                         <h3 class="pricing-title">Daily Lite</h3>
                         <div class="pricing-data">500MB</div>
-                        <div class="pricing-price">$0.50</div>
+                        <div class="pricing-price">Le 5,000</div>
                         <p class="pricing-validity">Valid for 24 hours</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 500MB High-speed data</li>
-                            <li><i class="fas fa-check"></i> 4G/5G speeds</li>
+                            <li><i class="fas fa-check"></i> 4G LTE speeds</li>
                             <li><i class="fas fa-check"></i> Auto-renew available</li>
                         </ul>
                         <div class="pricing-code">Dial *123*10#</div>
@@ -160,25 +208,46 @@
                         </div>
                         <h3 class="pricing-title">Daily Standard</h3>
                         <div class="pricing-data">1GB</div>
-                        <div class="pricing-price">$1.00</div>
+                        <div class="pricing-price">Le 10,000</div>
                         <p class="pricing-validity">Valid for 24 hours</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 1GB High-speed data</li>
-                            <li><i class="fas fa-check"></i> 4G/5G speeds</li>
+                            <li><i class="fas fa-check"></i> 4G LTE speeds</li>
                             <li><i class="fas fa-check"></i> Stream HD videos</li>
                         </ul>
                         <div class="pricing-code">Dial *123*11#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
                     </div>
 
-                    <!-- Weekly Plans -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Popular</div>
+                        <div class="pricing-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="pricing-title">Daily Plus</h3>
+                        <div class="pricing-data">2GB</div>
+                        <div class="pricing-price">Le 18,000</div>
+                        <p class="pricing-validity">Valid for 24 hours</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 2GB High-speed data</li>
+                            <li><i class="fas fa-check"></i> 4G LTE speeds</li>
+                            <li><i class="fas fa-check"></i> Free 50 SMS</li>
+                        </ul>
+                        <div class="pricing-code">Dial *123*12#</div>
+                        <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Weekly Plans -->
+                <h3 class="plan-category-title"><i class="fas fa-calendar-week"></i> Weekly Plans</h3>
+                <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-icon">
                             <i class="fas fa-calendar-week"></i>
                         </div>
                         <h3 class="pricing-title">Weekly Basic</h3>
                         <div class="pricing-data">2GB</div>
-                        <div class="pricing-price">$2.00</div>
+                        <div class="pricing-price">Le 20,000</div>
                         <p class="pricing-validity">Valid for 7 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 2GB High-speed data</li>
@@ -196,7 +265,7 @@
                         </div>
                         <h3 class="pricing-title">Weekly Pro</h3>
                         <div class="pricing-data">5GB</div>
-                        <div class="pricing-price">$4.50</div>
+                        <div class="pricing-price">Le 45,000</div>
                         <p class="pricing-validity">Valid for 7 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 5GB High-speed data</li>
@@ -208,20 +277,40 @@
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
                     </div>
 
-                    <!-- Monthly Plans -->
+                    <div class="pricing-card">
+                        <div class="pricing-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="pricing-title">Weekly Max</h3>
+                        <div class="pricing-data">10GB</div>
+                        <div class="pricing-price">Le 75,000</div>
+                        <p class="pricing-validity">Valid for 7 days</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 10GB High-speed data</li>
+                            <li><i class="fas fa-check"></i> Unlimited Qcell calls</li>
+                            <li><i class="fas fa-check"></i> 200 SMS included</li>
+                        </ul>
+                        <div class="pricing-code">Dial *123*22#</div>
+                        <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Monthly Plans -->
+                <h3 class="plan-category-title"><i class="fas fa-calendar-alt"></i> Monthly Plans</h3>
+                <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-icon">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
                         <h3 class="pricing-title">Monthly Standard</h3>
                         <div class="pricing-data">10GB</div>
-                        <div class="pricing-price">$8.00</div>
+                        <div class="pricing-price">Le 80,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 10GB High-speed data</li>
                             <li><i class="fas fa-check"></i> Unlimited Local calls</li>
                             <li><i class="fas fa-check"></i> 200 SMS included</li>
-                            <li><i class="fas fa-check"></i> Free OrangeTel calls</li>
+                            <li><i class="fas fa-check"></i> Free Qcell calls</li>
                         </ul>
                         <div class="pricing-code">Dial *123*30#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
@@ -233,7 +322,7 @@
                         </div>
                         <h3 class="pricing-title">Monthly Premium</h3>
                         <div class="pricing-data">25GB</div>
-                        <div class="pricing-price">$15.00</div>
+                        <div class="pricing-price">Le 150,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 25GB High-speed data</li>
@@ -252,7 +341,7 @@
                         </div>
                         <h3 class="pricing-title">Unlimited</h3>
                         <div class="pricing-data">Unlimited</div>
-                        <div class="pricing-price">$30.00</div>
+                        <div class="pricing-price">Le 300,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> Truly unlimited data</li>
@@ -263,14 +352,18 @@
                         <div class="pricing-code">Dial *123*99#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
                     </div>
+                </div>
 
+                <!-- Night Bundles -->
+                <h3 class="plan-category-title"><i class="fas fa-moon"></i> Night Bundles</h3>
+                <div class="pricing-grid">
                     <div class="pricing-card">
-                        <div class="pricing-icon">
+                        <div class="pricing-icon night">
                             <i class="fas fa-moon"></i>
                         </div>
                         <h3 class="pricing-title">Night Owl</h3>
                         <div class="pricing-data">5GB</div>
-                        <div class="pricing-price">$3.00</div>
+                        <div class="pricing-price">Le 30,000</div>
                         <p class="pricing-validity">12AM - 6AM daily, 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 5GB Night data</li>
@@ -280,6 +373,41 @@
                         <div class="pricing-code">Dial *123*50#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
                     </div>
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge hot">Hot</div>
+                        <div class="pricing-icon night">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h3 class="pricing-title">Night Pro</h3>
+                        <div class="pricing-data">15GB</div>
+                        <div class="pricing-price">Le 60,000</div>
+                        <p class="pricing-validity">12AM - 6AM daily, 30 days</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 15GB Night data</li>
+                            <li><i class="fas fa-check"></i> Use 12AM - 6AM</li>
+                            <li><i class="fas fa-check"></i> Ultra-fast speeds</li>
+                        </ul>
+                        <div class="pricing-code">Dial *123*51#</div>
+                        <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-icon night">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h3 class="pricing-title">Night Unlimited</h3>
+                        <div class="pricing-data">Unlimited</div>
+                        <div class="pricing-price">Le 100,000</div>
+                        <p class="pricing-validity">12AM - 6AM daily, 30 days</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited Night data</li>
+                            <li><i class="fas fa-check"></i> No data cap</li>
+                            <li><i class="fas fa-check"></i> Maximum speeds</li>
+                        </ul>
+                        <div class="pricing-code">Dial *123*52#</div>
+                        <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -287,8 +415,10 @@
         <!-- Call Plans Section -->
         <section id="calls" class="section" style="background: var(--white);">
             <div class="container">
-                <h2 class="section-title">Call Plans</h2>
-                <p class="section-subtitle">Stay connected with affordable voice plans</p>
+                <div class="section-header">
+                    <h2 class="section-title">Call Plans</h2>
+                    <p class="section-subtitle">Stay connected with affordable voice plans</p>
+                </div>
                 
                 <div class="pricing-grid">
                     <div class="pricing-card">
@@ -297,7 +427,7 @@
                         </div>
                         <h3 class="pricing-title">Local Minutes</h3>
                         <div class="pricing-data">100 Min</div>
-                        <div class="pricing-price">$1.00</div>
+                        <div class="pricing-price">Le 10,000</div>
                         <p class="pricing-validity">Valid for 7 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 100 Local minutes</li>
@@ -314,7 +444,7 @@
                         </div>
                         <h3 class="pricing-title">Unlimited Local</h3>
                         <div class="pricing-data">Unlimited</div>
-                        <div class="pricing-price">$5.00</div>
+                        <div class="pricing-price">Le 50,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> Unlimited local calls</li>
@@ -331,11 +461,11 @@
                         </div>
                         <h3 class="pricing-title">International</h3>
                         <div class="pricing-data">50 Min</div>
-                        <div class="pricing-price">$10.00</div>
+                        <div class="pricing-price">Le 100,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 50 International minutes</li>
-                            <li><i class="fas fa-check"></i> 100+ countries</li>
+                            <li><i class="fas fa-check"></i> 50+ countries</li>
                             <li><i class="fas fa-check"></i> Clear connection</li>
                         </ul>
                         <div class="pricing-code">Dial *124*3#</div>
@@ -348,8 +478,10 @@
         <!-- SMS Bundles Section -->
         <section id="sms" class="section" style="background: var(--light-bg);">
             <div class="container">
-                <h2 class="section-title">SMS Bundles</h2>
-                <p class="section-subtitle">Text your loved ones at affordable rates</p>
+                <div class="section-header">
+                    <h2 class="section-title">SMS Bundles</h2>
+                    <p class="section-subtitle">Text your loved ones at affordable rates</p>
+                </div>
                 
                 <div class="pricing-grid">
                     <div class="pricing-card">
@@ -358,7 +490,7 @@
                         </div>
                         <h3 class="pricing-title">SMS Lite</h3>
                         <div class="pricing-data">100 SMS</div>
-                        <div class="pricing-price">$0.50</div>
+                        <div class="pricing-price">Le 5,000</div>
                         <p class="pricing-validity">Valid for 7 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 100 SMS to all networks</li>
@@ -372,13 +504,13 @@
                         <div class="pricing-icon">
                             <i class="fas fa-comments"></i>
                         </div>
-                        <h3 class="pricing-title">SMS Pro</h3>
+                        <h3 class="pricing-title">SMS Standard</h3>
                         <div class="pricing-data">500 SMS</div>
-                        <div class="pricing-price">$2.00</div>
+                        <div class="pricing-price">Le 15,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> 500 SMS to all networks</li>
-                            <li><i class="fas fa-check"></i> International SMS included</li>
+                            <li><i class="fas fa-check"></i> 30-day validity</li>
                         </ul>
                         <div class="pricing-code">Dial *125*2#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
@@ -386,11 +518,11 @@
 
                     <div class="pricing-card">
                         <div class="pricing-icon">
-                            <i class="fas fa-infinity"></i>
+                            <i class="fas fa-comment-dots"></i>
                         </div>
-                        <h3 class="pricing-title">Unlimited SMS</h3>
+                        <h3 class="pricing-title">SMS Unlimited</h3>
                         <div class="pricing-data">Unlimited</div>
-                        <div class="pricing-price">$4.00</div>
+                        <div class="pricing-price">Le 25,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
                             <li><i class="fas fa-check"></i> Unlimited SMS</li>
@@ -406,22 +538,24 @@
         <!-- Roaming Section -->
         <section id="roaming" class="section" style="background: var(--white);">
             <div class="container">
-                <h2 class="section-title">International Roaming</h2>
-                <p class="section-subtitle">Stay connected when traveling abroad</p>
+                <div class="section-header">
+                    <h2 class="section-title">International Roaming</h2>
+                    <p class="section-subtitle">Stay connected while traveling abroad</p>
+                </div>
                 
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-icon">
                             <i class="fas fa-plane"></i>
                         </div>
-                        <h3 class="pricing-title">Travel Lite</h3>
-                        <div class="pricing-data">1GB</div>
-                        <div class="pricing-price">$15.00</div>
+                        <h3 class="pricing-title">Roaming Basic</h3>
+                        <div class="pricing-data">500MB + 50 Min</div>
+                        <div class="pricing-price">Le 100,000</div>
                         <p class="pricing-validity">Valid for 7 days</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 1GB Roaming data</li>
-                            <li><i class="fas fa-check"></i> 50+ countries</li>
-                            <li><i class="fas fa-check"></i> 30 Local minutes</li>
+                            <li><i class="fas fa-check"></i> 500MB roaming data</li>
+                            <li><i class="fas fa-check"></i> 50 minutes calls</li>
+                            <li><i class="fas fa-check"></i> West Africa coverage</li>
                         </ul>
                         <div class="pricing-code">Dial *126*1#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
@@ -430,17 +564,17 @@
                     <div class="pricing-card featured">
                         <div class="pricing-badge">Recommended</div>
                         <div class="pricing-icon">
-                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-globe-africa"></i>
                         </div>
-                        <h3 class="pricing-title">World Traveler</h3>
-                        <div class="pricing-data">5GB</div>
-                        <div class="pricing-price">$40.00</div>
-                        <p class="pricing-validity">Valid for 30 days</p>
+                        <h3 class="pricing-title">Roaming Plus</h3>
+                        <div class="pricing-data">2GB + 100 Min</div>
+                        <div class="pricing-price">Le 250,000</div>
+                        <p class="pricing-validity">Valid for 14 days</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 5GB Roaming data</li>
-                            <li><i class="fas fa-check"></i> 100+ countries</li>
-                            <li><i class="fas fa-check"></i> 100 Local minutes</li>
-                            <li><i class="fas fa-check"></i> Free incoming calls</li>
+                            <li><i class="fas fa-check"></i> 2GB roaming data</li>
+                            <li><i class="fas fa-check"></i> 100 minutes calls</li>
+                            <li><i class="fas fa-check"></i> Africa-wide coverage</li>
+                            <li><i class="fas fa-check"></i> 50 SMS included</li>
                         </ul>
                         <div class="pricing-code">Dial *126*2#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
@@ -448,17 +582,17 @@
 
                     <div class="pricing-card">
                         <div class="pricing-icon">
-                            <i class="fas fa-briefcase"></i>
+                            <i class="fas fa-globe"></i>
                         </div>
-                        <h3 class="pricing-title">Business Travel</h3>
-                        <div class="pricing-data">10GB</div>
-                        <div class="pricing-price">$75.00</div>
+                        <h3 class="pricing-title">World Roaming</h3>
+                        <div class="pricing-data">5GB + 200 Min</div>
+                        <div class="pricing-price">Le 500,000</div>
                         <p class="pricing-validity">Valid for 30 days</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 10GB Roaming data</li>
-                            <li><i class="fas fa-check"></i> All countries</li>
-                            <li><i class="fas fa-check"></i> Unlimited calls</li>
-                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> 5GB roaming data</li>
+                            <li><i class="fas fa-check"></i> 200 minutes calls</li>
+                            <li><i class="fas fa-check"></i> 50+ countries</li>
+                            <li><i class="fas fa-check"></i> 100 SMS included</li>
                         </ul>
                         <div class="pricing-code">Dial *126*3#</div>
                         <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
@@ -470,160 +604,237 @@
         <!-- Business Section -->
         <section id="enterprise" class="section" style="background: var(--light-bg);">
             <div class="container">
-                <h2 class="section-title">Business Solutions</h2>
-                <p class="section-subtitle">Tailored solutions for your business needs</p>
+                <div class="section-header">
+                    <h2 class="section-title">Business Solutions</h2>
+                    <p class="section-subtitle">Enterprise-grade connectivity for your business</p>
+                </div>
                 
                 <div class="pricing-grid">
-                    <div class="pricing-card" id="corporate">
-                        <div class="pricing-icon">
-                            <i class="fas fa-building"></i>
+                    <div class="pricing-card">
+                        <div class="pricing-icon business">
+                            <i class="fas fa-store"></i>
                         </div>
-                        <h3 class="pricing-title">Corporate Plan</h3>
-                        <div class="pricing-data">50GB</div>
-                        <div class="pricing-price">$100.00</div>
-                        <p class="pricing-validity">Per month, up to 10 lines</p>
+                        <h3 class="pricing-title">SME Basic</h3>
+                        <div class="pricing-data">50GB Shared</div>
+                        <div class="pricing-price">Le 500,000</div>
+                        <p class="pricing-validity">Monthly / Up to 5 SIMs</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 50GB Shared data</li>
-                            <li><i class="fas fa-check"></i> Up to 10 SIM cards</li>
-                            <li><i class="fas fa-check"></i> Unlimited calls between lines</li>
-                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                            <li><i class="fas fa-check"></i> 50GB shared data pool</li>
+                            <li><i class="fas fa-check"></i> 5 SIM cards included</li>
+                            <li><i class="fas fa-check"></i> Unlimited Qcell calls</li>
+                            <li><i class="fas fa-check"></i> Account manager</li>
                         </ul>
-                        <div class="pricing-code">Call *127# to inquire</div>
-                        <a href="contact.html" class="pricing-btn">Contact Sales</a>
+                        <button class="pricing-btn" data-modal="plan-modal">Contact Sales</button>
                     </div>
 
-                    <div class="pricing-card" id="bulk">
-                        <div class="pricing-icon">
-                            <i class="fas fa-envelope-open-text"></i>
+                    <div class="pricing-card featured" id="corporate">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-icon business">
+                            <i class="fas fa-building"></i>
                         </div>
-                        <h3 class="pricing-title">Bulk SMS</h3>
-                        <div class="pricing-data">10,000 SMS</div>
-                        <div class="pricing-price">$50.00</div>
+                        <h3 class="pricing-title">Corporate Pro</h3>
+                        <div class="pricing-data">200GB Shared</div>
+                        <div class="pricing-price">Le 1,500,000</div>
+                        <p class="pricing-validity">Monthly / Up to 20 SIMs</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 200GB shared data pool</li>
+                            <li><i class="fas fa-check"></i> 20 SIM cards included</li>
+                            <li><i class="fas fa-check"></i> Unlimited all-network calls</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Detailed usage reports</li>
+                        </ul>
+                        <button class="pricing-btn" data-modal="plan-modal">Contact Sales</button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-icon business">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-data">Custom</div>
+                        <div class="pricing-price">Custom Pricing</div>
+                        <p class="pricing-validity">Tailored to your needs</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited data pool</li>
+                            <li><i class="fas fa-check"></i> Unlimited SIM cards</li>
+                            <li><i class="fas fa-check"></i> Dedicated infrastructure</li>
+                            <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                            <li><i class="fas fa-check"></i> API integration</li>
+                        </ul>
+                        <button class="pricing-btn" data-modal="plan-modal">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bulk SMS Section -->
+        <section id="bulk" class="section" style="background: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Bulk SMS</h2>
+                    <p class="section-subtitle">Reach your customers with our Bulk SMS service</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="pricing-title">Starter Pack</h3>
+                        <div class="pricing-data">1,000 SMS</div>
+                        <div class="pricing-price">Le 100,000</div>
                         <p class="pricing-validity">No expiry</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 10,000 SMS credits</li>
-                            <li><i class="fas fa-check"></i> API integration</li>
-                            <li><i class="fas fa-check"></i> Custom sender ID</li>
+                            <li><i class="fas fa-check"></i> 1,000 bulk SMS</li>
+                            <li><i class="fas fa-check"></i> Sender ID customization</li>
                             <li><i class="fas fa-check"></i> Delivery reports</li>
                         </ul>
-                        <div class="pricing-code">Visit portal.orangetel.com</div>
-                        <a href="contact.html" class="pricing-btn">Get Started</a>
+                        <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Best Value</div>
+                        <div class="pricing-icon">
+                            <i class="fas fa-envelopes-bulk"></i>
+                        </div>
+                        <h3 class="pricing-title">Business Pack</h3>
+                        <div class="pricing-data">10,000 SMS</div>
+                        <div class="pricing-price">Le 800,000</div>
+                        <p class="pricing-validity">No expiry</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 10,000 bulk SMS</li>
+                            <li><i class="fas fa-check"></i> Sender ID customization</li>
+                            <li><i class="fas fa-check"></i> API access</li>
+                            <li><i class="fas fa-check"></i> Priority delivery</li>
+                        </ul>
+                        <button class="pricing-btn" data-modal="plan-modal">Buy Now</button>
                     </div>
 
                     <div class="pricing-card">
                         <div class="pricing-icon">
                             <i class="fas fa-server"></i>
                         </div>
-                        <h3 class="pricing-title">Enterprise Internet</h3>
-                        <div class="pricing-data">Dedicated</div>
+                        <h3 class="pricing-title">Enterprise Pack</h3>
+                        <div class="pricing-data">100,000+ SMS</div>
                         <div class="pricing-price">Custom</div>
-                        <p class="pricing-validity">Tailored to your needs</p>
+                        <p class="pricing-validity">Volume discounts available</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> Dedicated fiber connection</li>
-                            <li><i class="fas fa-check"></i> 99.9% uptime SLA</li>
-                            <li><i class="fas fa-check"></i> 24/7 Priority support</li>
-                            <li><i class="fas fa-check"></i> Static IP addresses</li>
+                            <li><i class="fas fa-check"></i> 100,000+ bulk SMS</li>
+                            <li><i class="fas fa-check"></i> Dedicated short code</li>
+                            <li><i class="fas fa-check"></i> Full API integration</li>
+                            <li><i class="fas fa-check"></i> Account manager</li>
                         </ul>
-                        <div class="pricing-code">Contact for quote</div>
-                        <a href="contact.html" class="pricing-btn">Request Quote</a>
+                        <button class="pricing-btn" data-modal="plan-modal">Contact Sales</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Devices Section -->
-        <section id="devices" class="section" style="background: var(--white);">
+        <!-- SIM Cards Section -->
+        <section id="sim" class="section" style="background: var(--light-bg);">
             <div class="container">
-                <h2 class="section-title">Devices & Accessories</h2>
-                <p class="section-subtitle">Get connected with our range of devices</p>
+                <div class="section-header">
+                    <h2 class="section-title">SIM Cards</h2>
+                    <p class="section-subtitle">Get a Qcell SIM and stay connected</p>
+                </div>
                 
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-icon">
                             <i class="fas fa-sim-card"></i>
                         </div>
-                        <h3 class="pricing-title">SIM Card</h3>
-                        <div class="pricing-data">New SIM</div>
-                        <div class="pricing-price">$1.00</div>
-                        <p class="pricing-validity">Includes $0.50 airtime</p>
+                        <h3 class="pricing-title">Standard SIM</h3>
+                        <div class="pricing-data">4G Ready</div>
+                        <div class="pricing-price">Le 5,000</div>
+                        <p class="pricing-validity">Includes Le 5,000 airtime</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 4G/5G Ready</li>
-                            <li><i class="fas fa-check"></i> Instant activation</li>
-                            <li><i class="fas fa-check"></i> Free starter bonus</li>
+                            <li><i class="fas fa-check"></i> 4G LTE enabled</li>
+                            <li><i class="fas fa-check"></i> Free registration</li>
+                            <li><i class="fas fa-check"></i> Le 5,000 bonus airtime</li>
                         </ul>
-                        <a href="sim-registration.html" class="pricing-btn">Get SIM</a>
+                        <button class="pricing-btn" data-modal="plan-modal">Get SIM</button>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Recommended</div>
+                        <div class="pricing-icon">
+                            <i class="fas fa-sim-card"></i>
+                        </div>
+                        <h3 class="pricing-title">Starter Bundle</h3>
+                        <div class="pricing-data">SIM + 2GB</div>
+                        <div class="pricing-price">Le 20,000</div>
+                        <p class="pricing-validity">7-day data bundle included</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 4G LTE SIM</li>
+                            <li><i class="fas fa-check"></i> 2GB data (7 days)</li>
+                            <li><i class="fas fa-check"></i> 50 minutes calls</li>
+                            <li><i class="fas fa-check"></i> 50 SMS</li>
+                        </ul>
+                        <button class="pricing-btn" data-modal="plan-modal">Get Bundle</button>
                     </div>
 
                     <div class="pricing-card">
                         <div class="pricing-icon">
-                            <i class="fas fa-wifi"></i>
+                            <i class="fas fa-id-card"></i>
                         </div>
-                        <h3 class="pricing-title">4G MiFi Router</h3>
-                        <div class="pricing-data">Portable WiFi</div>
-                        <div class="pricing-price">$35.00</div>
-                        <p class="pricing-validity">Connect up to 10 devices</p>
+                        <h3 class="pricing-title">Tourist SIM</h3>
+                        <div class="pricing-data">SIM + 5GB</div>
+                        <div class="pricing-price">Le 50,000</div>
+                        <p class="pricing-validity">30-day data bundle</p>
                         <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 4G LTE speeds</li>
-                            <li><i class="fas fa-check"></i> 10 device connection</li>
-                            <li><i class="fas fa-check"></i> 8hr battery life</li>
+                            <li><i class="fas fa-check"></i> 4G LTE SIM</li>
+                            <li><i class="fas fa-check"></i> 5GB data (30 days)</li>
+                            <li><i class="fas fa-check"></i> 100 minutes international</li>
+                            <li><i class="fas fa-check"></i> Pre-registered</li>
                         </ul>
-                        <a href="contact.html" class="pricing-btn">Buy Device</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <div class="pricing-icon">
-                            <i class="fas fa-broadcast-tower"></i>
-                        </div>
-                        <h3 class="pricing-title">Home Router</h3>
-                        <div class="pricing-data">Fixed Wireless</div>
-                        <div class="pricing-price">$50.00</div>
-                        <p class="pricing-validity">For home internet</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check"></i> 4G/5G capable</li>
-                            <li><i class="fas fa-check"></i> External antenna port</li>
-                            <li><i class="fas fa-check"></i> Ethernet ports</li>
-                        </ul>
-                        <a href="contact.html" class="pricing-btn">Buy Device</a>
+                        <button class="pricing-btn" data-modal="plan-modal">Get Tourist SIM</button>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Plan Modal -->
-    <div class="modal-overlay" id="plan-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-icon">
-                    <i class="fas fa-wifi"></i>
+        <!-- How to Buy Section -->
+        <section class="section" style="background: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How to Buy</h2>
+                    <p class="section-subtitle">Multiple easy ways to purchase your plan</p>
                 </div>
-                <h3 class="modal-title">Activate Your Plan</h3>
-                <p class="modal-subtitle">Complete your purchase</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Qcell App</h3>
+                        <p class="feature-description">Download the Qcell app and buy bundles with a few taps. Get app-exclusive discounts!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3 class="feature-title">USSD Code</h3>
+                        <p class="feature-description">Dial the USSD code shown on each plan card to purchase instantly from your phone.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3 class="feature-title">Qcell Stores</h3>
+                        <p class="feature-description">Visit any Qcell store or authorized dealer near you to purchase bundles.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3 class="feature-title">Recharge Cards</h3>
+                        <p class="feature-description">Buy Qcell recharge cards from retailers and dial *101*PIN# to recharge.</p>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Plan</span>
-                    <span class="modal-info-value">Data Plan</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Price</span>
-                    <span class="modal-info-value">$X.XX</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Validity</span>
-                    <span class="modal-info-value">X days</span>
-                </div>
-                <div class="modal-instructions">
-                    <h4>How to Activate</h4>
-                    <p>Dial the USSD code shown on the plan card or use the OrangeTel app to activate instantly. Example: <code>*123*XX#</code></p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="app.html" class="modal-btn">Download App to Buy</a>
-            </div>
-        </div>
-    </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -632,26 +843,34 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <i class="fas fa-signal"></i>
-                        <span>OrangeTel</span>
+                        <span>Qcell</span>
                     </div>
-                    <p class="footer-description">
-                        Connecting you to what matters most. Fast, reliable, and affordable telecommunications.
-                    </p>
+                    <p class="footer-description">Sierra Leone's leading telecommunications provider. Connecting you to what matters most.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Quick Links</h3>
+                    <h3 class="footer-title">Personal</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="promotions.html">Promotions</a></li>
-                        <li><a href="about-company.html">About Us</a></li>
+                        <li><a href="#data-plans">Data Plans</a></li>
+                        <li><a href="#calls">Call Plans</a></li>
+                        <li><a href="#sms">SMS Bundles</a></li>
+                        <li><a href="#roaming">Roaming</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Business</h3>
+                    <ul class="footer-links">
+                        <li><a href="#enterprise">Enterprise Internet</a></li>
+                        <li><a href="#corporate">Corporate Plans</a></li>
+                        <li><a href="#bulk">Bulk SMS</a></li>
+                        <li><a href="broadband.html">Broadband</a></li>
                     </ul>
                 </div>
                 
@@ -659,38 +878,38 @@
                     <h3 class="footer-title">Support</h3>
                     <ul class="footer-links">
                         <li><a href="support.html">Help Center</a></li>
-                        <li><a href="sim-registration.html">SIM Registration</a></li>
-                        <li><a href="app.html">Download App</a></li>
+                        <li><a href="support.html#faq">FAQs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Contact Info</h3>
+                    <h3 class="footer-title">Contact</h3>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Telecom Plaza, City Center</span>
-                        </div>
-                        <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>*123# or +1 (555) 123-4567</span>
+                            <span>Dial *123# or 076-000-000</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>support@orangetel.com</span>
+                            <span>support@qcell.sl</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 OrangeTel Communications. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Qcell Sierra Leone. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>

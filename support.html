@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Center - OrangeTel</title>
-    <meta name="description" content="Get help with OrangeTel services. Browse FAQs, contact support, and find answers to common questions.">
+    <title>Help Center - Qcell Sierra Leone</title>
+    <meta name="description" content="Get help with Qcell services. Browse FAQs, contact support, and find answers to common questions.">
+    <link rel="icon" type="image/png" href="https://i.imghippo.com/files/IJi2095tg.jpg">
+    <meta name="theme-color" content="#ff7a00" />
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header / Navbar -->
     <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
+                <a href="index.html" class="nav-logo">
                     <i class="fas fa-signal"></i>
-                    <span>OrangeTel</span>
-                </div>
+                    <span>Qcell</span>
+                </a>
                 <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Personal <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html"><i class="fas fa-wifi"></i> Data Plans</a></li>
+                            <li><a href="products.html#calls"><i class="fas fa-phone"></i> Call Plans</a></li>
+                            <li><a href="products.html#sms"><i class="fas fa-comment"></i> SMS Bundles</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
                     <li class="nav-item"><a href="support.html" class="nav-link active">Support</a></li>
                     <li class="nav-item"><a href="about-company.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="app.html" class="nav-link nav-cta">Get App</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span class="bar"></span>
@@ -34,11 +46,12 @@
         </nav>
     </header>
 
+    <!-- Mobile Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo">
                 <i class="fas fa-signal"></i>
-                <span>OrangeTel</span>
+                <span>Qcell</span>
             </div>
             <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
         </div>
@@ -48,16 +61,24 @@
             <li><a href="promotions.html" class="sidebar-link">Promotions</a></li>
             <li><a href="support.html" class="sidebar-link active">Support</a></li>
             <li><a href="about-company.html" class="sidebar-link">About</a></li>
-            <li><a href="app.html" class="sidebar-link">Get App</a></li>
+            <li><a href="app.html" class="sidebar-link highlight">Get App</a></li>
             <li><a href="contact.html" class="sidebar-link">Contact</a></li>
         </ul>
     </div>
 
     <main class="page-main">
-        <section class="page-header">
+        <!-- Page Header -->
+        <section class="page-header-enhanced">
             <div class="container">
-                <h1 class="page-title">Help Center</h1>
-                <p class="page-subtitle">How can we help you today?</p>
+                <div class="page-header-content">
+                    <h1>Help Center</h1>
+                    <p>How can we help you today?</p>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>/</span>
+                        <span>Support</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -81,46 +102,86 @@
                         <i class="fas fa-mobile-alt"></i>
                         <span>Download App</span>
                     </a>
+                    <a href="#ussd" class="quick-link-card">
+                        <i class="fas fa-hashtag"></i>
+                        <span>USSD Codes</span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Self-Service Options -->
-        <section class="section" style="background: var(--white);">
+        <section id="ussd" class="section" style="background: var(--white);">
             <div class="container">
-                <h2 class="section-title">Self-Service Options</h2>
-                <p class="section-subtitle">Quick actions you can do yourself</p>
+                <div class="section-header">
+                    <h2 class="section-title">Self-Service Options</h2>
+                    <p class="section-subtitle">Quick actions you can do yourself with USSD codes</p>
+                </div>
                 
-                <div class="documentation-grid">
-                    <div class="doc-card">
-                        <div class="doc-icon"><i class="fas fa-wallet"></i></div>
-                        <h3 class="doc-title">Check Balance</h3>
-                        <p class="doc-description">Dial <strong>*100#</strong> to check your current airtime and data balance instantly.</p>
+                <div class="ussd-grid">
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-wallet"></i></div>
+                        <div class="ussd-content">
+                            <h3>Check Balance</h3>
+                            <p>Check your airtime and data balance instantly</p>
+                            <div class="ussd-code">*100#</div>
+                        </div>
                     </div>
-                    <div class="doc-card">
-                        <div class="doc-icon"><i class="fas fa-wifi"></i></div>
-                        <h3 class="doc-title">Buy Data</h3>
-                        <p class="doc-description">Dial <strong>*123#</strong> to access our data menu and purchase bundles.</p>
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-wifi"></i></div>
+                        <div class="ussd-content">
+                            <h3>Buy Data</h3>
+                            <p>Access our data menu and purchase bundles</p>
+                            <div class="ussd-code">*123#</div>
+                        </div>
                     </div>
-                    <div class="doc-card">
-                        <div class="doc-icon"><i class="fas fa-credit-card"></i></div>
-                        <h3 class="doc-title">Recharge</h3>
-                        <p class="doc-description">Dial <strong>*101*PIN#</strong> to recharge using a scratch card voucher.</p>
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-credit-card"></i></div>
+                        <div class="ussd-content">
+                            <h3>Recharge</h3>
+                            <p>Recharge using a scratch card voucher</p>
+                            <div class="ussd-code">*101*PIN#</div>
+                        </div>
                     </div>
-                    <div class="doc-card">
-                        <div class="doc-icon"><i class="fas fa-exchange-alt"></i></div>
-                        <h3 class="doc-title">Transfer Airtime</h3>
-                        <p class="doc-description">Dial <strong>*102*NUMBER*AMOUNT#</strong> to share airtime with friends.</p>
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="ussd-content">
+                            <h3>Transfer Airtime</h3>
+                            <p>Share airtime with friends and family</p>
+                            <div class="ussd-code">*102*NUMBER*AMOUNT#</div>
+                        </div>
                     </div>
-                    <div class="doc-card">
-                        <div class="doc-icon"><i class="fas fa-sim-card"></i></div>
-                        <h3 class="doc-title">Check SIM Info</h3>
-                        <p class="doc-description">Dial <strong>*111#</strong> to see your number and account information.</p>
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-sim-card"></i></div>
+                        <div class="ussd-content">
+                            <h3>Check SIM Info</h3>
+                            <p>See your number and account information</p>
+                            <div class="ussd-code">*111#</div>
+                        </div>
                     </div>
-                    <div class="doc-card">
-                        <div class="doc-icon"><i class="fas fa-undo"></i></div>
-                        <h3 class="doc-title">PUK Recovery</h3>
-                        <p class="doc-description">Visit any OrangeTel store with your ID to recover your PUK code.</p>
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-share-alt"></i></div>
+                        <div class="ussd-content">
+                            <h3>Transfer Data</h3>
+                            <p>Share data with other Qcell users</p>
+                            <div class="ussd-code">*103*NUMBER*MB#</div>
+                        </div>
+                    </div>
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-globe"></i></div>
+                        <div class="ussd-content">
+                            <h3>Roaming</h3>
+                            <p>Activate or manage roaming services</p>
+                            <div class="ussd-code">*126#</div>
+                        </div>
+                    </div>
+                    <div class="ussd-card">
+                        <div class="ussd-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="ussd-content">
+                            <h3>Call Plans</h3>
+                            <p>Buy voice minutes and call bundles</p>
+                            <div class="ussd-code">*124#</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,87 +190,138 @@
         <!-- FAQs -->
         <section id="faq" class="section" style="background: var(--light-bg);">
             <div class="container">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common questions</p>
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common questions</p>
+                </div>
+                
+                <!-- FAQ Categories -->
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="all">All</button>
+                    <button class="faq-category-btn" data-category="data">Data & Internet</button>
+                    <button class="faq-category-btn" data-category="account">Account</button>
+                    <button class="faq-category-btn" data-category="sim">SIM & Registration</button>
+                    <button class="faq-category-btn" data-category="billing">Billing</button>
+                </div>
                 
                 <div class="faq-list">
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="data">
                         <div class="faq-question">
                             <h4>How do I check my data balance?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>You can check your data balance by dialing *100# or through the OrangeTel app. The app shows detailed usage breakdowns including remaining data, calls, and SMS.</p>
+                            <p>You can check your data balance by dialing <strong>*100#</strong> or through the Qcell app. The app shows detailed usage breakdowns including remaining data, calls, and SMS.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="data">
                         <div class="faq-question">
                             <h4>How do I buy a data bundle?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Dial *123# and follow the menu prompts to select your preferred bundle. You can also buy data through the OrangeTel app, which offers app-exclusive deals and instant activation.</p>
+                            <p>Dial <strong>*123#</strong> and follow the menu prompts to select your preferred bundle. You can also buy data through the Qcell app, which offers app-exclusive deals and instant activation.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="data">
+                        <div class="faq-question">
+                            <h4>Can I transfer data to another Qcell user?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! You can share data with other Qcell users through the app or by dialing <strong>*103*NUMBER*MB#</strong>. A small transfer fee may apply. Both users must be on Qcell network.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-category="data">
+                        <div class="faq-question">
+                            <h4>What is the Night Bundle and how does it work?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Night Bundles provide discounted data that can only be used between 12AM and 6AM daily. They're perfect for downloading large files or streaming at night. Purchase by dialing <strong>*123*50#</strong>.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-category="account">
                         <div class="faq-question">
                             <h4>What should I do if I forgot my PUK code?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Visit any OrangeTel store with a valid photo ID that matches the registered SIM owner. Our staff will verify your identity and provide your PUK code. You can also call customer service at *123#.</p>
+                            <p>Visit any Qcell store with a valid photo ID that matches the registered SIM owner. Our staff will verify your identity and provide your PUK code. You can also call customer service.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="sim">
                         <div class="faq-question">
                             <h4>How do I register my SIM card?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>New SIM cards must be registered within 30 days of purchase. Visit our <a href="sim-registration.html">SIM Registration page</a> or visit any OrangeTel store with your national ID and a passport photo.</p>
+                            <p>New SIM cards must be registered within 30 days of purchase. Visit our <a href="sim-registration.html">SIM Registration page</a> or visit any Qcell store with your national ID and a passport photo.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="sim">
                         <div class="faq-question">
-                            <h4>Can I transfer data to another OrangeTel user?</h4>
+                            <h4>Can I keep my number if I switch to Qcell?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes! You can share data with other OrangeTel users through the app or by dialing *103*NUMBER*MB#. A small transfer fee may apply. Both users must be on OrangeTel network.</p>
+                            <p>Mobile Number Portability (MNP) is available in Sierra Leone. Visit any Qcell store with your current SIM and ID to initiate the porting process. It typically takes 24-48 hours.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="data">
                         <div class="faq-question">
                             <h4>How do I activate international roaming?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Dial *126# to access roaming options or enable roaming through the app settings. We recommend purchasing a roaming package before traveling. Standard pay-as-you-go rates apply if no package is activated.</p>
+                            <p>Dial <strong>*126#</strong> to access roaming options or enable roaming through the app settings. We recommend purchasing a roaming package before traveling. Standard pay-as-you-go rates apply if no package is activated.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="billing">
+                        <div class="faq-question">
+                            <h4>How do I recharge my account?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can recharge using scratch cards by dialing <strong>*101*PIN#</strong>, through the Qcell app, mobile money, or at any authorized dealer. The app also supports bank card payments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-category="account">
                         <div class="faq-question">
                             <h4>What are the customer service hours?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Our phone support is available 24/7 by dialing *123# or calling our hotline. Store hours vary by location - use our store locator to find hours for your nearest store.</p>
+                            <p>Our phone support is available 24/7 by dialing <strong>076-000-000</strong> or calling our hotline. Store hours vary by location - use our store locator to find hours for your nearest store.</p>
                         </div>
                     </div>
                     
-                    <div class="faq-item">
+                    <div class="faq-item" data-category="account">
                         <div class="faq-question">
                             <h4>How do I stop unwanted promotional messages?</h4>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Dial *130# and select the option to manage your marketing preferences. You can also opt out through the OrangeTel app under Settings > Privacy > Marketing Communications.</p>
+                            <p>Dial <strong>*130#</strong> and select the option to manage your marketing preferences. You can also opt out through the Qcell app under Settings > Privacy > Marketing Communications.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-category="billing">
+                        <div class="faq-question">
+                            <h4>Why was my data deducted even though I have a bundle?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>This can happen if your bundle expired or you exceeded your data allowance. Check your bundle status with <strong>*100#</strong>. Some apps may also use data in the background. Enable data saver mode in your phone settings.</p>
                         </div>
                     </div>
                 </div>
@@ -219,65 +331,194 @@
         <!-- Contact Options -->
         <section class="section" style="background: var(--white);">
             <div class="container">
-                <h2 class="section-title">Still Need Help?</h2>
-                <p class="section-subtitle">Our support team is ready to assist</p>
+                <div class="section-header">
+                    <h2 class="section-title">Still Need Help?</h2>
+                    <p class="section-subtitle">Our support team is ready to assist</p>
+                </div>
                 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-phone"></i></div>
-                        <h3 class="feature-title">Call Us</h3>
-                        <p class="feature-description">Dial *123# from your OrangeTel number or call +1 (555) 123-4567 from any phone. Available 24/7.</p>
+                <div class="contact-options-grid">
+                    <div class="contact-option-card">
+                        <div class="contact-option-icon"><i class="fas fa-phone"></i></div>
+                        <h3>Call Us</h3>
+                        <p>Dial 076-000-000 from any phone or *123# from your Qcell number. Available 24/7.</p>
+                        <a href="tel:076000000" class="contact-option-btn">Call Now</a>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-envelope"></i></div>
-                        <h3 class="feature-title">Email Support</h3>
-                        <p class="feature-description">Send us an email at support@orangetel.com. We respond within 24 hours.</p>
+                    <div class="contact-option-card">
+                        <div class="contact-option-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email Support</h3>
+                        <p>Send us an email at support@qcell.sl. We respond within 24 hours.</p>
+                        <a href="mailto:support@qcell.sl" class="contact-option-btn">Send Email</a>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-store"></i></div>
-                        <h3 class="feature-title">Visit a Store</h3>
-                        <p class="feature-description">Find your nearest OrangeTel store for in-person assistance and SIM services.</p>
+                    <div class="contact-option-card">
+                        <div class="contact-option-icon"><i class="fas fa-store"></i></div>
+                        <h3>Visit a Store</h3>
+                        <p>Find your nearest Qcell store for in-person assistance and SIM services.</p>
+                        <a href="contact.html#stores" class="contact-option-btn">Find Store</a>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-comments"></i></div>
-                        <h3 class="feature-title">Live Chat</h3>
-                        <p class="feature-description">Chat with us through the OrangeTel app for instant support. Available 8AM - 10PM.</p>
+                    <div class="contact-option-card">
+                        <div class="contact-option-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Live Chat</h3>
+                        <p>Chat with us through the Qcell app for instant support. Available 8AM - 10PM.</p>
+                        <a href="app.html" class="contact-option-btn">Get App</a>
                     </div>
                 </div>
                 
                 <div style="text-align: center; margin-top: 3rem;">
-                    <a href="contact.html" class="cta-button">Contact Us</a>
+                    <a href="contact.html" class="cta-button primary">Contact Us</a>
                 </div>
             </div>
         </section>
+
+        <!-- Troubleshooting Guide -->
+        <section class="section" style="background: var(--light-bg);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Common Issues & Solutions</h2>
+                    <p class="section-subtitle">Quick fixes for common problems</p>
+                </div>
+                
+                <div class="troubleshoot-grid">
+                    <div class="troubleshoot-card">
+                        <div class="troubleshoot-icon"><i class="fas fa-wifi-slash"></i></div>
+                        <h3>No Internet Connection</h3>
+                        <ol>
+                            <li>Check if mobile data is enabled</li>
+                            <li>Verify you have an active data bundle</li>
+                            <li>Restart your device</li>
+                            <li>Check APN settings (APN: internet)</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="troubleshoot-card">
+                        <div class="troubleshoot-icon"><i class="fas fa-signal-slash"></i></div>
+                        <h3>Poor Network Signal</h3>
+                        <ol>
+                            <li>Move to an open area</li>
+                            <li>Toggle airplane mode on/off</li>
+                            <li>Check for network outages</li>
+                            <li>Try manual network selection</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="troubleshoot-card">
+                        <div class="troubleshoot-icon"><i class="fas fa-phone-slash"></i></div>
+                        <h3>Cannot Make Calls</h3>
+                        <ol>
+                            <li>Check airtime balance (*100#)</li>
+                            <li>Ensure SIM is properly inserted</li>
+                            <li>Disable call barring if enabled</li>
+                            <li>Contact support if issue persists</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="troubleshoot-card">
+                        <div class="troubleshoot-icon"><i class="fas fa-lock"></i></div>
+                        <h3>SIM Locked</h3>
+                        <ol>
+                            <li>Enter correct PIN (3 attempts)</li>
+                            <li>Use PUK code to unlock</li>
+                            <li>Visit Qcell store with ID</li>
+                            <li>Get PUK from customer service</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo"><i class="fas fa-signal"></i><span>OrangeTel</span></div>
-                    <p class="footer-description">Connecting you to what matters most.</p>
+                    <div class="footer-logo">
+                        <i class="fas fa-signal"></i>
+                        <span>Qcell</span>
+                    </div>
+                    <p class="footer-description">Sierra Leone's leading telecommunications provider. Connecting you to what matters most.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
-                    <h3 class="footer-title">Quick Links</h3>
+                    <h3 class="footer-title">Personal</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="products.html">Data Plans</a></li>
+                        <li><a href="products.html#calls">Call Plans</a></li>
+                        <li><a href="products.html#sms">SMS Bundles</a></li>
+                        <li><a href="products.html#roaming">Roaming</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Business</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#enterprise">Enterprise Internet</a></li>
+                        <li><a href="products.html#corporate">Corporate Plans</a></li>
+                        <li><a href="products.html#bulk">Bulk SMS</a></li>
+                        <li><a href="broadband.html">Broadband</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="support.html#faq">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
                 <div class="footer-section">
                     <h3 class="footer-title">Contact</h3>
                     <div class="contact-info">
-                        <div class="contact-item"><i class="fas fa-phone"></i><span>*123#</span></div>
-                        <div class="contact-item"><i class="fas fa-envelope"></i><span>support@orangetel.com</span></div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Dial *123# or 076-000-000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@qcell.sl</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2025 OrangeTel Communications.</p></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Qcell Sierra Leone. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="Script.js"></script>
+    <script>
+        // FAQ Category Filter
+        document.querySelectorAll('.faq-category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotions & Offers - OrangeTel</title>
-    <meta name="description" content="Discover amazing deals and promotions from OrangeTel. Get bonus data, night bundles, special discounts, and limited-time offers.">
+    <title>Promotions & Offers - Qcell Sierra Leone</title>
+    <meta name="description" content="Discover amazing deals and promotions from Qcell. Get bonus data, night bundles, special discounts, and limited-time offers.">
+    <link rel="icon" type="image/png" href="https://i.imghippo.com/files/IJi2095tg.jpg">
+    <meta name="theme-color" content="#ff7a00" />
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,15 +17,13 @@
     <header class="header" id="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
+                <a href="index.html" class="nav-logo">
                     <i class="fas fa-signal"></i>
-                    <span>OrangeTel</span>
-                </div>
+                    <span>Qcell</span>
+                </a>
                 
                 <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item has-dropdown">
                         <a href="#" class="nav-link">Personal <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -46,12 +41,15 @@
                             <li><a href="products.html#bulk"><i class="fas fa-comments"></i> Bulk SMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="products.html" class="nav-link">Products</a>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html#sim"><i class="fas fa-sim-card"></i> SIM Cards</a></li>
+                            <li><a href="devices.html"><i class="fas fa-mobile-alt"></i> Devices</a></li>
+                            <li><a href="broadband.html"><i class="fas fa-broadcast-tower"></i> Broadband</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="promotions.html" class="nav-link active">Promotions</a>
-                    </li>
+                    <li class="nav-item"><a href="promotions.html" class="nav-link active">Promotions</a></li>
                     <li class="nav-item has-dropdown">
                         <a href="#" class="nav-link">Support <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -60,9 +58,8 @@
                             <li><a href="contact.html"><i class="fas fa-headset"></i> Contact Support</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="about-company.html" class="nav-link">About</a>
-                    </li>
+                    <li class="nav-item"><a href="about-company.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="app.html" class="nav-link nav-cta">Get App</a></li>
                 </ul>
                 
                 <div class="hamburger" id="hamburger">
@@ -79,11 +76,9 @@
         <div class="sidebar-header">
             <div class="sidebar-logo">
                 <i class="fas fa-signal"></i>
-                <span>OrangeTel</span>
+                <span>Qcell</span>
             </div>
-            <button class="sidebar-close" id="sidebar-close">
-                <i class="fas fa-times"></i>
-            </button>
+            <button class="sidebar-close" id="sidebar-close"><i class="fas fa-times"></i></button>
         </div>
         <ul class="sidebar-menu">
             <li><a href="index.html" class="sidebar-link">Home</a></li>
@@ -114,7 +109,7 @@
             <li><a href="promotions.html" class="sidebar-link active">Promotions</a></li>
             <li><a href="support.html" class="sidebar-link">Support</a></li>
             <li><a href="about-company.html" class="sidebar-link">About</a></li>
-            <li><a href="app.html" class="sidebar-link">Get App</a></li>
+            <li><a href="app.html" class="sidebar-link highlight">Get App</a></li>
             <li><a href="contact.html" class="sidebar-link">Contact</a></li>
         </ul>
     </div>
@@ -122,34 +117,122 @@
     <!-- Main Content -->
     <main class="page-main">
         <!-- Page Header -->
-        <section class="page-header">
+        <section class="page-header-enhanced">
             <div class="container">
-                <h1 class="page-title">Promotions & Offers</h1>
-                <p class="page-subtitle">Don't miss out on these amazing deals and limited-time offers</p>
-            </div>
-        </section>
-
-        <!-- Featured Promotion Banner -->
-        <section class="section" style="padding: 40px 0;">
-            <div class="container">
-                <div class="hero-banner">
-                    <h2>50% BONUS DATA - This Week Only!</h2>
-                    <p>Buy any data bundle and get 50% extra data absolutely FREE. Offer ends Sunday!</p>
-                    <button class="cta-button" data-modal="bonus-modal">Grab Offer Now</button>
+                <div class="page-header-content">
+                    <h1>Promotions & Offers</h1>
+                    <p>Don't miss out on these amazing deals and limited-time offers</p>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span>/</span>
+                        <span>Promotions</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Current Promotions -->
+        <!-- Featured Promotion Banner -->
+        <section class="promo-banner-section">
+            <div class="container">
+                <div class="hero-banner featured-promo">
+                    <div class="banner-badge">This Week Only</div>
+                    <h2>100% BONUS DATA!</h2>
+                    <p>Buy any data bundle and get 100% extra data absolutely FREE. Double your data this week!</p>
+                    <div class="promo-timer">
+                        <div class="timer-item">
+                            <span class="timer-value" id="days">03</span>
+                            <span class="timer-label">Days</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-value" id="hours">18</span>
+                            <span class="timer-label">Hours</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-value" id="minutes">45</span>
+                            <span class="timer-label">Mins</span>
+                        </div>
+                        <div class="timer-item">
+                            <span class="timer-value" id="seconds">22</span>
+                            <span class="timer-label">Secs</span>
+                        </div>
+                    </div>
+                    <button class="cta-button" onclick="openPromoModal('bonus')">Grab Offer Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions Horizontal Scroll -->
+        <section class="promotions-scroll-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Hot Deals</h2>
+                    <p class="section-subtitle">Swipe through our latest promotions</p>
+                </div>
+            </div>
+            <div class="horizontal-scroll-container promo-scroll">
+                <div class="promo-scroll-card">
+                    <div class="promo-badge hot">Hot</div>
+                    <div class="promo-scroll-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>100% Bonus Data</h3>
+                    <p>Double your data on every purchase this week</p>
+                    <button class="promo-scroll-btn" onclick="openPromoModal('bonus')">Grab Offer</button>
+                </div>
+                
+                <div class="promo-scroll-card">
+                    <div class="promo-badge new">New</div>
+                    <div class="promo-scroll-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Night Bundles</h3>
+                    <p>5GB for only Le 30,000 - Use between 12AM-6AM</p>
+                    <button class="promo-scroll-btn" onclick="openPromoModal('night')">Learn More</button>
+                </div>
+                
+                <div class="promo-scroll-card">
+                    <div class="promo-badge limited">Limited</div>
+                    <div class="promo-scroll-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h3>Weekend Special</h3>
+                    <p>Unlimited weekend data for just Le 50,000</p>
+                    <button class="promo-scroll-btn" onclick="openPromoModal('weekend')">Get Now</button>
+                </div>
+                
+                <div class="promo-scroll-card">
+                    <div class="promo-scroll-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Family Plan</h3>
+                    <p>Connect 5 family members and save 30%</p>
+                    <button class="promo-scroll-btn" onclick="openPromoModal('family')">Learn More</button>
+                </div>
+                
+                <div class="promo-scroll-card">
+                    <div class="promo-badge hot">Hot</div>
+                    <div class="promo-scroll-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Student Discount</h3>
+                    <p>20% off all monthly plans for students</p>
+                    <button class="promo-scroll-btn" onclick="openPromoModal('student')">Apply Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Promotions Grid -->
         <section class="promo-section">
             <div class="container">
-                <h2 class="section-title">Current Offers</h2>
-                <p class="section-subtitle">Limited time offers you don't want to miss</p>
+                <div class="section-header">
+                    <h2 class="section-title">Current Offers</h2>
+                    <p class="section-subtitle">Limited time offers you don't want to miss</p>
+                </div>
                 
                 <div class="promo-grid">
                     <!-- Night Bundle -->
                     <div class="promo-card">
-                        <span class="promo-badge hot">Hot</span>
+                        <span class="promo-card-badge hot">Hot</span>
                         <div class="promo-image">
                             <i class="fas fa-moon"></i>
                         </div>
@@ -157,31 +240,31 @@
                             <h3 class="promo-title">Night Owl Bundle</h3>
                             <p class="promo-description">Get 5GB of high-speed data to use between 12AM and 6AM. Perfect for late-night streaming and downloads!</p>
                             <div class="promo-details">
-                                <span class="promo-price">$3.00</span>
-                                <button class="promo-btn" data-modal="night-modal">View Details</button>
+                                <span class="promo-price">Le 30,000</span>
+                                <button class="promo-btn" onclick="openPromoModal('night')">View Details</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 50% Bonus -->
+                    <!-- 100% Bonus -->
                     <div class="promo-card">
-                        <span class="promo-badge new">New</span>
+                        <span class="promo-card-badge new">New</span>
                         <div class="promo-image">
                             <i class="fas fa-gift"></i>
                         </div>
                         <div class="promo-content">
-                            <h3 class="promo-title">50% Bonus Data</h3>
-                            <p class="promo-description">Buy any data bundle this week and receive 50% extra data completely free. No limits!</p>
+                            <h3 class="promo-title">100% Bonus Data</h3>
+                            <p class="promo-description">Buy any data bundle this week and receive 100% extra data completely free. No limits!</p>
                             <div class="promo-details">
                                 <span class="promo-price">Free Bonus</span>
-                                <button class="promo-btn" data-modal="bonus-modal">View Details</button>
+                                <button class="promo-btn" onclick="openPromoModal('bonus')">View Details</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Family Plan -->
                     <div class="promo-card">
-                        <span class="promo-badge limited">Limited</span>
+                        <span class="promo-card-badge limited">Limited</span>
                         <div class="promo-image">
                             <i class="fas fa-users"></i>
                         </div>
@@ -190,14 +273,14 @@
                             <p class="promo-description">Connect up to 5 family members on one plan and save 30% on your monthly bill. Share data easily!</p>
                             <div class="promo-details">
                                 <span class="promo-price">Save 30%</span>
-                                <button class="promo-btn" data-modal="family-modal">View Details</button>
+                                <button class="promo-btn" onclick="openPromoModal('family')">View Details</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Weekend Special -->
                     <div class="promo-card">
-                        <span class="promo-badge hot">Hot</span>
+                        <span class="promo-card-badge hot">Hot</span>
                         <div class="promo-image">
                             <i class="fas fa-calendar-week"></i>
                         </div>
@@ -205,15 +288,15 @@
                             <h3 class="promo-title">Weekend Data Blast</h3>
                             <p class="promo-description">Unlimited data every weekend! From Friday 6PM to Sunday midnight. Stream, game, and browse without limits.</p>
                             <div class="promo-details">
-                                <span class="promo-price">$5.00</span>
-                                <button class="promo-btn" data-modal="weekend-modal">View Details</button>
+                                <span class="promo-price">Le 50,000</span>
+                                <button class="promo-btn" onclick="openPromoModal('weekend')">View Details</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Student Offer -->
                     <div class="promo-card">
-                        <span class="promo-badge new">New</span>
+                        <span class="promo-card-badge new">New</span>
                         <div class="promo-image">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
@@ -222,23 +305,23 @@
                             <p class="promo-description">Students get 20% off all monthly data plans! Just verify your student status and enjoy the savings.</p>
                             <div class="promo-details">
                                 <span class="promo-price">20% Off</span>
-                                <button class="promo-btn" data-modal="student-modal">View Details</button>
+                                <button class="promo-btn" onclick="openPromoModal('student')">View Details</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Double Airtime -->
                     <div class="promo-card">
-                        <span class="promo-badge limited">Limited</span>
+                        <span class="promo-card-badge limited">Limited</span>
                         <div class="promo-image">
                             <i class="fas fa-coins"></i>
                         </div>
                         <div class="promo-content">
                             <h3 class="promo-title">Double Airtime</h3>
-                            <p class="promo-description">Recharge today and get double the airtime! $10 recharge gives you $20 credit. First-time users only.</p>
+                            <p class="promo-description">Recharge today and get double the airtime! Le 10,000 recharge gives you Le 20,000 credit. First-time users only.</p>
                             <div class="promo-details">
                                 <span class="promo-price">2x Value</span>
-                                <button class="promo-btn" data-modal="airtime-modal">View Details</button>
+                                <button class="promo-btn" onclick="openPromoModal('airtime')">View Details</button>
                             </div>
                         </div>
                     </div>
@@ -249,18 +332,20 @@
         <!-- App Exclusive Offers -->
         <section class="section" style="background: var(--white);">
             <div class="container">
-                <h2 class="section-title">App Exclusive Deals</h2>
-                <p class="section-subtitle">Download our app to unlock these special offers</p>
+                <div class="section-header">
+                    <h2 class="section-title">App Exclusive Deals</h2>
+                    <p class="section-subtitle">Download our app to unlock these special offers</p>
+                </div>
                 
                 <div class="promo-grid">
-                    <div class="promo-card">
-                        <span class="promo-badge new">App Only</span>
+                    <div class="promo-card app-exclusive">
+                        <span class="promo-card-badge app">App Only</span>
                         <div class="promo-image" style="background: linear-gradient(135deg, #10b981, #059669);">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
                         <div class="promo-content">
                             <h3 class="promo-title">First App Purchase</h3>
-                            <p class="promo-description">Get 25% off your first data purchase through the OrangeTel app. New app users only!</p>
+                            <p class="promo-description">Get 25% off your first data purchase through the Qcell app. New app users only!</p>
                             <div class="promo-details">
                                 <span class="promo-price">25% Off</span>
                                 <a href="app.html" class="promo-btn">Get App</a>
@@ -268,8 +353,8 @@
                         </div>
                     </div>
 
-                    <div class="promo-card">
-                        <span class="promo-badge new">App Only</span>
+                    <div class="promo-card app-exclusive">
+                        <span class="promo-card-badge app">App Only</span>
                         <div class="promo-image" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
                             <i class="fas fa-gamepad"></i>
                         </div>
@@ -277,22 +362,37 @@
                             <h3 class="promo-title">Gaming Bundle</h3>
                             <p class="promo-description">Low latency gaming bundle with 3GB data optimized for gaming. Zero packet loss guaranteed!</p>
                             <div class="promo-details">
-                                <span class="promo-price">$4.00</span>
+                                <span class="promo-price">Le 40,000</span>
                                 <a href="app.html" class="promo-btn">Get App</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="promo-card">
-                        <span class="promo-badge new">App Only</span>
+                    <div class="promo-card app-exclusive">
+                        <span class="promo-card-badge app">App Only</span>
                         <div class="promo-image" style="background: linear-gradient(135deg, #ec4899, #db2777);">
                             <i class="fas fa-video"></i>
                         </div>
                         <div class="promo-content">
                             <h3 class="promo-title">Streaming Pass</h3>
-                            <p class="promo-description">Unlimited streaming on Netflix, YouTube, and Spotify for 24 hours. No data cap!</p>
+                            <p class="promo-description">Unlimited streaming on YouTube, TikTok, and Spotify for 24 hours. No data cap!</p>
                             <div class="promo-details">
-                                <span class="promo-price">$2.00</span>
+                                <span class="promo-price">Le 20,000</span>
+                                <a href="app.html" class="promo-btn">Get App</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="promo-card app-exclusive">
+                        <span class="promo-card-badge app">App Only</span>
+                        <div class="promo-image" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="promo-content">
+                            <h3 class="promo-title">Social Media Bundle</h3>
+                            <p class="promo-description">1GB for WhatsApp, Facebook, Instagram, and Twitter. Stay connected on social!</p>
+                            <div class="promo-details">
+                                <span class="promo-price">Le 15,000</span>
                                 <a href="app.html" class="promo-btn">Get App</a>
                             </div>
                         </div>
@@ -302,300 +402,158 @@
         </section>
 
         <!-- Referral Program -->
-        <section class="section" style="background: var(--light-bg);">
+        <section class="referral-section">
             <div class="container">
-                <h2 class="section-title">Refer & Earn</h2>
-                <p class="section-subtitle">Invite friends and earn free data</p>
+                <div class="section-header">
+                    <h2 class="section-title">Refer & Earn</h2>
+                    <p class="section-subtitle">Invite friends and earn free data</p>
+                </div>
                 
-                <div class="about-content" style="margin-top: 3rem;">
-                    <div class="about-text">
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">How it Works</h3>
-                        <div class="features-summary-grid" style="max-width: 100%;">
-                            <div class="feature-summary-card">
-                                <div class="feature-summary-icon">
-                                    <i class="fas fa-share-alt"></i>
-                                </div>
-                                <div>
-                                    <h4>1. Share Your Code</h4>
-                                    <p>Get your unique referral code from the app and share it with friends and family.</p>
+                <div class="referral-content">
+                    <div class="referral-text">
+                        <h3>How it Works</h3>
+                        <div class="referral-steps">
+                            <div class="referral-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Share Your Code</h4>
+                                    <p>Get your unique referral code from the Qcell app and share it with friends and family.</p>
                                 </div>
                             </div>
-                            <div class="feature-summary-card">
-                                <div class="feature-summary-icon">
-                                    <i class="fas fa-user-plus"></i>
-                                </div>
-                                <div>
-                                    <h4>2. Friend Signs Up</h4>
+                            <div class="referral-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Friend Signs Up</h4>
                                     <p>When your friend registers and activates their SIM using your code, you both get rewards.</p>
                                 </div>
                             </div>
-                            <div class="feature-summary-card">
-                                <div class="feature-summary-icon">
-                                    <i class="fas fa-gift"></i>
-                                </div>
-                                <div>
-                                    <h4>3. Earn Rewards</h4>
+                            <div class="referral-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Earn Rewards</h4>
                                     <p>You get 500MB free data and your friend gets 500MB too! No limits on referrals.</p>
                                 </div>
                             </div>
                         </div>
-                        <div style="margin-top: 2rem;">
-                            <a href="app.html" class="cta-button">Start Referring Now</a>
+                        <a href="app.html" class="cta-button primary">Start Referring Now</a>
+                    </div>
+                    <div class="referral-image">
+                        <img src="/img/file_000000007f1461f8827b752d8c94b5a9.png" alt="Qcell Referral Program" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Calendar -->
+        <section class="section" style="background: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Upcoming Promotions</h2>
+                    <p class="section-subtitle">Mark your calendar for these upcoming deals</p>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-card">
+                        <div class="calendar-date">
+                            <span class="calendar-day">15</span>
+                            <span class="calendar-month">Apr</span>
+                        </div>
+                        <div class="calendar-content">
+                            <h4>Easter Data Bonanza</h4>
+                            <p>Triple data on all purchases during Easter weekend</p>
+                            <span class="calendar-status upcoming">Coming Soon</span>
                         </div>
                     </div>
-                    <div class="about-image">
-                        <img src="/img/file_000000007f1461f8827b752d8c94b5a9.png" alt="OrangeTel Referral Program" />
+                    
+                    <div class="calendar-card">
+                        <div class="calendar-date">
+                            <span class="calendar-day">27</span>
+                            <span class="calendar-month">Apr</span>
+                        </div>
+                        <div class="calendar-content">
+                            <h4>Independence Day Offer</h4>
+                            <p>Special bundles to celebrate Sierra Leone Independence Day</p>
+                            <span class="calendar-status upcoming">Coming Soon</span>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-card">
+                        <div class="calendar-date">
+                            <span class="calendar-day">01</span>
+                            <span class="calendar-month">May</span>
+                        </div>
+                        <div class="calendar-content">
+                            <h4>Workers Day Special</h4>
+                            <p>Free data for all recharges on Workers Day</p>
+                            <span class="calendar-status upcoming">Coming Soon</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Terms Section -->
-        <section class="section" style="background: var(--white);">
+        <section class="section" style="background: var(--light-bg);">
             <div class="container">
-                <h2 class="section-title">Promotion Terms</h2>
-                <p class="section-subtitle">Important information about our offers</p>
+                <div class="section-header">
+                    <h2 class="section-title">Promotion Terms</h2>
+                    <p class="section-subtitle">Important information about our offers</p>
+                </div>
                 
-                <div class="documentation-grid">
-                    <div class="doc-card">
-                        <div class="doc-icon">
+                <div class="terms-grid">
+                    <div class="terms-card">
+                        <div class="terms-icon">
                             <i class="fas fa-info-circle"></i>
                         </div>
-                        <h3 class="doc-title">General Terms</h3>
-                        <p class="doc-description">All promotions are subject to availability and may be withdrawn at any time without notice. Fair usage policies apply.</p>
+                        <h3>General Terms</h3>
+                        <p>All promotions are subject to availability and may be withdrawn at any time without notice. Fair usage policies apply to all data bundles.</p>
                     </div>
                     
-                    <div class="doc-card">
-                        <div class="doc-icon">
+                    <div class="terms-card">
+                        <div class="terms-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h3 class="doc-title">Validity Periods</h3>
-                        <p class="doc-description">Check individual offer details for validity periods. Bonus data typically expires with the main bundle.</p>
+                        <h3>Validity Periods</h3>
+                        <p>Check individual offer details for validity periods. Bonus data expires at the same time as your main bundle unless otherwise stated.</p>
                     </div>
                     
-                    <div class="doc-card">
-                        <div class="doc-icon">
-                            <i class="fas fa-question-circle"></i>
+                    <div class="terms-card">
+                        <div class="terms-icon">
+                            <i class="fas fa-user-check"></i>
                         </div>
-                        <h3 class="doc-title">Need Help?</h3>
-                        <p class="doc-description">Contact our support team for questions about promotions or if you have trouble activating an offer.</p>
-                        <a href="support.html" class="doc-link">Get Support <i class="fas fa-arrow-right"></i></a>
+                        <h3>Eligibility</h3>
+                        <p>Some promotions may require specific eligibility criteria such as being a new customer, student verification, or app download.</p>
+                    </div>
+                    
+                    <div class="terms-card">
+                        <div class="terms-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Stacking</h3>
+                        <p>Promotions cannot be combined with other offers unless explicitly stated. Contact customer support for clarification.</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Night Bundle Modal -->
-    <div class="modal-overlay" id="night-modal">
+    <!-- Promotion Modal -->
+    <div id="promo-modal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-icon">
-                    <i class="fas fa-moon"></i>
-                </div>
-                <h3 class="modal-title">Night Owl Bundle</h3>
-                <p class="modal-subtitle">Perfect for night owls</p>
-            </div>
+            <button class="modal-close" onclick="closePromoModal()">&times;</button>
             <div class="modal-body">
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Data</span>
-                    <span class="modal-info-value">5GB</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Price</span>
-                    <span class="modal-info-value">$3.00</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Validity</span>
-                    <span class="modal-info-value">30 days</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Usage Time</span>
-                    <span class="modal-info-value">12:00 AM - 6:00 AM daily</span>
-                </div>
-                <div class="modal-instructions">
-                    <h4>How to Activate</h4>
-                    <p>Dial <code>*123*50#</code> or activate through the OrangeTel app. Data is usable only during night hours.</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="app.html" class="modal-btn">Download App to Buy</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bonus Data Modal -->
-    <div class="modal-overlay" id="bonus-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-icon">
+                <div class="modal-icon" id="modal-promo-icon">
                     <i class="fas fa-gift"></i>
                 </div>
-                <h3 class="modal-title">50% Bonus Data</h3>
-                <p class="modal-subtitle">Limited time offer</p>
-            </div>
-            <div class="modal-body">
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Offer</span>
-                    <span class="modal-info-value">50% Extra Data</span>
+                <h2 id="modal-promo-title">Promotion Title</h2>
+                <p id="modal-promo-description">Promotion description</p>
+                <div class="modal-promo-details" id="modal-promo-details">
+                    <!-- Dynamic content -->
                 </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Applies To</span>
-                    <span class="modal-info-value">All data bundles</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Valid Until</span>
-                    <span class="modal-info-value">This Sunday</span>
-                </div>
-                <div class="modal-instructions">
-                    <h4>How it Works</h4>
-                    <p>Simply buy any data bundle during the promotion period. The 50% bonus is automatically added to your account. For example, buy 10GB and get 15GB total!</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="products.html" class="modal-btn">Browse Data Plans</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Family Plan Modal -->
-    <div class="modal-overlay" id="family-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3 class="modal-title">Family Plan</h3>
-                <p class="modal-subtitle">Save together</p>
-            </div>
-            <div class="modal-body">
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Discount</span>
-                    <span class="modal-info-value">30% Off</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Max Lines</span>
-                    <span class="modal-info-value">Up to 5 members</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Shared Data</span>
-                    <span class="modal-info-value">Pool data between lines</span>
-                </div>
-                <div class="modal-instructions">
-                    <h4>Benefits</h4>
-                    <p>Share data pool between family members. Free calls within family group. One bill for all lines. Manage everything from the app.</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="contact.html" class="modal-btn">Contact Sales</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Weekend Modal -->
-    <div class="modal-overlay" id="weekend-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-icon">
-                    <i class="fas fa-calendar-week"></i>
-                </div>
-                <h3 class="modal-title">Weekend Data Blast</h3>
-                <p class="modal-subtitle">Unlimited weekend fun</p>
-            </div>
-            <div class="modal-body">
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Data</span>
-                    <span class="modal-info-value">Unlimited</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Price</span>
-                    <span class="modal-info-value">$5.00</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Duration</span>
-                    <span class="modal-info-value">Friday 6PM - Sunday Midnight</span>
-                </div>
-                <div class="modal-instructions">
-                    <h4>How to Activate</h4>
-                    <p>Dial <code>*123*77#</code> before Friday 6PM to activate for the coming weekend. Auto-renews weekly if balance available.</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="app.html" class="modal-btn">Download App to Buy</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Student Modal -->
-    <div class="modal-overlay" id="student-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3 class="modal-title">Student Special</h3>
-                <p class="modal-subtitle">Education discount</p>
-            </div>
-            <div class="modal-body">
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Discount</span>
-                    <span class="modal-info-value">20% Off</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Applies To</span>
-                    <span class="modal-info-value">Monthly plans only</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Eligibility</span>
-                    <span class="modal-info-value">Valid student ID required</span>
-                </div>
-                <div class="modal-instructions">
-                    <h4>How to Apply</h4>
-                    <p>Visit any OrangeTel store with your valid student ID to register for the student discount. Once verified, the discount applies automatically to all monthly plan purchases.</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="contact.html" class="modal-btn">Find a Store</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Airtime Modal -->
-    <div class="modal-overlay" id="airtime-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-icon">
-                    <i class="fas fa-coins"></i>
-                </div>
-                <h3 class="modal-title">Double Airtime</h3>
-                <p class="modal-subtitle">First-time bonus</p>
-            </div>
-            <div class="modal-body">
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Bonus</span>
-                    <span class="modal-info-value">100% Extra</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Example</span>
-                    <span class="modal-info-value">$10 = $20 credit</span>
-                </div>
-                <div class="modal-info-row">
-                    <span class="modal-info-label">Eligibility</span>
-                    <span class="modal-info-value">First recharge only</span>
-                </div>
-                <div class="modal-instructions">
-                    <h4>Terms</h4>
-                    <p>Available for first-time recharges only. Maximum bonus of $20 extra credit. Bonus credit valid for 30 days. Can be used for data, calls, or SMS.</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="app.html" class="modal-btn">Recharge Now</a>
+                <div class="modal-price" id="modal-promo-price">Free</div>
+                <div class="modal-code" id="modal-promo-code">Dial *123*XX#</div>
+                <button class="modal-btn" id="modal-promo-btn">Activate Now</button>
             </div>
         </div>
     </div>
@@ -607,26 +565,34 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <i class="fas fa-signal"></i>
-                        <span>OrangeTel</span>
+                        <span>Qcell</span>
                     </div>
-                    <p class="footer-description">
-                        Connecting you to what matters most. Fast, reliable, and affordable telecommunications.
-                    </p>
+                    <p class="footer-description">Sierra Leone's leading telecommunications provider. Connecting you to what matters most.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Quick Links</h3>
+                    <h3 class="footer-title">Personal</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="promotions.html">Promotions</a></li>
-                        <li><a href="about-company.html">About Us</a></li>
+                        <li><a href="products.html">Data Plans</a></li>
+                        <li><a href="products.html#calls">Call Plans</a></li>
+                        <li><a href="products.html#sms">SMS Bundles</a></li>
+                        <li><a href="products.html#roaming">Roaming</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Business</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#enterprise">Enterprise Internet</a></li>
+                        <li><a href="products.html#corporate">Corporate Plans</a></li>
+                        <li><a href="products.html#bulk">Bulk SMS</a></li>
+                        <li><a href="broadband.html">Broadband</a></li>
                     </ul>
                 </div>
                 
@@ -634,38 +600,138 @@
                     <h3 class="footer-title">Support</h3>
                     <ul class="footer-links">
                         <li><a href="support.html">Help Center</a></li>
-                        <li><a href="sim-registration.html">SIM Registration</a></li>
-                        <li><a href="app.html">Download App</a></li>
+                        <li><a href="support.html#faq">FAQs</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">Contact Info</h3>
+                    <h3 class="footer-title">Contact</h3>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Telecom Plaza, City Center</span>
-                        </div>
-                        <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>*123# or +1 (555) 123-4567</span>
+                            <span>Dial *123# or 076-000-000</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>support@orangetel.com</span>
+                            <span>support@qcell.sl</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 OrangeTel Communications. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Qcell Sierra Leone. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="Script.js"></script>
+    <script>
+        // Promo modal data
+        const promoData = {
+            bonus: {
+                icon: 'fa-gift',
+                title: '100% Bonus Data',
+                description: 'Buy any data bundle this week and receive 100% extra data. Buy 1GB, get 2GB total!',
+                details: '<ul><li>Valid on all data bundles</li><li>Bonus data valid same as main bundle</li><li>Limited time offer</li><li>Available for all customers</li></ul>',
+                price: 'FREE BONUS',
+                code: 'Dial *123# to buy any bundle'
+            },
+            night: {
+                icon: 'fa-moon',
+                title: 'Night Owl Bundle',
+                description: '5GB of high-speed data to use between 12AM and 6AM. Perfect for late-night activities!',
+                details: '<ul><li>5GB data included</li><li>Use between 12AM - 6AM</li><li>Valid for 30 days</li><li>Stackable with day bundles</li></ul>',
+                price: 'Le 30,000',
+                code: 'Dial *123*50#'
+            },
+            weekend: {
+                icon: 'fa-calendar-week',
+                title: 'Weekend Data Blast',
+                description: 'Unlimited data every weekend from Friday 6PM to Sunday midnight!',
+                details: '<ul><li>Unlimited weekend data</li><li>Friday 6PM - Sunday 12AM</li><li>Valid for 4 weekends</li><li>No fair usage cap</li></ul>',
+                price: 'Le 50,000',
+                code: 'Dial *123*60#'
+            },
+            family: {
+                icon: 'fa-users',
+                title: 'Family Plan Deal',
+                description: 'Connect up to 5 family members on one plan and enjoy 30% savings!',
+                details: '<ul><li>Up to 5 members</li><li>Shared data pool</li><li>30% monthly savings</li><li>Family manager controls</li></ul>',
+                price: 'Save 30%',
+                code: 'Visit any Qcell store'
+            },
+            student: {
+                icon: 'fa-graduation-cap',
+                title: 'Student Special',
+                description: 'Students get 20% off all monthly data plans. Study and stay connected for less!',
+                details: '<ul><li>20% off monthly plans</li><li>Valid student ID required</li><li>Renewable each semester</li><li>One discount per student</li></ul>',
+                price: '20% OFF',
+                code: 'Register via Qcell app'
+            },
+            airtime: {
+                icon: 'fa-coins',
+                title: 'Double Airtime',
+                description: 'First-time recharge bonus - get double the value on your first recharge!',
+                details: '<ul><li>100% bonus airtime</li><li>First recharge only</li><li>New customers only</li><li>Maximum Le 50,000 bonus</li></ul>',
+                price: '2x VALUE',
+                code: 'Dial *101*PIN#'
+            }
+        };
+
+        function openPromoModal(promo) {
+            const data = promoData[promo];
+            if (!data) return;
+            
+            document.getElementById('modal-promo-icon').innerHTML = `<i class="fas ${data.icon}"></i>`;
+            document.getElementById('modal-promo-title').textContent = data.title;
+            document.getElementById('modal-promo-description').textContent = data.description;
+            document.getElementById('modal-promo-details').innerHTML = data.details;
+            document.getElementById('modal-promo-price').textContent = data.price;
+            document.getElementById('modal-promo-code').textContent = data.code;
+            
+            document.getElementById('promo-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePromoModal() {
+            document.getElementById('promo-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on outside click
+        document.getElementById('promo-modal').addEventListener('click', function(e) {
+            if (e.target === this) closePromoModal();
+        });
+
+        // Countdown timer
+        function updateTimer() {
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 3);
+            
+            const now = new Date();
+            const diff = endDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
 </body>
 </html>
